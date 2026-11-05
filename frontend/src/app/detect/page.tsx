@@ -56,6 +56,10 @@ export default function DetectPage() {
       const result = await predict(upload, upload.name || "leaf.jpg", lang, true);
       await saveResult(result, file);
       router.push("/results");
+      // Next.js keeps visited routes mounted (hidden) and restores their state on return, so reset the form
+      // here; otherwise "New diagnosis" would reopen this page still showing the old photo and "Analysing…".
+      clear();
+      setBusy(false);
     } catch (e) {
       setError(e instanceof ApiError ? e.message : t("backend_down"));
       setBusy(false);

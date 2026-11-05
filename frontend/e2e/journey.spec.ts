@@ -79,6 +79,32 @@ test("field photo outside the training distribution is reported as not recognise
   await expect(page.getByTestId("advisory")).toHaveCount(0);
 });
 
+test("'New diagnosis' after a previous diagnosis starts fresh (regression)", async ({ page }) => {
+  // first diagnosis + feedback
+  await page.goto("/detect");
+  await page.getByTestId("file-input").setInputFiles(img(FIX.confident_tomato_early_blight));
+  await page.getByTestId("analyse").click();
+  await expect(page).toHaveURL(/\/results/);
+  await expect(page.getByTestId("status-banner")).toHaveAttribute("data-status", "confident");
+  await page.getByRole("button", { name: /Diagnosis correct/ }).click();
+  await page.getByRole("button", { name: /Send feedback/ }).click();
+  await expect(page.getByTestId("feedback-done")).toBeVisible();
+
+  // back to the form via the results page button: must be a clean form, not stuck on "Analysing…"
+  await page.getByRole("link", { name: /New diagnosis/ }).click();
+  await expect(page).toHaveURL(/\/detect/);
+  await expect(page.getByTestId("dropzone")).toBeVisible();
+  await expect(page.getByText("Analysing…")).toHaveCount(0);
+
+  // second diagnosis shows the NEW result and a fresh feedback box
+  await page.getByTestId("file-input").setInputFiles(img(FIX.unrecognized_field_image));
+  await expect(page.getByTestId("analyse")).toBeEnabled();
+  await page.getByTestId("analyse").click();
+  await expect(page).toHaveURL(/\/results/);
+  await expect(page.getByTestId("status-banner")).toHaveAttribute("data-status", "unrecognized");
+  await expect(page.getByTestId("feedback-done")).toHaveCount(0);
+});
+
 test("rejects a non-image upload with a clear error", async ({ page }) => {
   await page.goto("/detect");
   await page.getByTestId("file-input").setInputFiles({ name: "notes.txt", mimeType: "text/plain", buffer: Buffer.from("hello") });

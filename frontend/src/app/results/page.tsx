@@ -52,14 +52,16 @@ export default function ResultsPage() {
   const p = stored?.prediction;
 
   // advisory is fetched in the selected language (only for confident results)
+  // advice belongs to one prediction: drop it when a different diagnosis is shown
+  const [advFor, setAdvFor] = useState<string | null>(null);
   useEffect(() => {
     if (!p || p.status !== "confident") return;
     let alive = true;
     // eslint-disable-next-line react-hooks/set-state-in-effect -- loading flag for the language switch
     setAdvLoading(true);
     getAdvisory(p.class_id, lang)
-      .then((a) => alive && setAdvisory(a))
-      .catch(() => alive && setAdvisory(p.advisory && p.advisory.language === lang ? p.advisory : null))
+      .then((a) => { if (alive) { setAdvisory(a); setAdvFor(p.prediction_id ?? p.class_id); } })
+      .catch(() => { if (alive) { setAdvisory(p.advisory && p.advisory.language === lang ? p.advisory : null); setAdvFor(p.prediction_id ?? p.class_id); } })
       .finally(() => alive && setAdvLoading(false));
     return () => { alive = false; };
   }, [p, lang]);
@@ -69,6 +71,8 @@ export default function ResultsPage() {
     const d = names.get(id);
     return d ? { crop: d.crop, disease: d.name, slug: d.slug } : { ...fallback, slug: id };
   };
+
+  const adv = p && advFor === (p.prediction_id ?? p.class_id) ? advisory : null;
 
   if (stored === undefined) {
     return <div className="mx-auto max-w-6xl px-4 py-14"><Skeleton className="h-96 w-full rounded-2xl" /></div>;
@@ -89,7 +93,7 @@ export default function ResultsPage() {
   const showDiagnosis = p.status !== "unrecognized";
 
   const download = () => {
-    const html = buildReportHtml({ stored, advisory: p.status === "confident" ? advisory : null, lang, names: main, statusTitle, statusMsg: STATUS_MSG[lang][p.status] });
+    const html = buildReportHtml({ stored, advisory: p.status === "confident" ? adv : null, lang, names: main, statusTitle, statusMsg: STATUS_MSG[lang][p.status] });
     const blob = new Blob([html], { type: "text/html;charset=utf-8" });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
@@ -154,7 +158,7 @@ export default function ResultsPage() {
                     <div className="space-y-1">
                       <div className="text-sm font-medium text-muted-foreground">{t("crop")}: <span className="text-foreground" data-testid="crop-name">{main.crop}</span></div>
                       <div className="font-heading text-3xl font-semibold leading-tight" data-testid="disease-name">{main.disease}</div>
-                      {advisory?.scientific_name && <div className="text-sm italic text-muted-foreground">{advisory.scientific_name}</div>}
+                      {adv?.scientific_name && <div className="text-sm italic text-muted-foreground">{adv.scientific_name}</div>}
                     </div>
                     <Badge className={cn("gap-1 px-3 py-1 text-sm", p.healthy ? "bg-success/15 text-foreground" : "bg-destructive/12 text-foreground")} variant="outline">
                       {p.healthy ? <Leaf className="size-3.5 text-success" /> : <AlertTriangle className="size-3.5 text-destructive" />}
@@ -191,18 +195,18 @@ export default function ResultsPage() {
           </Card>
 
           {p.status === "confident" ? (
-            advLoading && !advisory ? <Skeleton className="h-72 w-full rounded-2xl" /> : advisory && (
+            advLoading && !adv ? <Skeleton className="h-72 w-full rounded-2xl" /> : adv && (
               <Card data-testid="advisory">
                 <CardContent>
                   <Tabs defaultValue="overview">
                     <TabsList className="mb-4 flex h-auto w-full flex-wrap justify-start">
                       <TabsTrigger value="overview"><Leaf />{t("overview")}</TabsTrigger>
                       <TabsTrigger value="symptoms">{t("symptoms")}</TabsTrigger>
-                      {!advisory.healthy && <TabsTrigger value="treatment"><FlaskConical />{t("treatment")}</TabsTrigger>}
+                      {!adv.healthy && <TabsTrigger value="treatment"><FlaskConical />{t("treatment")}</TabsTrigger>}
                       <TabsTrigger value="prevention"><Sprout />{t("prevention")}</TabsTrigger>
                       <TabsTrigger value="sources"><ExternalLink />{t("sources")}</TabsTrigger>
                     </TabsList>
-                    <AdvisoryBody a={advisory} mode="tabs" />
+                    <AdvisoryBody a={adv} mode="tabs" />
                   </Tabs>
                 </CardContent>
               </Card>
@@ -211,7 +215,7 @@ export default function ResultsPage() {
             <Alert className="border-warning/50"><CircleHelp className="text-warning" /><AlertDescription>{t("advisory_hidden")}</AlertDescription></Alert>
           )}
 
-          {p.prediction_id && <FeedbackPanel predictionId={p.prediction_id} />}
+          {p.prediction_id && <FeedbackPanel key={p.prediction_id} predictionId={p.prediction_id} />}
         </div>
       </div>
     </div>
