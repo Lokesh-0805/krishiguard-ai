@@ -12,8 +12,8 @@ flowchart LR
   end
   subgraph Backend container :8000
     API[FastAPI<br/>validation · rate limit · logging]
-    MS[ModelService<br/>timm model on CPU<br/>temperature + thresholds]
-    GC[Grad-CAM]
+    MS[ModelService<br/>ONNX Runtime on CPU<br/>temperature + thresholds]
+    GC[CAM heat-map<br/>from ONNX graph]
     ADV[AdvisoryStore<br/>advisory/diseases.json]
     MET[Metrics<br/>evaluation/summary.json]
   end
@@ -30,7 +30,7 @@ flowchart LR
     TR --> EV[evaluate.py<br/>calibration · thresholds · metrics]
     EV --> EXP[compare_and_export.py<br/>validation-only model selection]
   end
-  EXP -->|model.pt + model_card.json| MS
+  EXP -->|model.onnx + model_card.json| MS
   EXP -->|summary.json| MET
 ```
 
@@ -76,7 +76,7 @@ krishiguard-ai/
 | Same-origin `/api` rewrite in Next.js | No CORS in production, backend not exposed publicly in compose |
 | Fail-soft database | Diagnosis keeps working if Postgres is down; persistence endpoints return 503 |
 | Images never stored | Privacy; only SHA-256 + metadata recorded |
-| CPU inference with a small model | Cheap hosting; EfficientNet-B0 class latency is tens of ms |
+| CPU inference with ONNX Runtime | No PyTorch at serving time: ~150 MB deployment that fits serverless (Vercel), ~35 ms per image |
 | Serving checkpoint integrity | `model_card.json` carries the SHA-256 of `model.pt`; the API refuses to load on mismatch |
 | Preprocessing parity test | Serving preprocessing is unit-tested to equal the training eval transform |
 
@@ -87,5 +87,5 @@ krishiguard-ai/
 3. Sharpness = variance of Laplacian on a 256×256 grayscale copy → `blurry` flag below the validation-derived threshold.
 4. Model view = resize + centre crop (identical to evaluation) → logits → softmax(logits / T).
 5. Status: `confident` (p ≥ τ, and not blurry) / `uncertain` (τ_r ≤ p < τ or blurry) / `unrecognized` (p < τ_r).
-6. Grad-CAM on the predicted class (optional, default on), returned as base64 PNGs of model input, heatmap, overlay.
+6. CAM for the predicted class (computed inside the ONNX graph; equal to Grad-CAM for this architecture), returned as base64 PNGs of model input, heatmap, overlay.
 7. Advisory attached only when `confident`; prediction metadata persisted (fail-soft); structured log line emitted.

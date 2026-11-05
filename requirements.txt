@@ -1,0 +1,11 @@
+# Python dependencies for the Vercel API deployment (index.py). Keep in sync with backend/requirements.txt.
+# No PyTorch: inference runs on onnxruntime so the function stays well under Vercel's bundle limit.
+fastapi>=0.115
+pydantic>=2.7
+pydantic-settings>=2.3
+python-multipart>=0.0.9
+slowapi>=0.1.9
+sqlalchemy>=2.0
+pillow>=10.3
+numpy>=1.26
+onnxruntime>=1.18

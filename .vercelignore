@@ -1,0 +1,22 @@
+# Applies to the API project (Root Directory = repository root). Only backend/app, advisory/diseases.json,
+# ml/artifacts/serving/{model.onnx,model_card.json} and ml/artifacts/evaluation/summary.json are needed at runtime.
+.venv/
+.git/
+frontend/
+docs/
+scripts/
+infrastructure/
+backend/tests/
+backend/krishiguard_demo.db
+ml/datasets/
+ml/training/
+ml/preprocessing/
+ml/experiments/
+ml/evaluation/
+ml/artifacts/eda/
+ml/artifacts/models/
+ml/artifacts/evaluation/*/
+ml/artifacts/evaluation/*.png
+ml/artifacts/serving/model.pt
+**/__pycache__/
+*.png

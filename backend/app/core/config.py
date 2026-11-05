@@ -18,9 +18,7 @@ class Settings(BaseSettings):
     serving_dir: Path = PROJECT_ROOT / "ml/artifacts/serving"
     evaluation_dir: Path = PROJECT_ROOT / "ml/artifacts/evaluation"
     advisory_path: Path = PROJECT_ROOT / "advisory/diseases.json"
-    class_mapping_path: Path = PROJECT_ROOT / "ml/datasets/metadata/class_mapping.json"
-    device: str = "cpu"
-    torch_threads: int = 4
+    inference_threads: int = 2
 
     # upload policy
     max_upload_mb: float = 8.0

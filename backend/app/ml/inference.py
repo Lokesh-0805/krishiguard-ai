@@ -10,12 +10,11 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 import numpy as np
-import torch
 from PIL import Image, ImageOps, UnidentifiedImageError
 
 from app.core.errors import InvalidImageError, PayloadTooLargeError, ServiceUnavailableError, UnsupportedMediaError
 from app.core.logging import log
-from app.ml.gradcam import GradCAM, default_target_layer, render
+from app.ml.gradcam import render
 
 logger = logging.getLogger(__name__)
 Image.MAX_IMAGE_PIXELS = 40_000_000  # decompression-bomb guard
@@ -78,9 +77,10 @@ def model_view(img: Image.Image, size: int) -> Image.Image:
     return img.crop((left, top, left + size, top + size))
 
 
-def to_tensor(img: Image.Image) -> torch.Tensor:
+def to_array(img: Image.Image) -> np.ndarray:
+    """HWC uint8 RGB -> normalised CHW float32 (ImageNet statistics)."""
     arr = (np.asarray(img, dtype=np.float32) / 255.0 - IMAGENET_MEAN) / IMAGENET_STD
-    return torch.from_numpy(arr.transpose(2, 0, 1).copy())
+    return np.ascontiguousarray(arr.transpose(2, 0, 1))
 
 
 @dataclass
@@ -95,6 +95,8 @@ class ServingConfig:
     blur_threshold: float
     checkpoint: str
     checkpoint_sha256: str
+    onnx: str | None = None
+    onnx_sha256: str | None = None
     gradcam_target_layer: str | None = None
     extra: dict = field(default_factory=dict)
 
@@ -106,40 +108,42 @@ class ServingConfig:
 
 
 class ModelService:
-    """Holds the single deployed model. Loaded once at startup; thread-safe for inference."""
+    """Holds the single deployed model (ONNX, run with onnxruntime on CPU). Loaded once at startup.
 
-    def __init__(self, serving_dir: Path, device: str = "cpu", threads: int = 4):
+    The ONNX graph returns the logits and class activation maps (CAM) of the last feature map; for this
+    architecture (global average pooling + one linear layer) CAM equals Grad-CAM up to scale
+    (verified by ml/evaluation/export_onnx.py), so no gradients or PyTorch are needed at serving time."""
+
+    def __init__(self, serving_dir: Path, threads: int = 2):
         self.serving_dir = serving_dir
-        self.device = torch.device(device)
+        self.threads = threads
         self.cfg: ServingConfig | None = None
-        self.model: torch.nn.Module | None = None
-        self.cam: GradCAM | None = None
+        self.session = None
         self.load_error: str | None = None
-        torch.set_num_threads(threads)
 
     @property
     def ready(self) -> bool:
-        return self.model is not None
+        return self.session is not None
 
     def load(self) -> None:
-        import timm
+        import onnxruntime as ort
 
         t0 = time.time()
         try:
             cfg = ServingConfig.load(self.serving_dir)
-            ckpt_path = self.serving_dir / cfg.checkpoint
-            digest = hashlib.sha256(ckpt_path.read_bytes()).hexdigest()
-            if digest != cfg.checkpoint_sha256:
-                raise RuntimeError("checkpoint sha256 mismatch with model_card.json")
-            model = timm.create_model(cfg.arch, pretrained=False, num_classes=len(cfg.classes))
-            model.load_state_dict(torch.load(ckpt_path, map_location="cpu", weights_only=True))
-            model.eval().to(self.device)
-            target = cfg.gradcam_target_layer or default_target_layer(cfg.arch)
-            self.cam = GradCAM(model, target, getattr(model, "num_prefix_tokens", 0))
-            with torch.no_grad():  # warm-up
-                model(torch.zeros(1, 3, cfg.img_size, cfg.img_size, device=self.device))
-            self.cfg, self.model, self.load_error = cfg, model, None
-            log(logger, logging.INFO, "model loaded", version=cfg.model_version, arch=cfg.arch, seconds=round(time.time() - t0, 2))
+            if not cfg.onnx:
+                raise RuntimeError("model_card.json has no ONNX model; run ml/evaluation/export_onnx.py")
+            path = self.serving_dir / cfg.onnx
+            if hashlib.sha256(path.read_bytes()).hexdigest() != cfg.onnx_sha256:
+                raise RuntimeError("ONNX model sha256 mismatch with model_card.json")
+            opts = ort.SessionOptions()
+            opts.intra_op_num_threads = self.threads
+            opts.inter_op_num_threads = 1
+            session = ort.InferenceSession(str(path), sess_options=opts, providers=["CPUExecutionProvider"])
+            session.run(["logits"], {"input": np.zeros((1, 3, cfg.img_size, cfg.img_size), np.float32)})  # warm-up
+            self.cfg, self.session, self.load_error = cfg, session, None
+            log(logger, logging.INFO, "model loaded", version=cfg.model_version, arch=cfg.arch, runtime="onnxruntime",
+                seconds=round(time.time() - t0, 2))
         except FileNotFoundError as e:
             self.load_error = f"model artefacts not found: {e.filename}"
             log(logger, logging.ERROR, "model not loaded", error=self.load_error)
@@ -147,20 +151,20 @@ class ModelService:
             self.load_error = f"{type(e).__name__}: {e}"
             log(logger, logging.ERROR, "model not loaded", error=self.load_error)
 
-    def _require(self) -> tuple[torch.nn.Module, ServingConfig]:
-        if self.model is None or self.cfg is None:
+    def _require(self) -> ServingConfig:
+        if self.session is None or self.cfg is None:
             raise ServiceUnavailableError("The diagnosis model is not loaded.", details={"reason": self.load_error})
-        return self.model, self.cfg
+        return self.cfg
 
-    @torch.no_grad()
     def predict(self, images: list[Image.Image]) -> list[dict]:
-        model, cfg = self._require()
-        views = [model_view(im, cfg.img_size) for im in images]
-        x = torch.stack([to_tensor(v) for v in views]).to(self.device)
+        cfg = self._require()
+        x = np.stack([to_array(model_view(im, cfg.img_size)) for im in images])
         t0 = time.perf_counter()
-        logits = model(x).float().cpu()
+        (logits,) = self.session.run(["logits"], {"input": x})
         latency_ms = (time.perf_counter() - t0) * 1000 / len(images)
-        probs = torch.softmax(logits / cfg.temperature, dim=1).numpy()
+        z = logits.astype(np.float64) / cfg.temperature
+        z -= z.max(1, keepdims=True)
+        probs = np.exp(z) / np.exp(z).sum(1, keepdims=True)
         return [self._interpret(p, latency_ms) for p in probs]
 
     def _interpret(self, p: np.ndarray, latency_ms: float) -> dict:
@@ -190,10 +194,12 @@ class ModelService:
         }
 
     def explain(self, image: Image.Image, class_idx: int) -> tuple[bytes, bytes, bytes]:
-        model, cfg = self._require()
+        cfg = self._require()
         view = model_view(image, cfg.img_size)
-        cam = self.cam(to_tensor(view)[None].to(self.device), class_idx)
-        heat, overlay = render(cam, view)
+        (cam_all,) = self.session.run(["cam"], {"input": to_array(view)[None]})
+        cam = np.maximum(cam_all[0, class_idx], 0)
+        cam = (cam - cam.min()) / (cam.max() - cam.min()) if cam.max() > cam.min() else np.zeros_like(cam)
+        heat, overlay = render(cam.astype(np.float32), view)
         buf = io.BytesIO()
         v = view.copy()
         v.thumbnail((448, 448))

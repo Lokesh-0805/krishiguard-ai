@@ -79,6 +79,11 @@ Grad-CAM (Selvaraju et al., 2017) on the predicted class: EfficientNet `bn2` (po
 `layer4`, ViT `blocks[-1].norm1` tokens reshaped to the 14×14 patch grid. Computed on the exact centre crop the model
 sees and shown as model-input / heatmap / overlay. Presented as a sanity check, not as proof.
 
+**Serving:** the API runs the model with ONNX Runtime (`ml/evaluation/export_onnx.py`). The ONNX graph also outputs
+class activation maps (CAM = classifier weights × last feature map); because EfficientNet-B0 ends in global average
+pooling + one linear layer, CAM equals Grad-CAM up to a constant factor. The export script verifies ONNX vs PyTorch
+(identical predictions on 105 test images, max logit difference 1e-5) and CAM vs Grad-CAM (correlation > 0.9999).
+
 ## 9. Evaluation metrics
 Accuracy, macro and weighted precision/recall/F1, per-class precision/recall/F1/support, raw and row-normalised
 confusion matrices, top-3 accuracy, crop-level accuracy, ECE, selective accuracy & coverage at τ, unrecognized rate,

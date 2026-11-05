@@ -54,5 +54,14 @@
   "parameters_m": 4.06,
   "size_mb": 16.5,
   "selected_because": "argmax mean(validation macro-F1, external-validation macro-F1); ties within 0.005 broken by CPU latency. Test and external-test sets were not used for selection.",
-  "created_at": "2026-11-05T17:51:42+00:00"
+  "created_at": "2026-11-05T17:51:42+00:00",
+  "onnx": "model.onnx",
+  "onnx_sha256": "f36261c847fdcf98a990a5232a0cd9844cb86b55fe86d17636e117394b6d7c39",
+  "explanation_method": "CAM (equivalent to Grad-CAM at the last feature map for GAP + linear head)",
+  "onnx_verification": {
+    "images": 105,
+    "max_abs_logit_diff": 1.0251998901367188e-05,
+    "argmax_agreement": 1.0,
+    "cam_vs_gradcam_min_correlation": 0.9999999999983686
+  }
 }

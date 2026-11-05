@@ -21,7 +21,7 @@ and **Methodology / About** pages.
 | Layer | Stack |
 |---|---|
 | Deep learning | PyTorch 2, `timm` (EfficientNet-B0, ImageNet-pretrained), scikit-learn metrics, MLflow (experiment tracking), Optuna (small hyper-parameter search) |
-| Backend | FastAPI, Pydantic, SQLAlchemy (PostgreSQL, SQLite fallback), slowapi rate limiting, JSON logging |
+| Backend | FastAPI, ONNX Runtime (model inference, CAM heat-maps), Pydantic, SQLAlchemy (PostgreSQL, SQLite fallback), slowapi rate limiting, JSON logging |
 | Frontend | Next.js 16, React 19, TypeScript, Tailwind CSS 4, shadcn/ui, Lucide icons, Recharts |
 | Testing | pytest, Vitest + Testing Library, Playwright (desktop + mobile browser E2E) |
 | Deployment | Dockerfiles for frontend and backend, docker-compose with Postgres |
@@ -103,13 +103,13 @@ download the report, then open **Model performance**.
 
 Docker alternative: `cp .env.example .env && docker compose up --build`.
 
-**Free online deployment:** frontend on **Vercel** (root directory `frontend`, env `BACKEND_URL`) + backend on a
-**Hugging Face Space** (`scripts/deploy_hf_space.py`). Step-by-step: [docs/DEPLOYMENT_GUIDE.md](docs/DEPLOYMENT_GUIDE.md).
+**Free online deployment:** everything on **Vercel** — the API as a Python function (`index.py`, ONNX runtime, no
+PyTorch) and the website from `frontend/`. Step-by-step: [docs/DEPLOYMENT_GUIDE.md](docs/DEPLOYMENT_GUIDE.md).
 
 ### Tests (all passing on 2026-11-05)
 
 ```bash
-cd backend  && ../.venv/bin/python -m pytest   # 33 passed: preprocessing, model, API, real-model integration
+cd backend  && ../.venv/bin/python -m pytest   # 34 passed: preprocessing, ONNX model, CAM = Grad-CAM, API, real-model integration
 cd frontend && npm test                         # 6 passed: Vitest component tests
 cd frontend && npx playwright test              # 8 passed: full journey on desktop + mobile (servers must be running)
 ```
@@ -156,7 +156,7 @@ krishiguard-ai/
 | ResNet-50 and Vision Transformer comparison | Not trained (only a 1-epoch ResNet-50 learning-rate probe was run). The training script supports them (`--arch resnet50`, `--arch vit_small_patch16_224.augreg_in21k_ft_in1k`). |
 | EfficientNet-B2, domain adaptation with PlantDoc images | Not run; stages exist in `ml/training/run_experiments.py`. |
 | Docker images | Dockerfiles and compose written and validated (`docker compose config`), **not built** (Docker daemon not running, low disk). |
-| Public cloud deployment | Prepared (Vercel + Hugging Face Space files and guide) but not deployed — needs your Vercel/HF accounts. |
+| Public cloud deployment | Prepared for Vercel (API + website, free plan); deploy steps in the deployment guide. |
 
 ## Documentation
 

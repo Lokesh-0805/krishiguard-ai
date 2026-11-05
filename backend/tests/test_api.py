@@ -22,7 +22,7 @@ def test_predict_success_with_explanation(client):
     assert b["prediction_id"] and len(b["top_k"]) == 3
     assert b["status"] in {"confident", "uncertain", "unrecognized"}
     if b["status"] != "unrecognized":
-        assert b["explanation"]["method"] == "Grad-CAM" and len(b["explanation"]["overlay_png"]) > 100
+        assert b["explanation"]["method"].startswith("CAM") and len(b["explanation"]["overlay_png"]) > 100
     if b["status"] != "confident":
         assert b["advisory"] is None  # never attach treatment advice to an uncertain guess
 

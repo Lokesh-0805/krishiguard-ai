@@ -7,7 +7,7 @@ import torch
 from PIL import Image, ImageFilter
 
 from app.core.errors import InvalidImageError, PayloadTooLargeError, UnsupportedMediaError
-from app.ml.inference import blur_score, decode_upload, model_view, to_tensor
+from app.ml.inference import blur_score, decode_upload, model_view, to_array
 from tests.conftest import ROOT, jpeg_bytes
 
 KW = dict(max_bytes=8 * 1024 * 1024, allowed=("image/jpeg", "image/png", "image/webp"), min_side=64)
@@ -19,7 +19,7 @@ def test_matches_training_eval_transform():
     from common import eval_transform
 
     img = Image.open(io.BytesIO(jpeg_bytes((517, 389)))).convert("RGB")
-    ours = to_tensor(model_view(img, 224))
+    ours = torch.from_numpy(to_array(model_view(img, 224)))
     ref = eval_transform(224)(img)
     assert ours.shape == ref.shape == (3, 224, 224)
     assert torch.allclose(ours, ref, atol=1e-5)

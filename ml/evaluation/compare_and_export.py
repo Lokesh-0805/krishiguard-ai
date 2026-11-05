@@ -191,7 +191,7 @@ def gradcam_examples(ck, card):
     from PIL import Image
 
     from app.ml.gradcam import GradCAM, render
-    from app.ml.inference import model_view, to_tensor
+    from app.ml.inference import model_view, to_array
 
     model = build_model(ck["arch"], len(ck["classes"]), pretrained=False)
     model.load_state_dict(ck["state_dict"]); model.eval()
@@ -204,7 +204,7 @@ def gradcam_examples(ck, card):
     for r, p in enumerate(picks):
         img = Image.open(RAW / p).convert("RGB")
         view = model_view(img, card["img_size"])
-        x = to_tensor(view)[None]
+        x = torch.from_numpy(to_array(view))[None]
         with torch.no_grad():
             pr = torch.softmax(model(x) / card["temperature"], 1)[0]
         k = int(pr.argmax())

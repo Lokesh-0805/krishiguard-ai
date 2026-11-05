@@ -38,18 +38,26 @@ def jpeg_bytes(size=(320, 280), color=(40, 140, 60), noise=True, fmt="JPEG") -> 
 
 @pytest.fixture(scope="session")
 def fake_serving(tmp_path_factory) -> Path:
+    """Randomly initialised EfficientNet-B0 exported to ONNX exactly like the real model (logits + CAM outputs)."""
     import timm
     import torch
 
+    sys.path.insert(0, str(ROOT / "ml/evaluation"))
+    sys.path.insert(0, str(ROOT / "ml/training"))
+    from export_onnx import LogitsAndCam
+
     d = tmp_path_factory.mktemp("serving")
     torch.manual_seed(0)
-    m = timm.create_model("efficientnet_b0", pretrained=False, num_classes=len(CLASSES))
-    torch.save(m.state_dict(), d / "model.pt")
+    m = timm.create_model("efficientnet_b0", pretrained=False, num_classes=len(CLASSES)).eval()
+    torch.onnx.export(LogitsAndCam(m).eval(), (torch.randn(1, 3, 224, 224),), str(d / "model.onnx"),
+                      input_names=["input"], output_names=["logits", "cam"],
+                      dynamic_axes={"input": {0: "batch"}, "logits": {0: "batch"}, "cam": {0: "batch"}},
+                      opset_version=17, dynamo=False)
     card = {
         "model_version": "test@00000000", "run_name": "test", "arch": "efficientnet_b0", "img_size": 224, "classes": CLASSES,
         "temperature": 1.0, "confidence_threshold": 0.6, "reject_threshold": 0.2, "blur_threshold": 5.0,
-        "checkpoint": "model.pt", "checkpoint_sha256": hashlib.sha256((d / "model.pt").read_bytes()).hexdigest(),
-        "gradcam_target_layer": "bn2",
+        "checkpoint": "model.pt", "checkpoint_sha256": "", "onnx": "model.onnx",
+        "onnx_sha256": hashlib.sha256((d / "model.onnx").read_bytes()).hexdigest(), "gradcam_target_layer": "bn2",
     }
     (d / "model_card.json").write_text(json.dumps(card))
     return d

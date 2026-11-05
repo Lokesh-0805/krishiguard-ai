@@ -14,6 +14,7 @@ ml/experiments/logs/
 *.onnx
 # the small exported serving model (16.5 MB) IS kept so the app runs without retraining
 !ml/artifacts/serving/model.pt
+!ml/artifacts/serving/model.onnx
 # --- python ---
 .venv/
 __pycache__/

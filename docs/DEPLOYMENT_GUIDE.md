@@ -43,32 +43,41 @@ cd frontend && npm ci && npm run build && npm start      # http://localhost:3000
 Without Postgres the API still diagnoses (health = `degraded`, feedback returns 503). For a quick local DB use
 `KG_DATABASE_URL=sqlite:///./krishiguard.db`.
 
-## Recommended free deployment: Vercel (frontend) + Hugging Face Spaces (backend)
+## Recommended free deployment: everything on Vercel (Hobby plan, no credit card)
 
-Vercel cannot host the backend (its Python functions are limited to ~250 MB, PyTorch alone is larger), so the API
-runs on a free Hugging Face Docker Space (2 vCPU / 16 GB RAM) and Vercel proxies `/api/*` to it.
+The app is deployed as **two Vercel projects from the same GitHub repository**:
 
-**1. Backend → Hugging Face Space**
-1. Create a free account at https://huggingface.co and a **write** token at https://huggingface.co/settings/tokens.
-2. From the project folder:
-   ```bash
-   export HF_TOKEN=hf_xxxxxxxx
-   .venv/bin/python scripts/deploy_hf_space.py <your-hf-username>/krishiguard-api
-   ```
-   This uploads only what the API needs (`backend/app`, advisory, the 16.5 MB model, metrics) using
-   `infrastructure/hf-space/Dockerfile`. The first build takes ~5–10 minutes (watch the logs on the Space page).
-3. Check `https://<your-hf-username>-krishiguard-api.hf.space/api/health` → `"model_loaded": true`.
+| Project | Root Directory | What it runs |
+|---|---|---|
+| `krishiguard-api` | `.` (repository root) | FastAPI as a Python function (`index.py`, auto-detected). Inference uses **onnxruntime** (`ml/artifacts/serving/model.onnx`) — no PyTorch — so the function is ~150 MB instead of > 1 GB. |
+| `krishiguard-ai` (web) | `frontend` | Next.js site; `/api/*` and `/docs` are proxied to the API project. |
 
-**2. Frontend → Vercel**
-1. Push the repository to GitHub, then on https://vercel.com → *Add New Project* → import the repo.
-2. **Root Directory:** `frontend` (framework is detected as Next.js; keep default build settings).
-3. **Environment variable:** `BACKEND_URL = https://<your-hf-username>-krishiguard-api.hf.space` (no trailing slash).
-   It is used at build time by the `/api/*` rewrite, so redeploy after changing it.
-4. Deploy and open the Vercel URL.
+Files used by the API project: `index.py`, `requirements.txt`, `.python-version` (3.12), `vercel.json`
+(function max duration 60 s) and `.vercelignore` (keeps datasets, frontend, docs and training code out of the upload).
 
-Notes: the free Space sleeps after ~48 h without traffic — open the health URL a minute before a demo to wake it.
-The Space uses SQLite in `/tmp`, so feedback/prediction logs reset on restart (fine for a demo). Large phone photos
-are downscaled in the browser to 1,600 px before upload, keeping requests under Vercel's ~4.5 MB proxy limit.
+**1. API project**
+1. https://vercel.com → *Add New → Project* → import `krishiguard-ai` from GitHub.
+2. Project name `krishiguard-api`; **Root Directory: leave as `./`**; Framework preset: *FastAPI* (or *Other*).
+3. Deploy. Check `https://krishiguard-api.vercel.app/api/health` → `"model_loaded": true` (use the domain Vercel shows).
+
+**2. Web project**
+1. *Add New → Project* → import the **same** repository again.
+2. Project name e.g. `krishiguard-ai`; **Root Directory: `frontend`** (Next.js is detected).
+3. Environment variable `BACKEND_URL` = the API URL from step 1 (e.g. `https://krishiguard-api.vercel.app`, no trailing slash).
+4. Deploy and open the site.
+
+Both projects redeploy automatically on every `git push`. If `BACKEND_URL` changes, redeploy the web project
+(it is read at build time).
+
+**Free-plan behaviour**
+* No sleeping: the first request after a quiet period takes a few seconds (cold start: model load ≈ 1–2 s),
+  later requests ~50 ms of inference.
+* Uploads larger than ~4.5 MB would exceed Vercel's request limit, so the browser downscales photos to 1,600 px first.
+* The API uses SQLite in `/tmp` on Vercel, so feedback/prediction logs are temporary (fine for a demo). Set
+  `KG_DATABASE_URL` in the API project's environment variables to a free hosted Postgres (e.g. Neon) to keep them.
+* Heat-maps are computed as **CAM** inside the ONNX graph. For EfficientNet-B0 (global average pooling + linear
+  head) this equals Grad-CAM up to scale; `ml/evaluation/export_onnx.py` verifies it (correlation 0.99999999) and
+  that ONNX predictions match PyTorch on 105 test images (max logit difference 1e-5).
 
 ## Cloud deployment options
 

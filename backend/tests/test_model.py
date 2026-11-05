@@ -43,6 +43,23 @@ def test_status_thresholds(svc):
     assert svc._interpret(p, 1.0)["status"] == "unrecognized"
 
 
+def test_cam_matches_gradcam(svc, fake_serving):
+    """The API's ONNX CAM must equal gradient-based Grad-CAM (GAP + linear head)."""
+    import timm
+
+    from app.ml.inference import model_view, to_array
+
+    img = Image.open(io.BytesIO(jpeg_bytes())).convert("RGB")
+    x = to_array(model_view(img, 224))[None]
+    (cam,) = svc.session.run(["cam"], {"input": x})
+    torch.manual_seed(0)
+    m = timm.create_model("efficientnet_b0", pretrained=False, num_classes=len(CLASSES)).eval()
+    g = GradCAM(m, "bn2")(torch.from_numpy(x), 3)
+    c = np.maximum(cam[0, 3], 0)
+    c = (c - c.min()) / (c.max() - c.min())
+    assert np.corrcoef(g.ravel(), c.ravel())[0, 1] > 0.999
+
+
 def test_gradcam_cnn(svc):
     img = Image.open(io.BytesIO(jpeg_bytes())).convert("RGB")
     model_in, heat, overlay = svc.explain(img, 3)
@@ -63,7 +80,7 @@ def test_checksum_mismatch_refuses_to_load(fake_serving, tmp_path):
     d = tmp_path / "s"
     shutil.copytree(fake_serving, d)
     card = json.loads((d / "model_card.json").read_text())
-    card["checkpoint_sha256"] = "0" * 64
+    card["onnx_sha256"] = "0" * 64
     (d / "model_card.json").write_text(json.dumps(card))
     s = ModelService(d)
     s.load()

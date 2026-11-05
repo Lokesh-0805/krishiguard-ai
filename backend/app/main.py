@@ -1,8 +1,6 @@
 """KrishiGuard AI — FastAPI application."""
 from __future__ import annotations
 
-import hashlib
-import json
 import logging
 import time
 import uuid
@@ -20,51 +18,16 @@ from app.core.config import get_settings
 from app.core.errors import AppError, app_error_handler
 from app.core.logging import log, setup_logging
 from app.core.ratelimit import limiter
-from app.db.models import AdvisorySnapshot, EvaluationRun, ModelVersion
-from app.db.session import Database
-from app.ml.inference import ModelService
-from app.services.advisory import AdvisoryStore
+from app.bootstrap import init_state
 
 settings = get_settings()
 setup_logging(settings.log_level)
 logger = logging.getLogger("krishiguard")
 
 
-def _register_metadata(app: FastAPI) -> None:
-    """Record model version, evaluation summary and advisory snapshot (idempotent)."""
-    session = app.state.db.session()
-    if session is None:
-        return
-    try:
-        with session:
-            m = app.state.model
-            if m.ready and session.get(ModelVersion, m.cfg.model_version) is None:
-                session.add(ModelVersion(version=m.cfg.model_version, arch=m.cfg.arch, checkpoint_sha256=m.cfg.checkpoint_sha256,
-                                         card={**m.cfg.extra, "classes": m.cfg.classes, "temperature": m.cfg.temperature}))
-                session.flush()
-            summary = settings.evaluation_dir / "summary.json"
-            if m.ready and summary.exists():
-                raw = summary.read_bytes()
-                digest = hashlib.sha256(raw).hexdigest()
-                if session.query(EvaluationRun).filter_by(summary_sha256=digest).first() is None:
-                    session.add(EvaluationRun(model_version=m.cfg.model_version, summary_sha256=digest, metrics=json.loads(raw)))
-            a = app.state.advisory
-            if a is not None and session.get(AdvisorySnapshot, a.version_hash) is None:
-                session.add(AdvisorySnapshot(version_hash=a.version_hash, version=a.version,
-                                             content=json.loads(settings.advisory_path.read_text())))
-            session.commit()
-    except Exception as e:  # noqa: BLE001
-        log(logger, logging.WARNING, "metadata registration failed", error=repr(e))
-
-
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    app.state.model = ModelService(settings.serving_dir, settings.device, settings.torch_threads)
-    app.state.model.load()
-    app.state.advisory = AdvisoryStore(settings.advisory_path)
-    app.state.db = Database(settings.database_url)
-    app.state.db.connect()
-    _register_metadata(app)
+    init_state(app)  # also done lazily on first request for serverless runtimes without lifespan events
     yield
 
 

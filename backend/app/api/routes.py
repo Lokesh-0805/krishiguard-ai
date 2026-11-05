@@ -5,6 +5,7 @@ import logging
 
 from fastapi import APIRouter, File, Form, Query, Request, UploadFile
 
+from app.bootstrap import init_state
 from app.api.schemas import BatchItemError, BatchOut, FeedbackIn, FeedbackOut, HealthOut, PredictionOut
 from app.core.config import get_settings
 from app.core.errors import AppError, InvalidImageError, NotFoundError, ServiceUnavailableError
@@ -35,6 +36,7 @@ STATUS_MESSAGES = {
 
 
 def _svc(request: Request):
+    init_state(request.app)
     return request.app.state.model, request.app.state.advisory, request.app.state.db
 
 
@@ -95,7 +97,7 @@ def _build_prediction(request: Request, upload_bytes: bytes, content_type: str |
         model_in, heat, overlay = model.explain(img.image, r["class_index"])
         b64 = lambda b: base64.b64encode(b).decode()  # noqa: E731
         explanation = {
-            "method": "Grad-CAM",
+            "method": "CAM (equivalent to Grad-CAM for this model)",
             "target_layer": cfg.gradcam_target_layer or "default",
             "model_input_png": b64(model_in),
             "heatmap_png": b64(heat),

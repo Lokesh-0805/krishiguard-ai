@@ -11,11 +11,10 @@ import io
 import threading
 
 import numpy as np
-import torch
 from PIL import Image
 
 
-def resolve_module(model: torch.nn.Module, dotted: str) -> torch.nn.Module:
+def resolve_module(model, dotted: str):
     m = model
     for part in dotted.split("."):
         m = m[int(part)] if part.isdigit() else getattr(m, part)
@@ -33,7 +32,10 @@ def default_target_layer(arch: str) -> str:
 
 
 class GradCAM:
-    def __init__(self, model: torch.nn.Module, target: str, num_prefix_tokens: int = 0):
+    """Gradient-based Grad-CAM (needs PyTorch). Used offline by the ML scripts and tests; the API serves the
+    equivalent CAM from the ONNX graph instead (see inference.ModelService.explain)."""
+
+    def __init__(self, model, target: str, num_prefix_tokens: int = 0):
         self.model = model
         if ".-1" in target:  # allow "blocks.-1.norm1"
             head, tail = target.split(".-1", 1)
@@ -45,7 +47,9 @@ class GradCAM:
         self.prefix = num_prefix_tokens
         self._lock = threading.Lock()  # hooks are stateful -> one explanation at a time
 
-    def __call__(self, x: torch.Tensor, class_idx: int) -> np.ndarray:
+    def __call__(self, x, class_idx: int) -> np.ndarray:
+        import torch
+
         acts, grads = {}, {}
 
         def fwd_hook(_, __, out):
