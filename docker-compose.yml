@@ -1,0 +1,43 @@
+name: krishiguard
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-krishiguard}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: ${POSTGRES_DB:-krishiguard}
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-krishiguard} -d ${POSTGRES_DB:-krishiguard}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  backend:
+    build: { context: ., dockerfile: backend/Dockerfile }
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      KG_DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-krishiguard}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-krishiguard}
+    depends_on:
+      db: { condition: service_healthy }
+    expose: ["8000"]
+    deploy:
+      resources:
+        limits: { memory: 2g }
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      args: { BACKEND_URL: "http://backend:8000" }
+    depends_on:
+      backend: { condition: service_healthy }
+    ports: ["3000:3000"]
+    restart: unless-stopped
+
+volumes:
+  pgdata:

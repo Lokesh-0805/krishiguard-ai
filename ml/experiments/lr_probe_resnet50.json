@@ -1,0 +1,37 @@
+{
+  "arch": "resnet50",
+  "samples": 6000,
+  "results": {
+    "0.001": {
+      "epoch": 1,
+      "train_loss": 3.09466552734375,
+      "train_acc": 0.44017379679144386,
+      "val_loss": 2.1328725814819336,
+      "val_accuracy": 0.5946666666666667,
+      "val_macro_f1": 0.3998113722645691,
+      "val_weighted_f1": 0.5651503767771234,
+      "extval_accuracy": 0.10151187904967603,
+      "extval_macro_f1": 0.06740438772172518,
+      "extval_weighted_f1": 0.08312037225503716,
+      "epoch_seconds": 370.61219596862793,
+      "lr_head": 0.0,
+      "mean_macro_f1": 0.23360787999314714
+    },
+    "0.003": {
+      "epoch": 1,
+      "train_loss": 2.13050801486255,
+      "train_acc": 0.6811497326203209,
+      "val_loss": 0.6093789935112,
+      "val_accuracy": 0.8846666666666667,
+      "val_macro_f1": 0.8634483711282869,
+      "val_weighted_f1": 0.8829473859191774,
+      "extval_accuracy": 0.19222462203023757,
+      "extval_macro_f1": 0.17134183981981718,
+      "extval_weighted_f1": 0.19084523040268833,
+      "epoch_seconds": 399.5594642162323,
+      "lr_head": 0.0,
+      "mean_macro_f1": 0.517395105474052
+    }
+  },
+  "best_lr": 0.003
+}

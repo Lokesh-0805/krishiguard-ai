@@ -1,0 +1,12 @@
+                                        precision    recall  f1-score   support
+
+                 Tomato___Early_blight     0.3165    0.5592    0.4042      1200
+                  Tomato___Late_blight     0.3495    0.6725    0.4600      1200
+                    Tomato___Leaf_Mold     0.9636    0.0442    0.0845      1200
+           Tomato___Septoria_leaf_spot     0.4963    0.1108    0.1812      1200
+Tomato___Tomato_Yellow_Leaf_Curl_Virus     0.7896    0.2033    0.3234      1200
+                      Tomato___healthy     0.0000    0.0000    0.0000      1200
+
+                             micro avg     0.3768    0.2650    0.3112      7200
+                             macro avg     0.4859    0.2650    0.2422      7200
+                          weighted avg     0.4859    0.2650    0.2422      7200

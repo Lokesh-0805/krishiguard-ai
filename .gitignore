@@ -1,0 +1,32 @@
+# --- data & large artefacts (never committed) ---
+ml/datasets/raw/
+ml/datasets/processed/
+ml/datasets/metadata/image_index.csv
+ml/artifacts/models/
+ml/artifacts/evaluation/*/logits.npz
+ml/experiments/mlflow.db
+ml/experiments/mlartifacts/
+ml/experiments/optuna.db
+ml/experiments/logs/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+# the small exported serving model (16.5 MB) IS kept so the app runs without retraining
+!ml/artifacts/serving/model.pt
+# --- python ---
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# --- node ---
+frontend/node_modules/
+frontend/.next/
+frontend/test-results/
+frontend/playwright-report/
+# --- env / os ---
+.env
+.env.*
+!.env.example
+.DS_Store
+backend/krishiguard_demo.db

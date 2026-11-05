@@ -1,0 +1,81 @@
+{
+  "datasets": {
+    "plantvillage": {
+      "name": "PlantVillage (color subset)",
+      "role": "training / validation / internal test",
+      "source_url": "https://github.com/spMohanty/PlantVillage-Dataset",
+      "source_path": "raw/color",
+      "source_commit": "7f7ecc7e1eaca78107e3affe7cb5abd9427e139a",
+      "acquisition": "git partial clone (--filter=blob:none) + sparse-checkout raw/color; git metadata removed after checkout",
+      "license": "CC BY-SA 3.0 (declared in repository README_HF.md front-matter)",
+      "citation": "Mohanty, Hughes, Salathe (2016) Using deep learning for image-based plant disease detection. Front. Plant Sci. 7:1419. doi:10.3389/fpls.2016.01419",
+      "download_date": "2026-11-04",
+      "archive_name": null,
+      "extraction_location": "ml/datasets/raw/plantvillage/color",
+      "auxiliary_files": [
+        "leaf-map.json (image -> physical leaf id, used for leakage-free splitting)",
+        "README.md",
+        "README_HF.md",
+        "CITATION.cff"
+      ],
+      "image_count_expected": 54305,
+      "class_count": 38,
+      "image_count_verified": 54305,
+      "corrupt_images": 0,
+      "processing_status": "indexed, deduplicated, split manifests written",
+      "processed_on": "2026-11-04"
+    },
+    "plantdoc": {
+      "name": "PlantDoc (classification release)",
+      "role": "external test (real-world, cluttered backgrounds)",
+      "source_url": "https://github.com/pratikkayal/PlantDoc-Dataset",
+      "source_commit": "5467f6012d78d1c446145d5f582da6096f852ae8",
+      "acquisition": "git clone --depth 1; git metadata removed",
+      "license": "CC BY 4.0 (LICENSE.txt in repository)",
+      "citation": "Singh et al. (2020) PlantDoc: A Dataset for Visual Plant Disease Detection. CODS-COMAD 2020. doi:10.1145/3371158.3371196",
+      "download_date": "2026-11-04",
+      "archive_name": null,
+      "extraction_location": "ml/datasets/raw/plantdoc",
+      "image_count_expected": 2572,
+      "class_count": 28,
+      "label_mapping": "all 28 classes mapped onto PlantVillage classes (see class_mapping.json -> external_label_maps.plantdoc)",
+      "image_count_verified": 2572,
+      "corrupt_images": 0,
+      "processing_status": "indexed, deduplicated, split manifests written",
+      "processed_on": "2026-11-04"
+    },
+    "tomato_pk_field": {
+      "name": "Tomato Leaf Disease Classification Dataset in Pakistan (Mendeley Data 3mbnb82mxd)",
+      "role": "external test (smartphone field images, tomato only)",
+      "source_url": "https://data.mendeley.com/datasets/3mbnb82mxd",
+      "download_url": "https://data.mendeley.com/public-files/datasets/3mbnb82mxd/files/0a6c3bb6-5241-43e3-bc3a-f2e4be91fcfe/file_downloaded",
+      "license": "CC BY 4.0 (Mendeley record + License.txt in archive)",
+      "download_date": "2026-11-04",
+      "archive_name": "Tomato_Leaf_Dataset.zip",
+      "archive_sha256": "66380c1621a1b9fc6d60413f8ad41ec565778d1ef2c06729949387218c244c3c",
+      "extraction_location": "ml/datasets/raw/field_images/tomato_pakistan_mendeley/Tomato_Leaf_Dataset",
+      "image_count_expected": 7200,
+      "class_count": 6,
+      "label_mapping": "6 classes mapped onto PlantVillage tomato classes (class_mapping.json -> external_label_maps.tomato_pk_field)",
+      "image_count_verified": 7200,
+      "corrupt_images": 0,
+      "processing_status": "indexed, deduplicated, split manifests written",
+      "processed_on": "2026-11-04"
+    }
+  },
+  "not_acquired": {
+    "plant_pathology_2020_fgvc7": {
+      "reason": "Hosted only as a Kaggle competition (login + rules acceptance required); no Kaggle API token on this machine",
+      "url": "https://www.kaggle.com/c/plant-pathology-2020-fgvc7",
+      "optional": true
+    }
+  },
+  "splits": {
+    "train": "ml/datasets/processed/train/manifest.csv",
+    "validation": "ml/datasets/processed/validation/manifest.csv",
+    "test": "ml/datasets/processed/test/manifest.csv",
+    "external_validation": "ml/datasets/processed/external_validation/manifest.csv",
+    "domain_train": "ml/datasets/processed/domain_train/manifest.csv",
+    "external_test": "ml/datasets/processed/external_test/manifest.csv"
+  }
+}

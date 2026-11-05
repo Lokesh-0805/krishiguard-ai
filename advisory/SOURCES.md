@@ -1,0 +1,71 @@
+# KrishiGuard AI - Advisory Sources
+
+Sources cited in `diseases.json`. Every URL below was fetched successfully on the date shown (PDFs were downloaded and their text extracted for review). Pages that failed to load (e.g. ICAR-CPRI, ICAR-IIMR, ICAR-NRC Grapes and UMN Extension, which were unreachable or returned errors on the fetch date) are **not** cited.
+
+Dosages, concentrations and spray schedules present in some sources were deliberately **not** copied into the advisory; only active-ingredient / product-type names are used, each attributed to its source.
+
+| # | Title | Publisher | URL | Fetched | Used for (class ids) |
+|---|---|---|---|---|---|
+| 1 | Apple scab (Venturia inaequalis) | TNAU Agritech Portal, Tamil Nadu Agricultural University | https://agritech.tnau.ac.in/crop_protection/apple_1.html | 2026-11-04 | `Apple___Apple_scab` |
+| 2 | AESA based IPM Package - Apple | NIPHM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India | https://niphm.gov.in/IPMPackages/Apple.pdf | 2026-11-04 | `Apple___Apple_scab`, `Apple___Black_rot`, `Apple___healthy` |
+| 3 | Frogeye leaf spot and black rot on Apple | UNH Extension, University of New Hampshire | https://extension.unh.edu/resource/frogeye-leaf-spot-black-rot-apple-0 | 2026-11-04 | `Apple___Black_rot`, `Apple___healthy` |
+| 4 | Leaf Spots of Bother: The Troublesome 3 | NC State Extension (Southern Appalachian Apples) | https://apples.ces.ncsu.edu/news/leaf-spots-of-bother-the-troublesome-3/ | 2026-11-04 | `Apple___Black_rot` |
+| 5 | Cedar Apple Rust (Apple Pathology Factsheets) | NC State Extension Publications | https://content.ces.ncsu.edu/cedar-apple-rusts | 2026-11-04 | `Apple___Cedar_apple_rust` |
+| 6 | Blueberry (HGIC 1401) | Clemson Cooperative Extension, Home & Garden Information Center | https://hgic.clemson.edu/factsheet/blueberry/ | 2026-11-04 | `Blueberry___healthy` |
+| 7 | Powdery Mildew - Cherry Pest Management Guidelines | UC Statewide IPM Program, University of California | https://ipm.ucanr.edu/agriculture/cherry/powdery-mildew/ | 2026-11-04 | `Cherry_(including_sour)___Powdery_mildew`, `Cherry_(including_sour)___healthy` |
+| 8 | AESA based IPM Package - Cherry | NIPHM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India | https://niphm.gov.in/IPMPackages/Cherry.pdf | 2026-11-04 | `Cherry_(including_sour)___Powdery_mildew`, `Cherry_(including_sour)___healthy` |
+| 9 | Gray Leaf Spot of Corn | Crop Protection Network (US land-grant universities) | https://cropprotectionnetwork.org/encyclopedia/gray-leaf-spot-of-corn | 2026-11-04 | `Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot` |
+| 10 | Fungicide Efficacy for Control of Corn Diseases (CPN-2011-W) | Crop Protection Network, Corn Disease Working Group | https://crop-protection-network.s3.amazonaws.com/publications/fungicide-efficacy-for-control-of-corn-diseases-filename-2021-02-23-174247.pdf | 2026-11-04 | `Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot`, `Corn_(maize)___Common_rust_`, `Corn_(maize)___Northern_Leaf_Blight` |
+| 11 | Common Rust of Corn | Crop Protection Network (US land-grant universities) | https://cropprotectionnetwork.org/encyclopedia/common-rust-of-corn | 2026-11-04 | `Corn_(maize)___Common_rust_` |
+| 12 | Integrated Pest Management Package for Maize | ICAR-NCIPM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India (hosted by NIPHM) | https://niphm.gov.in/IPMPackages/Maize.pdf | 2026-11-04 | `Corn_(maize)___Common_rust_`, `Corn_(maize)___Northern_Leaf_Blight`, `Corn_(maize)___healthy` |
+| 13 | Turcicum leaf blight of maize (Exserohilum turcicum) | TNAU Agritech Portal, Tamil Nadu Agricultural University | https://agritech.tnau.ac.in/crop_protection/maize_disease/maize_4.html | 2026-11-04 | `Corn_(maize)___Northern_Leaf_Blight` |
+| 14 | Northern Corn Leaf Blight of Corn | Crop Protection Network (US land-grant universities) | https://cropprotectionnetwork.org/encyclopedia/northern-corn-leaf-blight-of-corn | 2026-11-04 | `Corn_(maize)___Northern_Leaf_Blight`, `Corn_(maize)___healthy` |
+| 15 | Black Rot (grape) | The Ohio State University, CFAES (Ohio Grape Web) | https://ohiograpeweb.cfaes.ohio-state.edu/ipm/diseases/black-rot | 2026-11-04 | `Grape___Black_rot`, `Grape___healthy` |
+| 16 | Grapes - Diseases | National Horticulture Board, Govt. of India | https://www.nhb.gov.in/pdf/fruits/grape/gra002.pdf | 2026-11-04 | `Grape___Black_rot` |
+| 17 | AESA based IPM Package - Grapes | NIPHM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India | https://niphm.gov.in/IPMPackages/Grapes.pdf | 2026-11-04 | `Grape___Black_rot`, `Grape___healthy` |
+| 18 | Esca (Black Measles) - Grape Pest Management Guidelines | UC Statewide IPM Program, University of California | https://ipm.ucanr.edu/agriculture/grape/esca-black-measles/ | 2026-11-04 | `Grape___Esca_(Black_Measles)` |
+| 19 | Measles (grape) - home garden | UC Statewide IPM Program, University of California | https://ipm.ucanr.edu/PMG/GARDEN/FRUIT/DISEASE/measles.html | 2026-11-04 | `Grape___Esca_(Black_Measles)` |
+| 20 | "To do list" for post-harvest vineyard management in Florida (fact sheet) | Florida A&M University, Center for Viticulture and Small Fruit Research | https://cafs.famu.edu/departments-and-centers/research/center-for-viticulture-and-small-fruit-research/pdf/Post-Harvest-Vineyard-Management-fact-sheet.pdf | 2026-11-04 | `Grape___Esca_(Black_Measles)`, `Grape___Leaf_blight_(Isariopsis_Leaf_Spot)` |
+| 21 | Leaf Spots of Grapes - Scouting Guide for Problems of Fruit | University of Kentucky, Martin-Gatton CAFE | https://fruitscout.mgcafe.uky.edu/leaf-spots-grapes | 2026-11-04 | `Grape___Leaf_blight_(Isariopsis_Leaf_Spot)` |
+| 22 | AESA based IPM Package - Citrus | NIPHM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India | https://niphm.gov.in/IPMPackages/Citrus.pdf | 2026-11-04 | `Orange___Haunglongbing_(Citrus_greening)` |
+| 23 | Asian Citrus Psyllid and Huanglongbing Disease (Pest Notes 74155) | UC Statewide IPM Program, University of California | https://ipm.ucanr.edu/legacy_assets/PDF/PESTNOTES/pnasiancitruspsyllid.pdf | 2026-11-04 | `Orange___Haunglongbing_(Citrus_greening)` |
+| 24 | Bacterial Spot Treatment in Peaches (ANR-2962) | Alabama Cooperative Extension System | https://www.aces.edu/wp-content/uploads/2025/03/ANR-2962_BacterialSpotTreatmentinPeaches_081925L.pdf | 2026-11-04 | `Peach___Bacterial_spot` |
+| 25 | Bacterial Spot of Stone Fruits (PLPATH-FRU-38) | Ohio State University Extension (Ohioline) | https://ohioline.osu.edu/factsheet/plpath-fru-38 | 2026-11-04 | `Peach___Bacterial_spot`, `Peach___healthy` |
+| 26 | AESA based IPM Package - Peach | NIPHM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India | https://niphm.gov.in/IPMPackages/Peach.pdf | 2026-11-04 | `Peach___healthy` |
+| 27 | Bacterial Spot in Peppers and Tomatoes | Alabama Cooperative Extension System | https://www.aces.edu/?p=57992 | 2026-11-04 | `Pepper,_bell___Bacterial_spot`, `Pepper,_bell___healthy`, `Tomato___Bacterial_spot` |
+| 28 | Bacterial Spot - Tomato Pest Management Guidelines | UC Statewide IPM Program, University of California | https://ipm.ucanr.edu/PMG/r783101711.html | 2026-11-04 | `Pepper,_bell___Bacterial_spot`, `Tomato___Bacterial_spot` |
+| 29 | Potato - Early blight (Alternaria solani) | KAU Agri-Infotech Portal, Kerala Agricultural University | https://celkau.in/crops/vegetables/potato/earlybight.php | 2026-11-04 | `Potato___Early_blight` |
+| 30 | Early Blight of Potato (PP1892) | NDSU Extension, North Dakota State University | https://www.ndsu.edu/agriculture/ag-hub/publications/early-blight-potato | 2026-11-04 | `Potato___Early_blight`, `Potato___healthy` |
+| 31 | Late blight of potato (Phytophthora infestans) | TNAU Agritech Portal, Tamil Nadu Agricultural University | https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_veg_potato_1.html | 2026-11-04 | `Potato___Late_blight`, `Potato___healthy` |
+| 32 | Growing Raspberries in Wisconsin (A1610) | University of Wisconsin-Madison Extension | https://hort.extension.wisc.edu/files/2023/12/A1610.pdf | 2026-11-04 | `Raspberry___healthy` |
+| 33 | AESA based IPM Package - Raspberry | NIPHM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India | https://niphm.gov.in/IPMPackages/Raspberry.pdf | 2026-11-04 | `Raspberry___healthy` |
+| 34 | Crop protection :: IPM :: Soybean | TNAU Agritech Portal, Tamil Nadu Agricultural University | https://agritech.tnau.ac.in/crop_protection/crop_prot_ipm_soybean.html | 2026-11-04 | `Soybean___healthy` |
+| 35 | Powdery Mildew - Cucurbits Pest Management Guidelines | UC Statewide IPM Program, University of California | https://ipm.ucanr.edu/agriculture/cucurbits/powdery-mildew | 2026-11-04 | `Squash___Powdery_mildew` |
+| 36 | Leaf Scorch of Strawberry | NC State Extension Publications | https://content.ces.ncsu.edu/leaf-scorch-of-strawberry | 2026-11-04 | `Strawberry___Leaf_scorch` |
+| 37 | Strawberry Leaf Diseases (PLPATH-FRU-35) | Ohio State University Extension (Ohioline) | https://ohioline.osu.edu/factsheet/plpath-fru-35 | 2026-11-04 | `Strawberry___Leaf_scorch`, `Strawberry___healthy` |
+| 38 | Strawberry (Fragaria spp.) - Leaf Scorch | Pacific Northwest Plant Disease Management Handbook (OSU, WSU, UI) | https://pnwhandbooks.org/plantdisease/host-disease/strawberry-fragaria-spp-leaf-scorch | 2026-11-04 | `Strawberry___Leaf_scorch` |
+| 39 | AESA based IPM Package - Strawberry | NIPHM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India | https://niphm.gov.in/IPMPackages/Strawberry.pdf | 2026-11-04 | `Strawberry___healthy` |
+| 40 | AESA based IPM Package - Tomato | NIPHM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India | https://www.niphm.gov.in/IPMPackages/Tomato.pdf | 2026-11-04 | `Tomato___Bacterial_spot`, `Tomato___Early_blight`, `Tomato___Late_blight`, `Tomato___Septoria_leaf_spot`, `Tomato___Spider_mites Two-spotted_spider_mite`, `Tomato___Tomato_Yellow_Leaf_Curl_Virus`, `Tomato___Tomato_mosaic_virus`, `Tomato___healthy` |
+| 41 | Early blight of tomato (Alternaria solani) | TNAU Agritech Portal, Tamil Nadu Agricultural University | https://agritech.tnau.ac.in/crop_protection/tomato_diseases_2.html | 2026-11-04 | `Tomato___Early_blight`, `Tomato___healthy` |
+| 42 | Late blight of tomato (Phytophthora infestans) | TNAU Agritech Portal, Tamil Nadu Agricultural University | https://agritech.tnau.ac.in/crop_protection/tomato_diseases_8.html | 2026-11-04 | `Tomato___Late_blight` |
+| 43 | Tomato Leaf Mold | UConn Extension IPM, University of Connecticut | https://ipm.cahnr.uconn.edu/?p=15437 | 2026-11-04 | `Tomato___Leaf_Mold` |
+| 44 | Tomato leaf mould (Fact sheet 076) | Pacific Pests, Pathogens, Weeds & Pesticides (Pacific Community / ACIAR) | https://apps.lucidcentral.org/pppw_v12/text/web_mini/entities/tomato_leaf_mould_076.htm | 2026-11-04 | `Tomato___Leaf_Mold` |
+| 45 | Septoria leaf spot of tomato | TNAU Agritech Portal, Tamil Nadu Agricultural University | https://agritech.tnau.ac.in/crop_protection/tomato_diseases_4.html | 2026-11-04 | `Tomato___Septoria_leaf_spot` |
+| 46 | Spider Mites - Pest Notes | UC Statewide IPM Program, University of California | https://ipm.ucanr.edu/PMG/PESTNOTES/pn7405.html | 2026-11-04 | `Tomato___Spider_mites Two-spotted_spider_mite` |
+| 47 | Tomato target spot (Fact sheet 163) | Pacific Pests, Pathogens, Weeds & Pesticides (Pacific Community / ACIAR) | https://apps.lucidcentral.org/pppw_v12/text/web_full/entities/tomato_target_spot_163.htm | 2026-11-04 | `Tomato___Target_Spot` |
+| 48 | An overview of target spot of tomato caused by Corynespora cassiicola (Acta Horticulturae 808, 2009) | Schlub et al., via LSU Digital Commons | https://repository.lsu.edu/plantcrop_pubs/105 | 2026-11-04 | `Tomato___Target_Spot` |
+| 49 | Tomato leaf curl (Tomato leaf curl virus) | TNAU Agritech Portal, Tamil Nadu Agricultural University | https://agritech.tnau.ac.in/crop_protection/tomato_diseases_6.html | 2026-11-04 | `Tomato___Tomato_Yellow_Leaf_Curl_Virus` |
+| 50 | Tomato Yellow Leaf Curl - Tomato Pest Management Guidelines | UC Statewide IPM Program, University of California | https://ipm.ucanr.edu/agriculture/tomato/tomato-yellow-leaf-curl/ | 2026-11-04 | `Tomato___Tomato_Yellow_Leaf_Curl_Virus` |
+| 51 | Tomato Mosaic - Vegetable Disease Facts | The Ohio State University, Dept. of Plant Pathology | https://u.osu.edu/vegetablediseasefacts/?p=1269 | 2026-11-04 | `Tomato___Tomato_mosaic_virus` |
+
+## Notes on use
+
+- **Healthy classes**: general good-practice care tips (sanitation, resistant varieties, spacing, irrigation, monitoring) taken from the crop's IPM package or extension guide listed against that class.
+- **NIPHM AESA-based IPM packages** (Govt. of India): used for Indian context, resistant varieties, cultural/biological practices and the active-ingredient options for Indian conditions.
+- **TNAU Agritech pages**: used for pathogen, symptoms, favourable conditions and active-ingredient options for tomato, potato, maize and apple.
+- **University extension / Crop Protection Network / Pacific Pests pages**: used where Indian sources did not cover a disease (e.g. cedar apple rust, gray leaf spot, leaf mold, target spot, strawberry leaf scorch, esca, grape leaf blight, squash powdery mildew, peach bacterial spot).
+- **Viral diseases and HLB**: sources were used only for vector (whitefly / psyllid) control options; all state there is no cure for the pathogen itself.
+
+## Post-review edit (lead engineer, 2026-11-04)
+- `Tomato___Bacterial_spot`: streptocycline (streptomycin + tetracycline) was changed from an option to a **do-not-use warning** after finding the Government of India draft order prohibiting this antibiotic combination in agriculture (complete ban proposed from 1 Jan 2024). Source: https://www.downtoearth.org.in/agriculture/union-agriculture-ministry-prohibits-use-of-tb-antibiotics-on-crops-80785 (fetched 2026-11-04). Final gazette status was not verified, so the conservative wording was chosen.
+- Registration status of other actives (e.g. zineb) can change; every chemical list ends with the CIB&RC registration / label / KVK instruction. See docs/LIMITATIONS.md.

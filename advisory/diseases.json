@@ -1,0 +1,3535 @@
+{
+  "version": "1.0.0",
+  "last_reviewed": "2026-11-04",
+  "disclaimer": {
+    "en": "This advice is general information compiled from Indian government, agricultural university and extension sources. It is not a substitute for expert diagnosis. The photo-based result can be wrong - confirm the problem with your local Krishi Vigyan Kendra (KVK), agriculture officer or state agricultural university before taking costly action.",
+    "hi": "यह सलाह भारत सरकार, कृषि विश्वविद्यालयों और कृषि विस्तार स्रोतों से ली गई सामान्य जानकारी है। यह विशेषज्ञ की जाँच की जगह नहीं ले सकती। फोटो से मिला नतीजा गलत भी हो सकता है - कोई महंगा कदम उठाने से पहले अपने नज़दीकी कृषि विज्ञान केंद्र (KVK), कृषि अधिकारी या राज्य कृषि विश्वविद्यालय से समस्या की पुष्टि ज़रूर करें।"
+  },
+  "chemical_label_notice": {
+    "en": "Chemical names are listed only as options reported by the cited sources - not as a prescription. Use only products registered by CIB&RC for this crop in India, read and follow the product label exactly (dose, timing, waiting period before harvest, safety gear), never mix or overdose products on your own, and consult your local KVK or agriculture officer before spraying.",
+    "hi": "दवाओं के नाम केवल दिए गए स्रोतों में बताए गए विकल्पों के रूप में लिखे हैं - यह कोई नुस्खा नहीं है। भारत में इस फसल के लिए CIB&RC द्वारा पंजीकृत दवा ही इस्तेमाल करें, दवा के लेबल को पढ़कर उसका ठीक-ठीक पालन करें (मात्रा, समय, तुड़ाई से पहले का इंतज़ार, सुरक्षा उपकरण), अपनी मर्ज़ी से दवाएँ न मिलाएँ और न ही ज़्यादा मात्रा डालें, और छिड़काव से पहले अपने नज़दीकी KVK या कृषि अधिकारी से सलाह लें।"
+  },
+  "diseases": [
+    {
+      "id": "Apple___Apple_scab",
+      "slug": "apple-apple-scab",
+      "crop": {
+        "en": "Apple",
+        "hi": "सेब"
+      },
+      "name": {
+        "en": "Apple scab",
+        "hi": "सेब का स्कैब (पपड़ी रोग)"
+      },
+      "healthy": false,
+      "pathogen_type": "fungus",
+      "scientific_name": "Venturia inaequalis",
+      "summary": {
+        "en": "Apple scab is a fungal disease that causes olive-green to black, velvety spots on leaves and rough, corky black spots on fruit. Severe attacks curl and distort leaves and make fruit unfit for market.",
+        "hi": "सेब का स्कैब एक फफूंद रोग है, जिसमें पत्तियों पर जैतूनी-हरे से काले, मखमली धब्बे और फलों पर खुरदरे, काले, कॉर्क जैसे धब्बे बनते हैं। ज़्यादा प्रकोप में पत्तियाँ मुड़कर बिगड़ जाती हैं और फल बिकने लायक नहीं रहते।"
+      },
+      "symptoms": {
+        "en": [
+          "Olive-green spots on the underside of leaves that turn brown to black and feel velvety.",
+          "Spots on young leaves have feathery, spreading edges; on older leaves they are sharper.",
+          "Badly infected leaves curl, stay small and become distorted.",
+          "Fruit shows small, rough, black round spots whose centres later become corky."
+        ],
+        "hi": [
+          "पत्तियों की निचली सतह पर जैतूनी-हरे धब्बे, जो बाद में भूरे से काले और मखमली हो जाते हैं।",
+          "नई पत्तियों पर धब्बों के किनारे पंख जैसे फैले होते हैं; पुरानी पत्तियों पर धब्बे साफ़ किनारे वाले होते हैं।",
+          "ज़्यादा संक्रमित पत्तियाँ मुड़ जाती हैं, छोटी रह जाती हैं और उनका आकार बिगड़ जाता है।",
+          "फलों पर छोटे, खुरदरे, काले गोल धब्बे बनते हैं, जिनका बीच का हिस्सा बाद में कॉर्क जैसा सख्त हो जाता है।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Caused by the fungus Venturia inaequalis.",
+          "The fungus survives the winter in fallen infected leaves; spores from these leaves start new infections in spring.",
+          "Wet, rainy weather during leaf opening and flowering favours infection."
+        ],
+        "hi": [
+          "यह रोग Venturia inaequalis नाम की फफूंद से होता है।",
+          "फफूंद ज़मीन पर गिरी संक्रमित पत्तियों में सर्दी बिताती है; वसंत में इन्हीं पत्तियों से निकले बीजाणु नया संक्रमण शुरू करते हैं।",
+          "पत्तियाँ खुलने और फूल आने के समय बारिश और नमी वाला मौसम संक्रमण को बढ़ाता है।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Keep the orchard clean: collect and destroy fallen leaves and pruned material in winter.",
+          "Grow scab-resistant or tolerant varieties where available (NIPHM lists varieties such as Prima, Florina, Firdous, Shireen and others).",
+          "Prune trees properly so that air moves freely and leaves dry quickly.",
+          "Use healthy, disease-free planting material."
+        ],
+        "hi": [
+          "बाग़ को साफ़ रखें: सर्दियों में गिरी पत्तियाँ और छँटाई की टहनियाँ इकट्ठा करके नष्ट करें।",
+          "जहाँ मिलें, स्कैब-रोधी या सहनशील किस्में लगाएँ (NIPHM ने Prima, Florina, Firdous, Shireen जैसी किस्मों का ज़िक्र किया है)।",
+          "पेड़ों की सही छँटाई करें ताकि हवा आसानी से चले और पत्तियाँ जल्दी सूखें।",
+          "रोग-मुक्त, स्वस्थ पौध सामग्री का इस्तेमाल करें।"
+        ]
+      },
+      "organic_treatment": {
+        "en": [
+          "Sanitation is the main non-chemical tool: burn or bury infected leaf litter so fewer spores are available next season.",
+          "Sulphur-based fungicide is among the options listed by NIPHM; it is a protectant and may help reduce new infections.",
+          "Pruning and trimming for an open canopy (NIPHM) helps leaves dry faster and may reduce disease."
+        ],
+        "hi": [
+          "साफ़-सफ़ाई सबसे ज़रूरी गैर-रासायनिक उपाय है: संक्रमित गिरी पत्तियों को जलाएँ या दबा दें ताकि अगले मौसम में कम बीजाणु बनें।",
+          "NIPHM द्वारा बताए गए विकल्पों में सल्फर आधारित फफूंदनाशक भी है; यह बचाव करता है और नए संक्रमण कम करने में मदद कर सकता है।",
+          "पेड़ को खुला रखने के लिए छँटाई (NIPHM) से पत्तियाँ जल्दी सूखती हैं और रोग कम हो सकता है।"
+        ]
+      },
+      "chemical_treatment": {
+        "en": [
+          "Protective fungicide options reported by TNAU and NIPHM include mancozeb, captan, dodine and ziram.",
+          "Systemic options reported by NIPHM include myclobutanil, difenoconazole, hexaconazole, penconazole and carbendazim.",
+          "Protection is most important from bud break through flowering and early fruit set; alternate fungicide groups to slow resistance.",
+          "Use only products registered for this crop in India (CIB&RC), follow the product label exactly, and consult your local KVK or agriculture officer before spraying."
+        ],
+        "hi": [
+          "TNAU और NIPHM द्वारा बताए गए बचाव वाले फफूंदनाशक विकल्प: mancozeb, captan, dodine और ziram।",
+          "NIPHM द्वारा बताए गए सिस्टमिक विकल्प: myclobutanil, difenoconazole, hexaconazole, penconazole और carbendazim।",
+          "कली खुलने से लेकर फूल आने और फल बनने की शुरुआत तक बचाव सबसे ज़रूरी है; प्रतिरोध से बचने के लिए अलग-अलग समूह की दवाएँ बदल-बदल कर इस्तेमाल करें।",
+          "भारत में इस फसल के लिए CIB&RC द्वारा पंजीकृत (रजिस्टर्ड) दवा ही इस्तेमाल करें, दवा के लेबल पर लिखे निर्देशों का ठीक-ठीक पालन करें, और छिड़काव से पहले अपने नज़दीकी KVK या कृषि अधिकारी से सलाह लें।"
+        ],
+        "active_ingredients": [
+          "mancozeb",
+          "captan",
+          "dodine",
+          "ziram",
+          "myclobutanil",
+          "difenoconazole",
+          "hexaconazole",
+          "penconazole",
+          "carbendazim",
+          "sulphur"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Apple scab (Venturia inaequalis)",
+          "publisher": "TNAU Agritech Portal, Tamil Nadu Agricultural University",
+          "url": "https://agritech.tnau.ac.in/crop_protection/apple_1.html",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "AESA based IPM Package - Apple",
+          "publisher": "NIPHM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India",
+          "url": "https://niphm.gov.in/IPMPackages/Apple.pdf",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Apple___Black_rot",
+      "slug": "apple-black-rot",
+      "crop": {
+        "en": "Apple",
+        "hi": "सेब"
+      },
+      "name": {
+        "en": "Black rot (frogeye leaf spot)",
+        "hi": "काला सड़न (फ्रॉगआई पत्ती धब्बा)"
+      },
+      "healthy": false,
+      "pathogen_type": "fungus",
+      "scientific_name": "Botryosphaeria obtusa",
+      "summary": {
+        "en": "Black rot is a fungal disease that causes 'frogeye' leaf spots, a black rot of fruit and cankers on branches. It is worse on stressed or injured trees and in wet weather.",
+        "hi": "काला सड़न एक फफूंद रोग है, जिससे पत्तियों पर 'मेंढक की आँख' जैसे धब्बे, फलों में काली सड़न और डालियों पर कैंकर (घाव) बनते हैं। कमज़ोर या चोट लगे पेड़ों पर और गीले मौसम में यह ज़्यादा होता है।"
+      },
+      "symptoms": {
+        "en": [
+          "Small purple flecks on leaves that grow into round spots with a tan/brown centre and purple border (frogeye).",
+          "Tiny black dots (fungal fruiting bodies) may appear in the centre of older leaf spots.",
+          "Fruit rot often starts at the calyx (flower) end, turns black or brown with rings, and fruit may dry into a mummy.",
+          "Sunken reddish-brown cankers on limbs; heavily spotted leaves turn yellow and drop."
+        ],
+        "hi": [
+          "पत्तियों पर छोटे बैंगनी बिंदु, जो बढ़कर भूरे बीच और बैंगनी किनारे वाले गोल धब्बे बन जाते हैं (मेंढक की आँख जैसे)।",
+          "पुराने धब्बों के बीच में छोटे काले दाने (फफूंद के बीजाणु-घर) दिख सकते हैं।",
+          "फल की सड़न अक्सर फूल वाले सिरे से शुरू होती है, काली या भूरी छल्लेदार हो जाती है, और फल सूखकर ममी बन सकता है।",
+          "डालियों पर धँसे हुए लाल-भूरे कैंकर; ज़्यादा धब्बे वाली पत्तियाँ पीली होकर गिर जाती हैं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Caused by the fungus Botryosphaeria obtusa.",
+          "The fungus survives in cankers, dead wood and mummified fruit and releases spores through the season.",
+          "Long wet periods, high humidity and warm temperatures favour infection.",
+          "Trees stressed by drought, winter injury, poor nutrition or wounds are more likely to be attacked."
+        ],
+        "hi": [
+          "यह रोग Botryosphaeria obtusa फफूंद से होता है।",
+          "फफूंद कैंकर, सूखी लकड़ी और ममी बने फलों में जीवित रहती है और पूरे मौसम बीजाणु छोड़ती है।",
+          "लंबे समय तक नमी, ज़्यादा आर्द्रता और गर्म तापमान संक्रमण को बढ़ाते हैं।",
+          "सूखे, ठंड की चोट, कम पोषण या घाव से कमज़ोर पेड़ों पर रोग ज़्यादा लगता है।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Prune out dead and cankered branches in the dormant season and remove mummified fruit and fruit stems.",
+          "Remove fallen leaves and debris from the orchard floor.",
+          "Avoid mechanical injury during pruning and other work.",
+          "Keep trees vigorous with balanced fertilizer and watering to reduce stress."
+        ],
+        "hi": [
+          "सुप्त मौसम (पत्तियाँ न होने पर) में सूखी और कैंकर वाली डालियाँ काट दें, और ममी बने फल व फल के डंठल हटा दें।",
+          "बाग़ की ज़मीन से गिरी पत्तियाँ और कचरा हटा दें।",
+          "छँटाई और दूसरे कामों के समय पेड़ को चोट न पहुँचाएँ।",
+          "संतुलित खाद और सिंचाई से पेड़ों को मज़बूत रखें ताकि तनाव कम हो।"
+        ]
+      },
+      "organic_treatment": {
+        "en": [
+          "Removing infection sources (cankers, mummies, dead wood) is the most important organic step.",
+          "Trichoderma viride or T. harzianum applied with neem cake is an option reported by NIPHM for black rot/canker; it may help reduce disease."
+        ],
+        "hi": [
+          "संक्रमण के स्रोत (कैंकर, ममी फल, सूखी लकड़ी) हटाना सबसे ज़रूरी जैविक उपाय है।",
+          "काला सड़न/कैंकर के लिए NIPHM ने नीम खली के साथ Trichoderma viride या T. harzianum देने का विकल्प बताया है; यह रोग कम करने में मदद कर सकता है।"
+        ]
+      },
+      "chemical_treatment": {
+        "en": [
+          "Fungicide options reported by NC State Extension for frogeye leaf spot and black rot include captan, ziram and thiophanate-methyl, and some DMI (triazole) fungicides.",
+          "UNH Extension advises early-season protection, with more frequent cover in wet seasons.",
+          "Use only products registered for this crop in India (CIB&RC), follow the product label exactly, and consult your local KVK or agriculture officer before spraying."
+        ],
+        "hi": [
+          "NC State Extension द्वारा फ्रॉगआई पत्ती धब्बा और काला सड़न के लिए बताए गए विकल्प: captan, ziram, thiophanate-methyl और कुछ DMI (ट्राइएज़ोल) फफूंदनाशक।",
+          "UNH Extension के अनुसार मौसम की शुरुआत में बचाव ज़रूरी है, और बरसात वाले मौसम में ज़्यादा ध्यान दें।",
+          "भारत में इस फसल के लिए CIB&RC द्वारा पंजीकृत (रजिस्टर्ड) दवा ही इस्तेमाल करें, दवा के लेबल पर लिखे निर्देशों का ठीक-ठीक पालन करें, और छिड़काव से पहले अपने नज़दीकी KVK या कृषि अधिकारी से सलाह लें।"
+        ],
+        "active_ingredients": [
+          "captan",
+          "ziram",
+          "thiophanate-methyl"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Frogeye leaf spot and black rot on Apple",
+          "publisher": "UNH Extension, University of New Hampshire",
+          "url": "https://extension.unh.edu/resource/frogeye-leaf-spot-black-rot-apple-0",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Leaf Spots of Bother: The Troublesome 3",
+          "publisher": "NC State Extension (Southern Appalachian Apples)",
+          "url": "https://apples.ces.ncsu.edu/news/leaf-spots-of-bother-the-troublesome-3/",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "AESA based IPM Package - Apple",
+          "publisher": "NIPHM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India",
+          "url": "https://niphm.gov.in/IPMPackages/Apple.pdf",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Apple___Cedar_apple_rust",
+      "slug": "apple-cedar-apple-rust",
+      "crop": {
+        "en": "Apple",
+        "hi": "सेब"
+      },
+      "name": {
+        "en": "Cedar apple rust",
+        "hi": "सीडर-सेब रतुआ (रस्ट)"
+      },
+      "healthy": false,
+      "pathogen_type": "fungus",
+      "scientific_name": "Gymnosporangium juniperi-virginianae",
+      "summary": {
+        "en": "Cedar apple rust is a fungal disease that needs two hosts: juniper/cedar trees and apple. It causes bright yellow-orange spots on apple leaves and fruit and can cause early leaf drop; it only occurs where suitable juniper hosts grow nearby.",
+        "hi": "सीडर-सेब रतुआ एक फफूंद रोग है जिसे दो पौधों की ज़रूरत होती है: जुनिपर/सीडर पेड़ और सेब। इससे सेब की पत्तियों और फलों पर चमकीले पीले-नारंगी धब्बे बनते हैं और पत्तियाँ जल्दी गिर सकती हैं; यह तभी होता है जब पास में जुनिपर जैसे पेड़ हों।"
+      },
+      "symptoms": {
+        "en": [
+          "Yellow to bright orange round spots on the upper side of apple leaves.",
+          "Small tufts or tube-like structures form on the leaf underside, below each spot.",
+          "Slightly raised orange spots on fruit that may later crack and turn brown.",
+          "On nearby junipers, brown galls produce orange jelly-like horns after spring rain."
+        ],
+        "hi": [
+          "सेब की पत्तियों की ऊपरी सतह पर पीले से चमकीले नारंगी गोल धब्बे।",
+          "हर धब्बे के ठीक नीचे पत्ती की निचली सतह पर छोटे गुच्छे या नली जैसी संरचनाएँ बनती हैं।",
+          "फलों पर हल्के उभरे नारंगी धब्बे, जो बाद में फट कर भूरे हो सकते हैं।",
+          "पास के जुनिपर पेड़ों पर भूरी गाँठें बनती हैं, जिनसे वसंत की बारिश के बाद नारंगी जेली जैसे सींग निकलते हैं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Caused by the fungus Gymnosporangium juniperi-virginianae.",
+          "The fungus spends part of its life on juniper/cedar; spores from galls are blown by wind to apple trees.",
+          "Spring rain with mild temperatures favours spore release; young leaves and fruit around flowering are most at risk.",
+          "Spores from apple do not re-infect apple, so the disease depends on nearby juniper hosts."
+        ],
+        "hi": [
+          "यह रोग Gymnosporangium juniperi-virginianae फफूंद से होता है।",
+          "फफूंद अपना कुछ जीवन जुनिपर/सीडर पर बिताती है; गाँठों से निकले बीजाणु हवा से सेब तक पहुँचते हैं।",
+          "हल्के तापमान के साथ वसंत की बारिश में बीजाणु ज़्यादा निकलते हैं; फूल आने के समय नई पत्तियाँ और फल सबसे ज़्यादा खतरे में होते हैं।",
+          "सेब से निकले बीजाणु दोबारा सेब को संक्रमित नहीं करते, इसलिए यह रोग पास के जुनिपर पेड़ों पर निर्भर है।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Plant resistant apple varieties where possible (NC State lists Red Delicious, McIntosh and Liberty as resistant).",
+          "Avoid planting apple close to juniper/cedar trees; removing nearby alternate hosts breaks the disease cycle.",
+          "Inspect nearby junipers and remove galls where practical."
+        ],
+        "hi": [
+          "जहाँ संभव हो रोग-रोधी किस्में लगाएँ (NC State ने Red Delicious, McIntosh और Liberty को रोधी बताया है)।",
+          "सेब को जुनिपर/सीडर पेड़ों के पास न लगाएँ; पास के दूसरे मेज़बान पेड़ हटाने से रोग का चक्र टूटता है।",
+          "पास के जुनिपर पेड़ों की जाँच करें और जहाँ संभव हो गाँठें हटा दें।"
+        ]
+      },
+      "organic_treatment": {
+        "en": [
+          "No organic spray was named by NC State Extension; non-chemical control relies on resistant varieties and removing nearby juniper hosts or their galls."
+        ],
+        "hi": [
+          "NC State Extension ने कोई जैविक छिड़काव नहीं बताया; गैर-रासायनिक नियंत्रण रोग-रोधी किस्मों और पास के जुनिपर पेड़ों या उनकी गाँठों को हटाने पर निर्भर है।"
+        ]
+      },
+      "chemical_treatment": {
+        "en": [
+          "Fungicide options reported by NC State Extension: sterol-inhibitor (triazole) fungicides such as myclobutanil, fenbuconazole, triflumizole and flutriafol work best; mancozeb is also listed.",
+          "Protection is needed mainly from the pink-bud/tight-cluster stage until shortly after petal fall, often together with scab sprays.",
+          "Use only products registered for this crop in India (CIB&RC), follow the product label exactly, and consult your local KVK or agriculture officer before spraying."
+        ],
+        "hi": [
+          "NC State Extension द्वारा बताए गए विकल्प: स्टेरॉल-इनहिबिटर (ट्राइएज़ोल) फफूंदनाशक जैसे myclobutanil, fenbuconazole, triflumizole और flutriafol सबसे असरदार हैं; mancozeb भी सूची में है।",
+          "बचाव मुख्य रूप से कली गुलाबी होने से लेकर पंखुड़ियाँ गिरने के कुछ समय बाद तक ज़रूरी है, अक्सर स्कैब के छिड़काव के साथ।",
+          "भारत में इस फसल के लिए CIB&RC द्वारा पंजीकृत (रजिस्टर्ड) दवा ही इस्तेमाल करें, दवा के लेबल पर लिखे निर्देशों का ठीक-ठीक पालन करें, और छिड़काव से पहले अपने नज़दीकी KVK या कृषि अधिकारी से सलाह लें।"
+        ],
+        "active_ingredients": [
+          "myclobutanil",
+          "fenbuconazole",
+          "triflumizole",
+          "flutriafol",
+          "mancozeb"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Cedar Apple Rust (Apple Pathology Factsheets)",
+          "publisher": "NC State Extension Publications",
+          "url": "https://content.ces.ncsu.edu/cedar-apple-rusts",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Apple___healthy",
+      "slug": "apple-healthy",
+      "crop": {
+        "en": "Apple",
+        "hi": "सेब"
+      },
+      "name": {
+        "en": "Healthy",
+        "hi": "स्वस्थ"
+      },
+      "healthy": true,
+      "pathogen_type": "none",
+      "scientific_name": null,
+      "summary": {
+        "en": "The apple leaf looks healthy with no visible disease. Keep up good orchard care and regular checks so problems are caught early.",
+        "hi": "सेब की पत्ती स्वस्थ दिख रही है और कोई रोग नज़र नहीं आ रहा। बाग़ की अच्छी देखभाल और नियमित जाँच जारी रखें ताकि कोई समस्या जल्दी पकड़ में आए।"
+      },
+      "symptoms": {
+        "en": [
+          "Uniform green colour with no spots, rings, rust-coloured patches or velvety growth.",
+          "Leaf is flat and normal in size, without curling or distortion.",
+          "No holes, yellowing or early leaf drop on the tree."
+        ],
+        "hi": [
+          "पत्ती एक जैसी हरी है, उस पर कोई धब्बा, छल्ला, जंग जैसे निशान या मखमली परत नहीं है।",
+          "पत्ती सपाट और सामान्य आकार की है, मुड़ी या बिगड़ी हुई नहीं।",
+          "पेड़ पर छेद, पीलापन या समय से पहले पत्ती गिरना नहीं दिख रहा।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Wet weather during spring growth raises the risk of scab and other leaf diseases.",
+          "Fallen leaves, mummified fruit and dead wood can carry disease into the next season.",
+          "Stressed or injured trees are more easily attacked."
+        ],
+        "hi": [
+          "वसंत में बढ़वार के समय गीला मौसम स्कैब और दूसरे पत्ती रोगों का खतरा बढ़ाता है।",
+          "गिरी पत्तियाँ, सूखे (ममी) फल और सूखी लकड़ी रोग को अगले मौसम तक ले जा सकते हैं।",
+          "कमज़ोर या चोट लगे पेड़ों पर रोग आसानी से लगता है।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Collect and destroy fallen leaves and prunings in winter.",
+          "Prune for an open canopy and remove dead or cankered wood.",
+          "Use healthy planting material and resistant varieties where available.",
+          "Give balanced nutrition based on soil test and check the orchard every week."
+        ],
+        "hi": [
+          "सर्दियों में गिरी पत्तियाँ और छँटाई की टहनियाँ इकट्ठा करके नष्ट करें।",
+          "पेड़ को खुला रखने के लिए छँटाई करें और सूखी या कैंकर वाली लकड़ी हटाएँ।",
+          "स्वस्थ पौध सामग्री और जहाँ मिलें रोग-रोधी किस्में लगाएँ।",
+          "मिट्टी जाँच के आधार पर संतुलित खाद दें और हर हफ़्ते बाग़ की जाँच करें।"
+        ]
+      },
+      "organic_treatment": null,
+      "chemical_treatment": null,
+      "sources": [
+        {
+          "title": "AESA based IPM Package - Apple",
+          "publisher": "NIPHM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India",
+          "url": "https://niphm.gov.in/IPMPackages/Apple.pdf",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Frogeye leaf spot and black rot on Apple",
+          "publisher": "UNH Extension, University of New Hampshire",
+          "url": "https://extension.unh.edu/resource/frogeye-leaf-spot-black-rot-apple-0",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Blueberry___healthy",
+      "slug": "blueberry-healthy",
+      "crop": {
+        "en": "Blueberry",
+        "hi": "ब्लूबेरी"
+      },
+      "name": {
+        "en": "Healthy",
+        "hi": "स्वस्थ"
+      },
+      "healthy": true,
+      "pathogen_type": "none",
+      "scientific_name": null,
+      "summary": {
+        "en": "The blueberry leaf looks healthy. Blueberries need acidic, well-drained soil rich in organic matter; good site and soil care keeps plants strong.",
+        "hi": "ब्लूबेरी की पत्ती स्वस्थ दिख रही है। ब्लूबेरी को अम्लीय (खट्टी), अच्छे जल-निकास वाली और जैविक पदार्थ से भरपूर मिट्टी चाहिए; सही जगह और मिट्टी की देखभाल से पौधे मज़बूत रहते हैं।"
+      },
+      "symptoms": {
+        "en": [
+          "Leaves are evenly green with no spots or patches.",
+          "No yellowing between the veins, which can point to soil problems.",
+          "New shoots grow normally without wilting or dieback."
+        ],
+        "hi": [
+          "पत्तियाँ एक जैसी हरी हैं, कोई धब्बा या चकत्ता नहीं।",
+          "नसों के बीच पीलापन नहीं है, जो मिट्टी की समस्या का संकेत हो सकता है।",
+          "नई टहनियाँ सामान्य रूप से बढ़ रही हैं, मुरझाना या ऊपर से सूखना नहीं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Soil that is not acidic enough, or heavy, poorly drained soil, stresses plants.",
+          "Too much fertilizer easily damages blueberry plants.",
+          "Leaf spots, fruit rots, root rot and grey mould are common problems to watch for."
+        ],
+        "hi": [
+          "कम अम्लीय मिट्टी या भारी, पानी रुकने वाली मिट्टी पौधों पर तनाव डालती है।",
+          "ज़्यादा खाद ब्लूबेरी के पौधों को आसानी से नुकसान पहुँचाती है।",
+          "पत्ती धब्बे, फल सड़न, जड़ सड़न और ग्रे मोल्ड आम समस्याएँ हैं जिन पर नज़र रखें।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Get a soil test before planting and grow only in acidic, well-drained soil; use raised beds on heavy soil.",
+          "Mulch with pine bark, pine needles or similar organic material.",
+          "Water regularly in dry spells but avoid waterlogging.",
+          "Fertilize lightly and prune during the dormant season."
+        ],
+        "hi": [
+          "लगाने से पहले मिट्टी की जाँच कराएँ और केवल अम्लीय, अच्छे जल-निकास वाली मिट्टी में लगाएँ; भारी मिट्टी में ऊँची क्यारी बनाएँ।",
+          "चीड़ की छाल, चीड़ की पत्तियाँ या ऐसी जैविक मल्च बिछाएँ।",
+          "सूखे समय में नियमित सिंचाई करें, पर पानी जमा न होने दें।",
+          "हल्की खाद दें और सुप्त मौसम में छँटाई करें।"
+        ]
+      },
+      "organic_treatment": null,
+      "chemical_treatment": null,
+      "sources": [
+        {
+          "title": "Blueberry (HGIC 1401)",
+          "publisher": "Clemson Cooperative Extension, Home & Garden Information Center",
+          "url": "https://hgic.clemson.edu/factsheet/blueberry/",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Cherry_(including_sour)___Powdery_mildew",
+      "slug": "cherry-powdery-mildew",
+      "crop": {
+        "en": "Cherry (including sour)",
+        "hi": "चेरी (खट्टी चेरी सहित)"
+      },
+      "name": {
+        "en": "Powdery mildew",
+        "hi": "पाउडरी मिल्ड्यू (सफेद चूर्ण रोग)"
+      },
+      "healthy": false,
+      "pathogen_type": "fungus",
+      "scientific_name": "Podosphaera clandestina",
+      "summary": {
+        "en": "Powdery mildew is a fungal disease that forms a white, powdery or web-like growth on cherry leaves, shoots and fruit. It is worst on new growth and can make fruit unmarketable.",
+        "hi": "पाउडरी मिल्ड्यू एक फफूंद रोग है, जिसमें चेरी की पत्तियों, टहनियों और फलों पर सफेद पाउडर या जाले जैसी परत बन जाती है। यह नई बढ़वार पर सबसे ज़्यादा होता है और फल बिकने लायक नहीं रहते।"
+      },
+      "symptoms": {
+        "en": [
+          "White, powdery or web-like patches on leaves, often first on leaves inside the canopy.",
+          "Patches join and can cover the whole leaf; leaves may blister or curl.",
+          "Infected shoots can be distorted and stunted.",
+          "Fruit may show slightly sunken areas covered with white fungal growth."
+        ],
+        "hi": [
+          "पत्तियों पर सफेद पाउडर या जाले जैसे धब्बे, अक्सर पहले पेड़ के अंदर की पत्तियों पर।",
+          "धब्बे मिलकर पूरी पत्ती ढक सकते हैं; पत्तियों पर फफोले पड़ सकते हैं या वे मुड़ सकती हैं।",
+          "संक्रमित टहनियाँ टेढ़ी और छोटी रह सकती हैं।",
+          "फलों पर हल्के धँसे हिस्से दिख सकते हैं जिन पर सफेद फफूंद होती है।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Caused by the fungus Podosphaera clandestina.",
+          "The fungus survives in buds and on bark; spores in spring spread to new growth by air.",
+          "Warm temperatures with high humidity and low rainfall favour the disease."
+        ],
+        "hi": [
+          "यह रोग Podosphaera clandestina फफूंद से होता है।",
+          "फफूंद कलियों और छाल पर जीवित रहती है; वसंत में बीजाणु हवा से नई बढ़वार तक पहुँचते हैं।",
+          "गर्म तापमान, ज़्यादा नमी और कम बारिश इस रोग को बढ़ाते हैं।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Keep proper spacing and prune to improve air circulation and lower humidity in the canopy.",
+          "Check leaves of inner shoots and water sprouts regularly so the disease is caught early.",
+          "Ask the nearest KVK/SAU about tolerant varieties suitable for your area."
+        ],
+        "hi": [
+          "सही दूरी रखें और छँटाई करें ताकि हवा का बहाव बढ़े और पेड़ के अंदर नमी कम हो।",
+          "अंदर की टहनियों और पानी वाली (वॉटर स्प्राउट) टहनियों की पत्तियाँ नियमित जाँचें ताकि रोग जल्दी पकड़ में आए।",
+          "अपने क्षेत्र के लिए सहनशील किस्मों के बारे में नज़दीकी KVK/कृषि विश्वविद्यालय से पूछें।"
+        ]
+      },
+      "organic_treatment": {
+        "en": [
+          "Wettable sulphur and potassium bicarbonate are organic-acceptable options reported by UC IPM; they protect new growth and may help reduce the disease.",
+          "Pruning for an open canopy helps leaves dry and may reduce disease pressure."
+        ],
+        "hi": [
+          "UC IPM के अनुसार घुलनशील सल्फर (wettable sulphur) और पोटैशियम बाइकार्बोनेट जैविक खेती में मान्य विकल्प हैं; ये नई बढ़वार को बचाते हैं और रोग कम करने में मदद कर सकते हैं।",
+          "पेड़ को खुला रखने वाली छँटाई से पत्तियाँ सूखती हैं और रोग का दबाव कम हो सकता है।"
+        ]
+      },
+      "chemical_treatment": {
+        "en": [
+          "Fungicide options reported by UC IPM include triazoles (myclobutanil, propiconazole, tebuconazole, difenoconazole), strobilurins (azoxystrobin, trifloxystrobin) and quinoxyfen.",
+          "UC IPM advises not using the same fungicide group repeatedly in one season, to slow resistance.",
+          "Use only products registered for this crop in India (CIB&RC), follow the product label exactly, and consult your local KVK or agriculture officer before spraying."
+        ],
+        "hi": [
+          "UC IPM द्वारा बताए गए विकल्प: ट्राइएज़ोल (myclobutanil, propiconazole, tebuconazole, difenoconazole), स्ट्रोबिल्यूरिन (azoxystrobin, trifloxystrobin) और quinoxyfen।",
+          "UC IPM सलाह देता है कि प्रतिरोध से बचने के लिए एक ही मौसम में एक ही समूह की दवा बार-बार न डालें।",
+          "भारत में इस फसल के लिए CIB&RC द्वारा पंजीकृत (रजिस्टर्ड) दवा ही इस्तेमाल करें, दवा के लेबल पर लिखे निर्देशों का ठीक-ठीक पालन करें, और छिड़काव से पहले अपने नज़दीकी KVK या कृषि अधिकारी से सलाह लें।"
+        ],
+        "active_ingredients": [
+          "myclobutanil",
+          "propiconazole",
+          "tebuconazole",
+          "difenoconazole",
+          "azoxystrobin",
+          "trifloxystrobin",
+          "quinoxyfen",
+          "sulphur"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Powdery Mildew - Cherry Pest Management Guidelines",
+          "publisher": "UC Statewide IPM Program, University of California",
+          "url": "https://ipm.ucanr.edu/agriculture/cherry/powdery-mildew/",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "AESA based IPM Package - Cherry",
+          "publisher": "NIPHM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India",
+          "url": "https://niphm.gov.in/IPMPackages/Cherry.pdf",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Cherry_(including_sour)___healthy",
+      "slug": "cherry-healthy",
+      "crop": {
+        "en": "Cherry (including sour)",
+        "hi": "चेरी (खट्टी चेरी सहित)"
+      },
+      "name": {
+        "en": "Healthy",
+        "hi": "स्वस्थ"
+      },
+      "healthy": true,
+      "pathogen_type": "none",
+      "scientific_name": null,
+      "summary": {
+        "en": "The cherry leaf looks healthy with no visible disease. Continue good orchard care and regular checks.",
+        "hi": "चेरी की पत्ती स्वस्थ दिख रही है और कोई रोग नज़र नहीं आ रहा। बाग़ की अच्छी देखभाल और नियमित जाँच जारी रखें।"
+      },
+      "symptoms": {
+        "en": [
+          "Leaves are glossy green with no white powder, spots or holes.",
+          "Leaves are flat, not curled or blistered.",
+          "Shoots grow normally without distortion."
+        ],
+        "hi": [
+          "पत्तियाँ चमकदार हरी हैं, उन पर सफेद पाउडर, धब्बे या छेद नहीं हैं।",
+          "पत्तियाँ सपाट हैं, मुड़ी हुई या फफोले वाली नहीं।",
+          "टहनियाँ बिना टेढ़ेपन के सामान्य रूप से बढ़ रही हैं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Warm, humid weather favours powdery mildew on new growth.",
+          "Dense canopies stay humid and are more prone to disease.",
+          "Waterlogged soil around the trunk favours root and crown rots."
+        ],
+        "hi": [
+          "गर्म और नम मौसम नई बढ़वार पर पाउडरी मिल्ड्यू को बढ़ाता है।",
+          "घने पेड़ों में नमी बनी रहती है और रोग ज़्यादा लगता है।",
+          "तने के आसपास पानी रुकने से जड़ और तने की सड़न का खतरा बढ़ता है।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Keep proper spacing and prune for good air circulation.",
+          "Ensure good drainage and do not let irrigation water wet the trunk.",
+          "Check new shoots regularly, especially in warm, humid weather."
+        ],
+        "hi": [
+          "सही दूरी रखें और अच्छी हवा के लिए छँटाई करें।",
+          "अच्छा जल-निकास रखें और सिंचाई का पानी तने पर न लगने दें।",
+          "नई टहनियों की नियमित जाँच करें, खासकर गर्म और नम मौसम में।"
+        ]
+      },
+      "organic_treatment": null,
+      "chemical_treatment": null,
+      "sources": [
+        {
+          "title": "AESA based IPM Package - Cherry",
+          "publisher": "NIPHM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India",
+          "url": "https://niphm.gov.in/IPMPackages/Cherry.pdf",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Powdery Mildew - Cherry Pest Management Guidelines",
+          "publisher": "UC Statewide IPM Program, University of California",
+          "url": "https://ipm.ucanr.edu/agriculture/cherry/powdery-mildew/",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+      "slug": "corn-gray-leaf-spot",
+      "crop": {
+        "en": "Corn (maize)",
+        "hi": "मक्का"
+      },
+      "name": {
+        "en": "Cercospora leaf spot / Gray leaf spot",
+        "hi": "सर्कोस्पोरा पत्ती धब्बा / ग्रे लीफ स्पॉट"
+      },
+      "healthy": false,
+      "pathogen_type": "fungus",
+      "scientific_name": "Cercospora zeae-maydis",
+      "summary": {
+        "en": "Gray leaf spot is a fungal disease that causes long, narrow, rectangular grey-tan spots on maize leaves. In warm, very humid weather spots can join and kill whole leaves, reducing yield.",
+        "hi": "ग्रे लीफ स्पॉट एक फफूंद रोग है, जिसमें मक्का की पत्तियों पर लंबे, पतले, आयताकार धूसर-भूरे धब्बे बनते हैं। गर्म और बहुत नम मौसम में धब्बे मिलकर पूरी पत्ती सुखा सकते हैं, जिससे उपज घटती है।"
+      },
+      "symptoms": {
+        "en": [
+          "Long, narrow, rectangular spots that are light tan at first and later grey.",
+          "Spots are usually limited by leaf veins, giving straight edges.",
+          "Symptoms start on lower leaves and move upward.",
+          "Spots can join and kill entire leaves."
+        ],
+        "hi": [
+          "लंबे, पतले, आयताकार धब्बे जो शुरू में हल्के भूरे और बाद में धूसर (ग्रे) हो जाते हैं।",
+          "धब्बे आमतौर पर पत्ती की नसों के बीच सीमित रहते हैं, इसलिए उनके किनारे सीधे दिखते हैं।",
+          "लक्षण नीचे की पत्तियों से शुरू होकर ऊपर की ओर बढ़ते हैं।",
+          "धब्बे आपस में मिलकर पूरी पत्ती को सुखा सकते हैं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Caused by the fungus Cercospora zeae-maydis.",
+          "The fungus survives in maize crop residue, so maize after maize has more disease.",
+          "Spores spread by wind and splashing water.",
+          "Warm temperatures with long periods of very high humidity favour the disease."
+        ],
+        "hi": [
+          "यह रोग Cercospora zeae-maydis फफूंद से होता है।",
+          "फफूंद मक्का के फसल अवशेषों में जीवित रहती है, इसलिए मक्का के बाद मक्का लेने पर रोग ज़्यादा होता है।",
+          "बीजाणु हवा और पानी के छींटों से फैलते हैं।",
+          "गर्म तापमान और लंबे समय तक बहुत ज़्यादा नमी इस रोग को बढ़ाते हैं।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Grow resistant or tolerant hybrids.",
+          "Rotate maize with non-host crops.",
+          "Bury or manage crop residue (tillage) to reduce the fungus surviving in the field.",
+          "Scout lower leaves regularly from a few weeks before tasselling."
+        ],
+        "hi": [
+          "रोग-रोधी या सहनशील संकर (हाइब्रिड) किस्में लगाएँ।",
+          "मक्का के बाद ऐसी फसल लें जिस पर यह रोग न लगे (फसल चक्र)।",
+          "फसल अवशेष को जुताई से मिट्टी में दबाएँ ताकि खेत में फफूंद कम बचे।",
+          "नर मंजरी (टैसल) निकलने से कुछ हफ़्ते पहले से नीचे की पत्तियों की नियमित जाँच करें।"
+        ]
+      },
+      "organic_treatment": {
+        "en": [
+          "No organic spray with proven effect was reported by the sources consulted; resistant hybrids, crop rotation and residue management are the main non-chemical tools."
+        ],
+        "hi": [
+          "देखे गए स्रोतों में कोई साबित असर वाला जैविक छिड़काव नहीं बताया गया; रोग-रोधी संकर किस्में, फसल चक्र और फसल अवशेष प्रबंधन ही मुख्य गैर-रासायनिक उपाय हैं।"
+        ]
+      },
+      "chemical_treatment": {
+        "en": [
+          "Fungicide options rated effective for gray leaf spot by the Crop Protection Network include azoxystrobin, pyraclostrobin, propiconazole, prothioconazole, tetraconazole and strobilurin + triazole mixtures.",
+          "These ratings come from US field trials; check which products are registered for maize in India.",
+          "Use only products registered for this crop in India (CIB&RC), follow the product label exactly, and consult your local KVK or agriculture officer before spraying."
+        ],
+        "hi": [
+          "Crop Protection Network द्वारा ग्रे लीफ स्पॉट के लिए असरदार बताए गए विकल्प: azoxystrobin, pyraclostrobin, propiconazole, prothioconazole, tetraconazole और स्ट्रोबिल्यूरिन + ट्राइएज़ोल मिश्रण।",
+          "ये रेटिंग अमेरिका के खेत परीक्षणों पर आधारित हैं; भारत में मक्का के लिए कौन-सी दवाएँ पंजीकृत हैं, यह ज़रूर जाँचें।",
+          "भारत में इस फसल के लिए CIB&RC द्वारा पंजीकृत (रजिस्टर्ड) दवा ही इस्तेमाल करें, दवा के लेबल पर लिखे निर्देशों का ठीक-ठीक पालन करें, और छिड़काव से पहले अपने नज़दीकी KVK या कृषि अधिकारी से सलाह लें।"
+        ],
+        "active_ingredients": [
+          "azoxystrobin",
+          "pyraclostrobin",
+          "propiconazole",
+          "prothioconazole",
+          "tetraconazole"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Gray Leaf Spot of Corn",
+          "publisher": "Crop Protection Network (US land-grant universities)",
+          "url": "https://cropprotectionnetwork.org/encyclopedia/gray-leaf-spot-of-corn",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Fungicide Efficacy for Control of Corn Diseases (CPN-2011-W)",
+          "publisher": "Crop Protection Network, Corn Disease Working Group",
+          "url": "https://crop-protection-network.s3.amazonaws.com/publications/fungicide-efficacy-for-control-of-corn-diseases-filename-2021-02-23-174247.pdf",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Corn_(maize)___Common_rust_",
+      "slug": "corn-common-rust",
+      "crop": {
+        "en": "Corn (maize)",
+        "hi": "मक्का"
+      },
+      "name": {
+        "en": "Common rust",
+        "hi": "सामान्य रतुआ (गेरुई)"
+      },
+      "healthy": false,
+      "pathogen_type": "fungus",
+      "scientific_name": "Puccinia sorghi",
+      "summary": {
+        "en": "Common rust is a fungal disease that forms small brick-red, powdery pustules on both sides of maize leaves. Spores are carried long distances by wind; severe attacks can kill leaves.",
+        "hi": "सामान्य रतुआ एक फफूंद रोग है, जिसमें मक्का की पत्तियों के दोनों ओर छोटे ईंट-लाल, पाउडर जैसे उभार (फुंसियाँ) बनते हैं। बीजाणु हवा से दूर तक पहुँचते हैं; ज़्यादा प्रकोप से पत्तियाँ सूख सकती हैं।"
+      },
+      "symptoms": {
+        "en": [
+          "Small yellowish flecks that develop into brick-red, powdery pustules on leaves.",
+          "Pustules appear on both upper and lower leaf surfaces.",
+          "Pustules turn dark brown to black as the crop matures.",
+          "Heavy infection causes yellowing and drying of leaves; husks and stalks can also be affected."
+        ],
+        "hi": [
+          "पत्तियों पर छोटे पीले बिंदु, जो ईंट-लाल पाउडर वाली फुंसियों में बदल जाते हैं।",
+          "फुंसियाँ पत्ती की ऊपरी और निचली दोनों सतहों पर दिखती हैं।",
+          "फसल पकने के साथ फुंसियाँ गहरी भूरी से काली हो जाती हैं।",
+          "ज़्यादा संक्रमण से पत्तियाँ पीली होकर सूख जाती हैं; भुट्टे के छिलके और तना भी प्रभावित हो सकते हैं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Caused by the fungus Puccinia sorghi.",
+          "Spores are carried by wind over long distances.",
+          "High humidity with moderate temperatures and cool nights favour the disease."
+        ],
+        "hi": [
+          "यह रोग Puccinia sorghi फफूंद से होता है।",
+          "बीजाणु हवा के साथ दूर-दूर तक फैलते हैं।",
+          "ज़्यादा नमी, मध्यम तापमान और ठंडी रातें इस रोग को बढ़ाती हैं।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Grow resistant hybrids/varieties (NIPHM lists examples such as HQPM 1, Buland and others for common rust).",
+          "Sow at the recommended time for your region.",
+          "Check leaves regularly and act at the first appearance of pustules."
+        ],
+        "hi": [
+          "रोग-रोधी संकर/किस्में लगाएँ (NIPHM ने सामान्य रतुआ के लिए HQPM 1, Buland जैसी किस्मों के उदाहरण दिए हैं)।",
+          "अपने क्षेत्र के लिए सुझाए गए समय पर बुवाई करें।",
+          "पत्तियों की नियमित जाँच करें और फुंसियाँ दिखते ही कदम उठाएँ।"
+        ]
+      },
+      "organic_treatment": {
+        "en": [
+          "No organic spray with proven effect was reported by the sources consulted; resistant hybrids, crop rotation and residue management are the main non-chemical tools."
+        ],
+        "hi": [
+          "देखे गए स्रोतों में कोई साबित असर वाला जैविक छिड़काव नहीं बताया गया; रोग-रोधी संकर किस्में, फसल चक्र और फसल अवशेष प्रबंधन ही मुख्य गैर-रासायनिक उपाय हैं।"
+        ]
+      },
+      "chemical_treatment": {
+        "en": [
+          "Fungicide options reported by the NIPHM/NCIPM maize IPM package at first appearance of pustules: mancozeb or zineb.",
+          "The Crop Protection Network rates strobilurin and triazole fungicides (e.g. azoxystrobin, pyraclostrobin, propiconazole) as effective for common rust.",
+          "Use only products registered for this crop in India (CIB&RC), follow the product label exactly, and consult your local KVK or agriculture officer before spraying."
+        ],
+        "hi": [
+          "पहली फुंसियाँ दिखने पर NIPHM/NCIPM मक्का IPM पैकेज द्वारा बताए गए विकल्प: mancozeb या zineb।",
+          "Crop Protection Network ने सामान्य रतुआ के लिए स्ट्रोबिल्यूरिन और ट्राइएज़ोल दवाओं (जैसे azoxystrobin, pyraclostrobin, propiconazole) को असरदार बताया है।",
+          "भारत में इस फसल के लिए CIB&RC द्वारा पंजीकृत (रजिस्टर्ड) दवा ही इस्तेमाल करें, दवा के लेबल पर लिखे निर्देशों का ठीक-ठीक पालन करें, और छिड़काव से पहले अपने नज़दीकी KVK या कृषि अधिकारी से सलाह लें।"
+        ],
+        "active_ingredients": [
+          "mancozeb",
+          "zineb",
+          "azoxystrobin",
+          "pyraclostrobin",
+          "propiconazole"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Common Rust of Corn",
+          "publisher": "Crop Protection Network (US land-grant universities)",
+          "url": "https://cropprotectionnetwork.org/encyclopedia/common-rust-of-corn",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Integrated Pest Management Package for Maize",
+          "publisher": "ICAR-NCIPM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India (hosted by NIPHM)",
+          "url": "https://niphm.gov.in/IPMPackages/Maize.pdf",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Fungicide Efficacy for Control of Corn Diseases (CPN-2011-W)",
+          "publisher": "Crop Protection Network, Corn Disease Working Group",
+          "url": "https://crop-protection-network.s3.amazonaws.com/publications/fungicide-efficacy-for-control-of-corn-diseases-filename-2021-02-23-174247.pdf",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Corn_(maize)___Northern_Leaf_Blight",
+      "slug": "corn-northern-leaf-blight",
+      "crop": {
+        "en": "Corn (maize)",
+        "hi": "मक्का"
+      },
+      "name": {
+        "en": "Northern leaf blight (Turcicum leaf blight)",
+        "hi": "उत्तरी पत्ती झुलसा (टर्सिकम पत्ती झुलसा)"
+      },
+      "healthy": false,
+      "pathogen_type": "fungus",
+      "scientific_name": "Exserohilum turcicum (syn. Setosphaeria turcica)",
+      "summary": {
+        "en": "Northern (Turcicum) leaf blight is a fungal disease that causes long, cigar-shaped grey-green to tan lesions on maize leaves. It is one of the common leaf diseases of maize in India and can make the crop look burnt.",
+        "hi": "उत्तरी (टर्सिकम) पत्ती झुलसा एक फफूंद रोग है, जिसमें मक्का की पत्तियों पर लंबे, सिगार जैसे धूसर-हरे से भूरे धब्बे बनते हैं। यह भारत में मक्का के आम पत्ती रोगों में से एक है और फसल झुलसी हुई दिख सकती है।"
+      },
+      "symptoms": {
+        "en": [
+          "Small oval, water-soaked spots that grow into long, spindle or cigar-shaped lesions.",
+          "Lesions are grey-green at first and later pale grey or tan.",
+          "Lesions start on lower leaves and increase in size and number as the plant grows.",
+          "In severe cases the leaves dry and the field looks burnt."
+        ],
+        "hi": [
+          "छोटे अंडाकार, पानी भरे जैसे धब्बे, जो बढ़कर लंबे, तकली या सिगार जैसे धब्बे बन जाते हैं।",
+          "धब्बे पहले धूसर-हरे और बाद में हल्के धूसर या भूरे हो जाते हैं।",
+          "धब्बे नीचे की पत्तियों से शुरू होकर पौधे की बढ़वार के साथ आकार और संख्या में बढ़ते हैं।",
+          "ज़्यादा प्रकोप में पत्तियाँ सूख जाती हैं और खेत झुलसा हुआ दिखता है।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Caused by the fungus Exserohilum turcicum.",
+          "The fungus survives in maize residue; spores spread by wind and rain splash.",
+          "Long leaf wetness from rain or dew with moderate temperatures favours the disease.",
+          "Infection around silking causes the most damage."
+        ],
+        "hi": [
+          "यह रोग Exserohilum turcicum फफूंद से होता है।",
+          "फफूंद मक्का के अवशेषों में जीवित रहती है; बीजाणु हवा और बारिश के छींटों से फैलते हैं।",
+          "बारिश या ओस से पत्तियों का लंबे समय तक गीला रहना और मध्यम तापमान रोग को बढ़ाते हैं।",
+          "भुट्टे पर रेशे (सिल्क) निकलने के समय का संक्रमण सबसे ज़्यादा नुकसान करता है।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Grow resistant hybrids where the disease is common.",
+          "Rotate crops and reduce surface residue by tillage.",
+          "Scout lower leaves regularly, especially in wet weather."
+        ],
+        "hi": [
+          "जहाँ यह रोग आम है वहाँ रोग-रोधी संकर किस्में लगाएँ।",
+          "फसल चक्र अपनाएँ और जुताई से सतह पर पड़े अवशेष कम करें।",
+          "नीचे की पत्तियों की नियमित जाँच करें, खासकर गीले मौसम में।"
+        ]
+      },
+      "organic_treatment": {
+        "en": [
+          "No organic spray with proven effect was reported by the sources consulted; resistant hybrids, crop rotation and residue management are the main non-chemical tools."
+        ],
+        "hi": [
+          "देखे गए स्रोतों में कोई साबित असर वाला जैविक छिड़काव नहीं बताया गया; रोग-रोधी संकर किस्में, फसल चक्र और फसल अवशेष प्रबंधन ही मुख्य गैर-रासायनिक उपाय हैं।"
+        ]
+      },
+      "chemical_treatment": {
+        "en": [
+          "Fungicide options reported by TNAU and the NIPHM/NCIPM maize package at first appearance of leaf blight: mancozeb or zineb.",
+          "The Crop Protection Network also rates azoxystrobin, pyraclostrobin, propiconazole and tebuconazole as effective for northern corn leaf blight.",
+          "Use only products registered for this crop in India (CIB&RC), follow the product label exactly, and consult your local KVK or agriculture officer before spraying."
+        ],
+        "hi": [
+          "पत्ती झुलसा दिखते ही TNAU और NIPHM/NCIPM मक्का पैकेज द्वारा बताए गए विकल्प: mancozeb या zineb।",
+          "Crop Protection Network ने azoxystrobin, pyraclostrobin, propiconazole और tebuconazole को भी उत्तरी पत्ती झुलसा के लिए असरदार बताया है।",
+          "भारत में इस फसल के लिए CIB&RC द्वारा पंजीकृत (रजिस्टर्ड) दवा ही इस्तेमाल करें, दवा के लेबल पर लिखे निर्देशों का ठीक-ठीक पालन करें, और छिड़काव से पहले अपने नज़दीकी KVK या कृषि अधिकारी से सलाह लें।"
+        ],
+        "active_ingredients": [
+          "mancozeb",
+          "zineb",
+          "azoxystrobin",
+          "pyraclostrobin",
+          "propiconazole",
+          "tebuconazole"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Turcicum leaf blight of maize (Exserohilum turcicum)",
+          "publisher": "TNAU Agritech Portal, Tamil Nadu Agricultural University",
+          "url": "https://agritech.tnau.ac.in/crop_protection/maize_disease/maize_4.html",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Integrated Pest Management Package for Maize",
+          "publisher": "ICAR-NCIPM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India (hosted by NIPHM)",
+          "url": "https://niphm.gov.in/IPMPackages/Maize.pdf",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Northern Corn Leaf Blight of Corn",
+          "publisher": "Crop Protection Network (US land-grant universities)",
+          "url": "https://cropprotectionnetwork.org/encyclopedia/northern-corn-leaf-blight-of-corn",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Fungicide Efficacy for Control of Corn Diseases (CPN-2011-W)",
+          "publisher": "Crop Protection Network, Corn Disease Working Group",
+          "url": "https://crop-protection-network.s3.amazonaws.com/publications/fungicide-efficacy-for-control-of-corn-diseases-filename-2021-02-23-174247.pdf",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Corn_(maize)___healthy",
+      "slug": "corn-healthy",
+      "crop": {
+        "en": "Corn (maize)",
+        "hi": "मक्का"
+      },
+      "name": {
+        "en": "Healthy",
+        "hi": "स्वस्थ"
+      },
+      "healthy": true,
+      "pathogen_type": "none",
+      "scientific_name": null,
+      "summary": {
+        "en": "The maize leaf looks healthy with no visible disease. Keep following good crop practices and check the field regularly.",
+        "hi": "मक्का की पत्ती स्वस्थ दिख रही है और कोई रोग नज़र नहीं आ रहा। अच्छी खेती के तरीके अपनाते रहें और खेत की नियमित जाँच करें।"
+      },
+      "symptoms": {
+        "en": [
+          "Leaves are uniformly green with no spots, streaks or pustules.",
+          "No grey, tan or cigar-shaped lesions on lower leaves.",
+          "Leaves are not drying from the tips or edges."
+        ],
+        "hi": [
+          "पत्तियाँ एक जैसी हरी हैं, कोई धब्बा, धारी या फुंसी नहीं।",
+          "नीचे की पत्तियों पर धूसर, भूरे या सिगार जैसे धब्बे नहीं हैं।",
+          "पत्तियाँ सिरे या किनारों से सूख नहीं रहीं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Maize grown after maize with crop residue left on the surface increases leaf disease risk.",
+          "Long periods of leaf wetness and high humidity favour leaf blights and rust.",
+          "Susceptible hybrids are more easily damaged."
+        ],
+        "hi": [
+          "मक्का के बाद मक्का लेने और सतह पर अवशेष छोड़ने से पत्ती रोगों का खतरा बढ़ता है।",
+          "पत्तियों का लंबे समय तक गीला रहना और ज़्यादा नमी झुलसा और रतुआ को बढ़ाते हैं।",
+          "रोग के प्रति संवेदनशील किस्में ज़्यादा आसानी से प्रभावित होती हैं।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Grow resistant/tolerant hybrids recommended for your region.",
+          "Follow crop rotation and manage crop residue.",
+          "Use treated, healthy seed and sow on time.",
+          "Scout the crop weekly, especially the lower leaves."
+        ],
+        "hi": [
+          "अपने क्षेत्र के लिए सुझाई गई रोग-रोधी/सहनशील संकर किस्में लगाएँ।",
+          "फसल चक्र अपनाएँ और फसल अवशेषों का सही प्रबंधन करें।",
+          "उपचारित, स्वस्थ बीज इस्तेमाल करें और समय पर बुवाई करें।",
+          "हर हफ़्ते फसल की जाँच करें, खासकर नीचे की पत्तियों की।"
+        ]
+      },
+      "organic_treatment": null,
+      "chemical_treatment": null,
+      "sources": [
+        {
+          "title": "Integrated Pest Management Package for Maize",
+          "publisher": "ICAR-NCIPM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India (hosted by NIPHM)",
+          "url": "https://niphm.gov.in/IPMPackages/Maize.pdf",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Northern Corn Leaf Blight of Corn",
+          "publisher": "Crop Protection Network (US land-grant universities)",
+          "url": "https://cropprotectionnetwork.org/encyclopedia/northern-corn-leaf-blight-of-corn",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Grape___Black_rot",
+      "slug": "grape-black-rot",
+      "crop": {
+        "en": "Grape",
+        "hi": "अंगूर"
+      },
+      "name": {
+        "en": "Black rot",
+        "hi": "काला सड़न (ब्लैक रॉट)"
+      },
+      "healthy": false,
+      "pathogen_type": "fungus",
+      "scientific_name": "Guignardia bidwellii",
+      "summary": {
+        "en": "Black rot is a fungal disease of grapes that causes reddish-brown leaf spots and turns berries into hard, black, shrivelled 'mummies'. Warm, wet weather favours it and losses can be heavy if not managed.",
+        "hi": "काला सड़न अंगूर का एक फफूंद रोग है, जिसमें पत्तियों पर लाल-भूरे धब्बे बनते हैं और दाने सिकुड़कर सख्त, काले 'ममी' बन जाते हैं। गर्म और गीला मौसम इसे बढ़ाता है और रोकथाम न करने पर भारी नुकसान हो सकता है।"
+      },
+      "symptoms": {
+        "en": [
+          "Round to irregular reddish-brown spots on leaves with darker edges.",
+          "Tiny black dots (fungal fruiting bodies) inside the leaf spots.",
+          "Small dark, elongated lesions on young shoots, leaf stalks and tendrils.",
+          "Berries rot, shrivel and become hard, black mummies that stay on the bunch."
+        ],
+        "hi": [
+          "पत्तियों पर गोल से बेढंगे लाल-भूरे धब्बे, जिनके किनारे गहरे रंग के होते हैं।",
+          "पत्ती के धब्बों के अंदर छोटे काले दाने (फफूंद के बीजाणु-घर)।",
+          "नई टहनियों, पत्ती के डंठल और लताओं (टेंड्रिल) पर छोटे गहरे लंबे धब्बे।",
+          "दाने सड़कर सिकुड़ जाते हैं और सख्त काली ममी बनकर गुच्छे पर लटके रहते हैं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Caused by the fungus Guignardia bidwellii.",
+          "The fungus survives in mummified berries and infected canes and plant debris.",
+          "Warm, moist weather with long rainy and cloudy spells favours the disease.",
+          "Young leaves, shoots and developing berries are most susceptible."
+        ],
+        "hi": [
+          "यह रोग Guignardia bidwellii फफूंद से होता है।",
+          "फफूंद ममी बने दानों, संक्रमित बेलों और पौधों के कचरे में जीवित रहती है।",
+          "गर्म और नम मौसम, लंबी बारिश और बादल वाले दिन इस रोग को बढ़ाते हैं।",
+          "नई पत्तियाँ, टहनियाँ और बढ़ते दाने सबसे ज़्यादा प्रभावित होते हैं।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Collect and destroy mummified berries, infected tendrils and leaf litter.",
+          "At pruning, keep canes without cankers and remove diseased wood.",
+          "Train and prune vines so air moves freely and leaves dry quickly.",
+          "Choose sunny sites with good air movement for new vineyards."
+        ],
+        "hi": [
+          "ममी बने दाने, संक्रमित लताएँ और गिरी पत्तियाँ इकट्ठा करके नष्ट करें।",
+          "छँटाई के समय बिना घाव वाली बेलें रखें और रोगी लकड़ी हटा दें।",
+          "बेलों को इस तरह साधें और छाँटें कि हवा आसानी से चले और पत्तियाँ जल्दी सूखें।",
+          "नए बाग़ के लिए धूप वाली और हवादार जगह चुनें।"
+        ]
+      },
+      "organic_treatment": {
+        "en": [
+          "Sanitation (removing mummies and infected material) is especially important in organic vineyards.",
+          "Bordeaux mixture (a copper preparation) on young bunches is reported by the National Horticulture Board; Ohio State reports that home-garden copper and sulphur products did not control black rot well, so do not rely on them alone."
+        ],
+        "hi": [
+          "जैविक बाग़ों में साफ़-सफ़ाई (ममी दाने और संक्रमित हिस्से हटाना) खास तौर पर ज़रूरी है।",
+          "राष्ट्रीय बागवानी बोर्ड (NHB) ने छोटे गुच्छों पर बोर्डो मिश्रण (तांबा आधारित) का छिड़काव बताया है; Ohio State के अनुसार घरेलू तांबा और सल्फर उत्पादों से काला सड़न ठीक से नहीं रुका, इसलिए केवल इन पर निर्भर न रहें।"
+        ]
+      },
+      "chemical_treatment": {
+        "en": [
+          "Fungicide options reported by Ohio State University: mancozeb (protectant) and myclobutanil (systemic).",
+          "The most important protection period is from just before flowering until a few weeks after flowering.",
+          "Use only products registered for this crop in India (CIB&RC), follow the product label exactly, and consult your local KVK or agriculture officer before spraying."
+        ],
+        "hi": [
+          "Ohio State University द्वारा बताए गए विकल्प: mancozeb (बचाव वाली) और myclobutanil (सिस्टमिक)।",
+          "बचाव का सबसे ज़रूरी समय फूल आने से ठीक पहले से लेकर फूल आने के कुछ हफ़्ते बाद तक है।",
+          "भारत में इस फसल के लिए CIB&RC द्वारा पंजीकृत (रजिस्टर्ड) दवा ही इस्तेमाल करें, दवा के लेबल पर लिखे निर्देशों का ठीक-ठीक पालन करें, और छिड़काव से पहले अपने नज़दीकी KVK या कृषि अधिकारी से सलाह लें।"
+        ],
+        "active_ingredients": [
+          "mancozeb",
+          "myclobutanil",
+          "copper (Bordeaux mixture)"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Black Rot (grape)",
+          "publisher": "The Ohio State University, CFAES (Ohio Grape Web)",
+          "url": "https://ohiograpeweb.cfaes.ohio-state.edu/ipm/diseases/black-rot",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Grapes - Diseases",
+          "publisher": "National Horticulture Board, Govt. of India",
+          "url": "https://www.nhb.gov.in/pdf/fruits/grape/gra002.pdf",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "AESA based IPM Package - Grapes",
+          "publisher": "NIPHM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India",
+          "url": "https://niphm.gov.in/IPMPackages/Grapes.pdf",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Grape___Esca_(Black_Measles)",
+      "slug": "grape-esca-black-measles",
+      "crop": {
+        "en": "Grape",
+        "hi": "अंगूर"
+      },
+      "name": {
+        "en": "Esca (Black measles)",
+        "hi": "एस्का (ब्लैक मीज़ल्स)"
+      },
+      "healthy": false,
+      "pathogen_type": "fungus",
+      "scientific_name": "Phaeomoniella chlamydospora and Phaeoacremonium spp. (fungal complex)",
+      "summary": {
+        "en": "Esca (black measles) is a trunk disease caused by wood-infecting fungi that enter through pruning wounds. It causes 'tiger-stripe' leaf symptoms and spotted berries, and the infection inside the wood cannot be cured by sprays.",
+        "hi": "एस्का (ब्लैक मीज़ल्स) तने का रोग है, जो छँटाई के घावों से लकड़ी में घुसने वाली फफूंदों से होता है। इसमें पत्तियों पर 'बाघ जैसी धारियाँ' और दानों पर धब्बे बनते हैं, और लकड़ी के अंदर का संक्रमण छिड़काव से ठीक नहीं होता।"
+      },
+      "symptoms": {
+        "en": [
+          "Yellow (white varieties) or dark red (red varieties) stripes between leaf veins that later dry out - a 'tiger-stripe' pattern.",
+          "Symptoms often appear on single shoots or on shoots from the same spur or cane.",
+          "Small, round, dark spots with a brown-purple ring on berries; berries may crack and dry.",
+          "Cut wood shows rings of dark spots; affected arms may die back over time."
+        ],
+        "hi": [
+          "पत्ती की नसों के बीच पीली (सफेद किस्मों में) या गहरी लाल (लाल किस्मों में) धारियाँ, जो बाद में सूख जाती हैं - 'बाघ की धारियों' जैसा पैटर्न।",
+          "लक्षण अक्सर किसी एक टहनी पर या एक ही स्पर/बेल से निकली टहनियों पर दिखते हैं।",
+          "दानों पर भूरे-बैंगनी घेरे वाले छोटे, गोल, गहरे धब्बे; दाने फट कर सूख सकते हैं।",
+          "काटी गई लकड़ी में गहरे धब्बों के छल्ले दिखते हैं; प्रभावित शाखाएँ धीरे-धीरे सूख सकती हैं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Caused by a group of wood-infecting fungi, mainly Phaeomoniella chlamydospora and Phaeoacremonium species.",
+          "Spores are released during rain and enter through fresh pruning wounds.",
+          "Once inside, the infection in the wood is permanent; symptoms usually show in older vineyards and vary year to year."
+        ],
+        "hi": [
+          "यह रोग लकड़ी को संक्रमित करने वाली फफूंदों के समूह से होता है, मुख्य रूप से Phaeomoniella chlamydospora और Phaeoacremonium प्रजातियाँ।",
+          "बारिश में बीजाणु निकलते हैं और ताज़ा छँटाई के घावों से अंदर घुसते हैं।",
+          "अंदर पहुँचने के बाद लकड़ी का संक्रमण स्थायी रहता है; लक्षण आमतौर पर पुराने बाग़ों में दिखते हैं और हर साल अलग हो सकते हैं।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Avoid large pruning cuts and prune in dry weather where possible.",
+          "Remove and destroy dead or badly affected arms and prunings from the vineyard.",
+          "Mark vines showing symptoms and monitor them each season.",
+          "Use healthy planting material from reliable nurseries."
+        ],
+        "hi": [
+          "बड़े छँटाई के कट से बचें और जहाँ संभव हो सूखे मौसम में छँटाई करें।",
+          "सूखी या बुरी तरह प्रभावित शाखाएँ और छँटाई का कचरा बाग़ से हटाकर नष्ट करें।",
+          "लक्षण वाली बेलों पर निशान लगाएँ और हर मौसम उन पर नज़र रखें।",
+          "भरोसेमंद नर्सरी से स्वस्थ पौध सामग्री लें।"
+        ]
+      },
+      "organic_treatment": {
+        "en": [
+          "No organic or chemical treatment is known to cure esca; UC IPM states there are currently no recommended treatments, and management focuses on protecting pruning wounds and removing infected wood."
+        ],
+        "hi": [
+          "एस्का को ठीक करने वाला कोई जैविक या रासायनिक इलाज ज्ञात नहीं है; UC IPM के अनुसार अभी कोई सुझाया गया इलाज नहीं है, और प्रबंधन छँटाई के घावों को बचाने तथा संक्रमित लकड़ी हटाने पर केंद्रित है।"
+        ]
+      },
+      "chemical_treatment": null,
+      "sources": [
+        {
+          "title": "Esca (Black Measles) - Grape Pest Management Guidelines",
+          "publisher": "UC Statewide IPM Program, University of California",
+          "url": "https://ipm.ucanr.edu/agriculture/grape/esca-black-measles/",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Measles (grape) - home garden",
+          "publisher": "UC Statewide IPM Program, University of California",
+          "url": "https://ipm.ucanr.edu/PMG/GARDEN/FRUIT/DISEASE/measles.html",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "\"To do list\" for post-harvest vineyard management in Florida (fact sheet)",
+          "publisher": "Florida A&M University, Center for Viticulture and Small Fruit Research",
+          "url": "https://cafs.famu.edu/departments-and-centers/research/center-for-viticulture-and-small-fruit-research/pdf/Post-Harvest-Vineyard-Management-fact-sheet.pdf",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+      "slug": "grape-leaf-blight-isariopsis",
+      "crop": {
+        "en": "Grape",
+        "hi": "अंगूर"
+      },
+      "name": {
+        "en": "Leaf blight (Isariopsis leaf spot)",
+        "hi": "पत्ती झुलसा (आइसैरियोप्सिस पत्ती धब्बा)"
+      },
+      "healthy": false,
+      "pathogen_type": "fungus",
+      "scientific_name": "Pseudocercospora vitis (syn. Isariopsis clavispora)",
+      "summary": {
+        "en": "Leaf blight, earlier called Isariopsis leaf spot, is a fungal leaf disease of grapes. It causes large irregular spots that turn black and brittle; it is usually minor and is most common late in the season on poorly sprayed vines.",
+        "hi": "पत्ती झुलसा, जिसे पहले आइसैरियोप्सिस पत्ती धब्बा कहा जाता था, अंगूर का फफूंद वाला पत्ती रोग है। इसमें बड़े बेढंगे धब्बे बनते हैं जो काले और भुरभुरे हो जाते हैं; यह आमतौर पर कम नुकसान वाला रोग है और मौसम के अंत में ठीक से देखभाल न की गई बेलों पर ज़्यादा दिखता है।"
+      },
+      "symptoms": {
+        "en": [
+          "Large, irregular leaf spots, dull red to brown at first.",
+          "Spots turn black and brittle as they age.",
+          "Heavily spotted leaves may dry and drop early."
+        ],
+        "hi": [
+          "पत्तियों पर बड़े, बेढंगे धब्बे, जो शुरू में फीके लाल से भूरे होते हैं।",
+          "पुराने होने पर धब्बे काले और भुरभुरे हो जाते हैं।",
+          "ज़्यादा धब्बों वाली पत्तियाँ सूखकर जल्दी गिर सकती हैं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Caused by the fungus Pseudocercospora vitis.",
+          "Spores form in high humidity and are spread by wind.",
+          "Weak vines, dense canopies and poor spray coverage late in the season favour the disease."
+        ],
+        "hi": [
+          "यह रोग Pseudocercospora vitis फफूंद से होता है।",
+          "ज़्यादा नमी में बीजाणु बनते हैं और हवा से फैलते हैं।",
+          "कमज़ोर बेलें, घनी छतरी और मौसम के अंत में ठीक से छिड़काव न होना रोग को बढ़ाते हैं।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Keep vines vigorous with balanced nutrition and irrigation.",
+          "Improve air circulation through pruning, shoot thinning, proper spacing and weed control.",
+          "Remove and destroy fallen infected leaves.",
+          "University of Kentucky notes that vineyards sprayed for the main grape diseases seldom have this problem; ask your KVK which products are registered for grape leaf spots."
+        ],
+        "hi": [
+          "संतुलित पोषण और सिंचाई से बेलों को मज़बूत रखें।",
+          "छँटाई, टहनियाँ कम करने, सही दूरी और खरपतवार नियंत्रण से हवा का बहाव बढ़ाएँ।",
+          "गिरी हुई संक्रमित पत्तियाँ हटाकर नष्ट करें।",
+          "University of Kentucky के अनुसार जिन बाग़ों में मुख्य अंगूर रोगों के लिए छिड़काव होता है, वहाँ यह समस्या कम ही होती है; अंगूर के पत्ती धब्बों के लिए पंजीकृत दवाओं के बारे में अपने KVK से पूछें।"
+        ]
+      },
+      "organic_treatment": {
+        "en": [
+          "Improving airflow and removing infected leaves may help reduce spread; no specific organic product was named by the sources consulted."
+        ],
+        "hi": [
+          "हवा का बहाव बढ़ाना और संक्रमित पत्तियाँ हटाना फैलाव कम करने में मदद कर सकता है; देखे गए स्रोतों में कोई खास जैविक उत्पाद नहीं बताया गया।"
+        ]
+      },
+      "chemical_treatment": null,
+      "sources": [
+        {
+          "title": "\"To do list\" for post-harvest vineyard management in Florida (fact sheet)",
+          "publisher": "Florida A&M University, Center for Viticulture and Small Fruit Research",
+          "url": "https://cafs.famu.edu/departments-and-centers/research/center-for-viticulture-and-small-fruit-research/pdf/Post-Harvest-Vineyard-Management-fact-sheet.pdf",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Leaf Spots of Grapes - Scouting Guide for Problems of Fruit",
+          "publisher": "University of Kentucky, Martin-Gatton CAFE",
+          "url": "https://fruitscout.mgcafe.uky.edu/leaf-spots-grapes",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Grape___healthy",
+      "slug": "grape-healthy",
+      "crop": {
+        "en": "Grape",
+        "hi": "अंगूर"
+      },
+      "name": {
+        "en": "Healthy",
+        "hi": "स्वस्थ"
+      },
+      "healthy": true,
+      "pathogen_type": "none",
+      "scientific_name": null,
+      "summary": {
+        "en": "The grape leaf looks healthy with no visible disease. Continue good canopy management, sanitation and regular checks.",
+        "hi": "अंगूर की पत्ती स्वस्थ दिख रही है और कोई रोग नज़र नहीं आ रहा। छतरी (कैनोपी) प्रबंधन, साफ़-सफ़ाई और नियमित जाँच जारी रखें।"
+      },
+      "symptoms": {
+        "en": [
+          "Leaves are evenly green with no spots, stripes, powder or downy growth.",
+          "No reddish-brown spots with black dots, and no 'tiger-stripe' pattern between veins.",
+          "Leaf edges are not dry or brittle."
+        ],
+        "hi": [
+          "पत्तियाँ एक जैसी हरी हैं, उन पर कोई धब्बा, धारी, पाउडर या रोएँदार परत नहीं।",
+          "काले दानों वाले लाल-भूरे धब्बे या नसों के बीच 'बाघ की धारियाँ' नहीं हैं।",
+          "पत्ती के किनारे सूखे या भुरभुरे नहीं हैं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Warm, wet and cloudy weather favours many grape leaf and fruit diseases.",
+          "Mummified berries, infected canes and leaf litter carry disease into the next season.",
+          "Dense canopies and pruning wounds increase disease risk."
+        ],
+        "hi": [
+          "गर्म, गीला और बादल वाला मौसम अंगूर के कई पत्ती और फल रोगों को बढ़ाता है।",
+          "ममी बने दाने, संक्रमित बेलें और गिरी पत्तियाँ रोग को अगले मौसम तक ले जाती हैं।",
+          "घनी छतरी और छँटाई के घाव रोग का खतरा बढ़ाते हैं।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Remove mummified berries, diseased canes and leaf litter.",
+          "Prune and train vines for good air movement and sunlight.",
+          "Use tolerant varieties where available and healthy planting material.",
+          "Check the vineyard every week, especially after rain."
+        ],
+        "hi": [
+          "ममी बने दाने, रोगी बेलें और गिरी पत्तियाँ हटा दें।",
+          "अच्छी हवा और धूप के लिए बेलों की छँटाई और साधना करें।",
+          "जहाँ मिलें सहनशील किस्में और स्वस्थ पौध सामग्री इस्तेमाल करें।",
+          "हर हफ़्ते बाग़ की जाँच करें, खासकर बारिश के बाद।"
+        ]
+      },
+      "organic_treatment": null,
+      "chemical_treatment": null,
+      "sources": [
+        {
+          "title": "AESA based IPM Package - Grapes",
+          "publisher": "NIPHM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India",
+          "url": "https://niphm.gov.in/IPMPackages/Grapes.pdf",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Black Rot (grape)",
+          "publisher": "The Ohio State University, CFAES (Ohio Grape Web)",
+          "url": "https://ohiograpeweb.cfaes.ohio-state.edu/ipm/diseases/black-rot",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Orange___Haunglongbing_(Citrus_greening)",
+      "slug": "orange-citrus-greening-hlb",
+      "crop": {
+        "en": "Orange",
+        "hi": "संतरा"
+      },
+      "name": {
+        "en": "Citrus greening (Huanglongbing, HLB)",
+        "hi": "सिट्रस ग्रीनिंग (हुआंगलोंगबिंग, HLB)"
+      },
+      "healthy": false,
+      "pathogen_type": "bacterium",
+      "scientific_name": "Candidatus Liberibacter asiaticus (spread by the Asian citrus psyllid, Diaphorina citri)",
+      "summary": {
+        "en": "Citrus greening (HLB) is a very serious bacterial disease spread by a tiny insect, the Asian citrus psyllid. There is no cure: infected trees decline, give small, bitter, lopsided fruit and eventually die, so management focuses on preventing spread.",
+        "hi": "सिट्रस ग्रीनिंग (HLB) एक बहुत गंभीर जीवाणु (बैक्टीरिया) रोग है, जो एक छोटे कीट - एशियाई सिट्रस सिल्ला (psyllid) - से फैलता है। इसका कोई इलाज नहीं है: संक्रमित पेड़ कमज़ोर होते जाते हैं, छोटे, कड़वे और टेढ़े फल देते हैं और आखिर में सूख जाते हैं, इसलिए प्रबंधन का लक्ष्य फैलाव रोकना है।"
+      },
+      "symptoms": {
+        "en": [
+          "Blotchy, uneven yellow mottling on leaves - the pattern is different on the two sides of the midrib (unlike nutrient deficiency, which is symmetrical).",
+          "Yellowing often starts on one branch or one part of the tree; small green islands may appear in yellow areas.",
+          "Small, upright leaves, heavy leaf drop and twig dieback on chronically infected trees.",
+          "Fruit stays small, partly green, lopsided and bitter, with dark aborted seeds, and drops early."
+        ],
+        "hi": [
+          "पत्तियों पर बेतरतीब पीले-हरे चकत्ते - मध्य नस के दोनों ओर पैटर्न अलग होता है (पोषक तत्व की कमी में दोनों ओर एक जैसा होता है)।",
+          "पीलापन अक्सर एक डाली या पेड़ के एक हिस्से से शुरू होता है; पीले हिस्से में छोटे हरे टापू दिख सकते हैं।",
+          "पुराने संक्रमित पेड़ों पर छोटी, ऊपर की ओर खड़ी पत्तियाँ, ज़्यादा पत्ती गिरना और टहनियों का ऊपर से सूखना।",
+          "फल छोटे, आंशिक रूप से हरे, टेढ़े और कड़वे रहते हैं, बीज काले और अधूरे होते हैं, और फल जल्दी गिर जाते हैं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Caused by the bacterium Candidatus Liberibacter asiaticus, which lives in the tree's food-conducting tissue.",
+          "Spread by the Asian citrus psyllid (Diaphorina citri) as it feeds on new flush leaves.",
+          "Also spread through infected budwood and nursery plants (grafting).",
+          "Symptoms may take a year or more to appear, while the tree can already be a source of infection."
+        ],
+        "hi": [
+          "यह रोग Candidatus Liberibacter asiaticus जीवाणु से होता है, जो पेड़ की भोजन ले जाने वाली नलियों में रहता है।",
+          "यह एशियाई सिट्रस सिल्ला (Diaphorina citri) से फैलता है, जो नई कोंपलों (फ्लश) पर रस चूसता है।",
+          "संक्रमित बडवुड और नर्सरी पौधों (कलम/ग्राफ्टिंग) से भी फैलता है।",
+          "लक्षण दिखने में एक साल या ज़्यादा लग सकता है, जबकि पेड़ उससे पहले ही संक्रमण फैला सकता है।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Plant only certified, disease-free nursery plants and budwood.",
+          "Check new flush regularly for psyllids (adults, yellow eggs, nymphs with white waxy threads).",
+          "Remove and destroy confirmed infected trees so they do not act as a source for psyllids.",
+          "Coordinate psyllid control with neighbouring orchards; report suspected trees to the agriculture department or KVK."
+        ],
+        "hi": [
+          "केवल प्रमाणित, रोग-मुक्त नर्सरी पौधे और बडवुड ही लगाएँ।",
+          "नई कोंपलों पर सिल्ला (वयस्क, पीले अंडे, सफेद मोम जैसे धागों वाले शिशु) की नियमित जाँच करें।",
+          "पक्के तौर पर संक्रमित पेड़ों को उखाड़कर नष्ट करें ताकि वे सिल्ला के लिए संक्रमण का स्रोत न बनें।",
+          "पड़ोसी बाग़ों के साथ मिलकर सिल्ला नियंत्रण करें; संदिग्ध पेड़ों की जानकारी कृषि विभाग या KVK को दें।"
+        ]
+      },
+      "organic_treatment": {
+        "en": [
+          "There is no organic cure for HLB. Natural enemies of the psyllid (parasitoid wasps Tamarixia radiata and Diaphorencyrtus aligarhensis, ladybird beetles, lacewings, syrphid flies) should be conserved - reported by NIPHM and UC IPM.",
+          "Horticultural spray oil, neem oil and insecticidal soap may help reduce psyllid numbers (UC IPM); they act only on contact, so coverage must be thorough.",
+          "Control ants around trees, because ants protect psyllids from their natural enemies."
+        ],
+        "hi": [
+          "HLB का कोई जैविक इलाज नहीं है। सिल्ला के प्राकृतिक दुश्मनों (परजीवी ततैया Tamarixia radiata और Diaphorencyrtus aligarhensis, लेडीबर्ड भृंग, लेसविंग, सिरफिड मक्खी) को बचाकर रखें - NIPHM और UC IPM के अनुसार।",
+          "बागवानी स्प्रे तेल, नीम तेल और कीटनाशी साबुन सिल्ला की संख्या कम करने में मदद कर सकते हैं (UC IPM); ये केवल सीधे संपर्क पर असर करते हैं, इसलिए पूरा पेड़ अच्छी तरह भिगोना ज़रूरी है।",
+          "पेड़ों के आसपास चींटियों को नियंत्रित करें, क्योंकि चींटियाँ सिल्ला को उसके प्राकृतिक दुश्मनों से बचाती हैं।"
+        ]
+      },
+      "chemical_treatment": {
+        "en": [
+          "There is NO chemical cure for the HLB bacterium; sprays only target the psyllid vector to slow spread.",
+          "Psyllid control options reported by NIPHM include imidacloprid, thiamethoxam and dimethoate; UC IPM also lists imidacloprid.",
+          "Avoid spraying insecticides during flowering to protect bees.",
+          "Use only products registered for this crop in India (CIB&RC), follow the product label exactly, and consult your local KVK or agriculture officer before spraying."
+        ],
+        "hi": [
+          "HLB जीवाणु का कोई रासायनिक इलाज नहीं है; छिड़काव केवल सिल्ला कीट पर होता है ताकि फैलाव धीमा हो।",
+          "NIPHM द्वारा सिल्ला नियंत्रण के लिए बताए गए विकल्प: imidacloprid, thiamethoxam और dimethoate; UC IPM ने भी imidacloprid बताया है।",
+          "मधुमक्खियों को बचाने के लिए फूल आने के समय कीटनाशक का छिड़काव न करें।",
+          "भारत में इस फसल के लिए CIB&RC द्वारा पंजीकृत (रजिस्टर्ड) दवा ही इस्तेमाल करें, दवा के लेबल पर लिखे निर्देशों का ठीक-ठीक पालन करें, और छिड़काव से पहले अपने नज़दीकी KVK या कृषि अधिकारी से सलाह लें।"
+        ],
+        "active_ingredients": [
+          "imidacloprid",
+          "thiamethoxam",
+          "dimethoate"
+        ]
+      },
+      "sources": [
+        {
+          "title": "AESA based IPM Package - Citrus",
+          "publisher": "NIPHM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India",
+          "url": "https://niphm.gov.in/IPMPackages/Citrus.pdf",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Asian Citrus Psyllid and Huanglongbing Disease (Pest Notes 74155)",
+          "publisher": "UC Statewide IPM Program, University of California",
+          "url": "https://ipm.ucanr.edu/legacy_assets/PDF/PESTNOTES/pnasiancitruspsyllid.pdf",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Peach___Bacterial_spot",
+      "slug": "peach-bacterial-spot",
+      "crop": {
+        "en": "Peach",
+        "hi": "आड़ू"
+      },
+      "name": {
+        "en": "Bacterial spot",
+        "hi": "जीवाणु धब्बा रोग (बैक्टीरियल स्पॉट)"
+      },
+      "healthy": false,
+      "pathogen_type": "bacterium",
+      "scientific_name": "Xanthomonas arboricola pv. pruni",
+      "summary": {
+        "en": "Bacterial spot is a bacterial disease of peach and other stone fruits that causes angular leaf spots, 'shot-holes', leaf drop and pitted, cracked fruit. It is favoured by warm, wet, windy weather and sprays only protect - they do not cure.",
+        "hi": "बैक्टीरियल स्पॉट आड़ू और दूसरे गुठलीदार फलों का जीवाणु रोग है, जिसमें पत्तियों पर कोणीय धब्बे, 'छर्रे जैसे छेद', पत्ती गिरना और फलों पर गड्ढे व दरारें होती हैं। गर्म, गीला और हवादार मौसम इसे बढ़ाता है, और छिड़काव केवल बचाव करता है - इलाज नहीं।"
+      },
+      "symptoms": {
+        "en": [
+          "Small water-soaked spots on leaves that turn purple-brown to black and are angular (limited by veins).",
+          "Spots are common along the midrib and leaf tip; centres fall out, leaving shot-holes and a ragged look.",
+          "Infected leaves turn yellow and drop early.",
+          "Fruit shows small dark spots that become sunken, pitted or cracked."
+        ],
+        "hi": [
+          "पत्तियों पर छोटे पानी भरे जैसे धब्बे जो बैंगनी-भूरे से काले हो जाते हैं और कोणीय होते हैं (नसों से सीमित)।",
+          "धब्बे अक्सर मध्य नस और पत्ती की नोक पर होते हैं; बीच का हिस्सा गिरकर छेद बन जाता है और पत्ती फटी-सी दिखती है।",
+          "संक्रमित पत्तियाँ पीली होकर जल्दी गिर जाती हैं।",
+          "फलों पर छोटे गहरे धब्बे बनते हैं, जो धँस जाते हैं, गड्ढेदार या फटे हुए हो जाते हैं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Caused by the bacterium Xanthomonas arboricola pv. pruni.",
+          "Bacteria survive the winter in twig cankers and ooze out in spring.",
+          "Wind-driven rain and splashing water carry bacteria to leaves and fruit; they enter through natural openings.",
+          "Warm temperatures with frequent rain, heavy dew and wind favour the disease; sandy sites and stressed trees suffer more."
+        ],
+        "hi": [
+          "यह रोग Xanthomonas arboricola pv. pruni जीवाणु से होता है।",
+          "जीवाणु टहनियों के कैंकर (घाव) में सर्दी बिताते हैं और वसंत में बाहर रिसते हैं।",
+          "हवा के साथ बारिश और पानी के छींटे जीवाणु को पत्तियों और फलों तक ले जाते हैं; ये प्राकृतिक छिद्रों से अंदर जाते हैं।",
+          "गर्म तापमान, बार-बार बारिश, भारी ओस और हवा रोग को बढ़ाते हैं; रेतीली जगह और कमज़ोर पेड़ों पर ज़्यादा नुकसान होता है।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Plant resistant or less susceptible varieties - this is the most sustainable control.",
+          "Avoid low, shaded or poorly drained sites; plant vigorous, disease-free trees.",
+          "Prune every year in dry weather to open the canopy so leaves dry faster.",
+          "Fertilize as recommended - keep trees vigorous but avoid excessive growth."
+        ],
+        "hi": [
+          "रोग-रोधी या कम संवेदनशील किस्में लगाएँ - यह सबसे टिकाऊ उपाय है।",
+          "निचली, छायादार या पानी रुकने वाली जगह से बचें; मज़बूत, रोग-मुक्त पौधे लगाएँ।",
+          "हर साल सूखे मौसम में छँटाई करें ताकि छतरी खुली रहे और पत्तियाँ जल्दी सूखें।",
+          "सुझाई गई मात्रा में खाद दें - पेड़ मज़बूत रहें पर ज़रूरत से ज़्यादा बढ़वार न हो।"
+        ]
+      },
+      "organic_treatment": {
+        "en": [
+          "Copper-based sprays are the main product reported by Alabama Extension; some copper products are accepted in organic farming. Peach leaves are sensitive to copper, so use only as labelled.",
+          "Good pruning and site selection may help reduce disease by keeping leaves dry."
+        ],
+        "hi": [
+          "Alabama Extension के अनुसार तांबा आधारित छिड़काव मुख्य उपाय है; कुछ तांबा उत्पाद जैविक खेती में मान्य हैं। आड़ू की पत्तियाँ तांबे के प्रति संवेदनशील होती हैं, इसलिए केवल लेबल के अनुसार इस्तेमाल करें।",
+          "अच्छी छँटाई और सही जगह का चुनाव पत्तियों को सूखा रखकर रोग कम करने में मदद कर सकते हैं।"
+        ]
+      },
+      "chemical_treatment": {
+        "en": [
+          "Copper-containing bactericides are the main chemical option reported by Alabama Extension; sprays are preventive, not curative.",
+          "Ohio State notes that no spray program is completely effective, so combine sprays with resistant varieties and good orchard care.",
+          "Use only products registered for this crop in India (CIB&RC), follow the product label exactly, and consult your local KVK or agriculture officer before spraying."
+        ],
+        "hi": [
+          "Alabama Extension के अनुसार तांबा युक्त जीवाणुनाशक मुख्य रासायनिक विकल्प हैं; छिड़काव बचाव के लिए हैं, इलाज के लिए नहीं।",
+          "Ohio State के अनुसार कोई भी छिड़काव कार्यक्रम पूरी तरह असरदार नहीं है, इसलिए छिड़काव के साथ रोग-रोधी किस्में और बाग़ की अच्छी देखभाल ज़रूरी है।",
+          "भारत में इस फसल के लिए CIB&RC द्वारा पंजीकृत (रजिस्टर्ड) दवा ही इस्तेमाल करें, दवा के लेबल पर लिखे निर्देशों का ठीक-ठीक पालन करें, और छिड़काव से पहले अपने नज़दीकी KVK या कृषि अधिकारी से सलाह लें।"
+        ],
+        "active_ingredients": [
+          "copper (fixed copper compounds)"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Bacterial Spot Treatment in Peaches (ANR-2962)",
+          "publisher": "Alabama Cooperative Extension System",
+          "url": "https://www.aces.edu/wp-content/uploads/2025/03/ANR-2962_BacterialSpotTreatmentinPeaches_081925L.pdf",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Bacterial Spot of Stone Fruits (PLPATH-FRU-38)",
+          "publisher": "Ohio State University Extension (Ohioline)",
+          "url": "https://ohioline.osu.edu/factsheet/plpath-fru-38",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Peach___healthy",
+      "slug": "peach-healthy",
+      "crop": {
+        "en": "Peach",
+        "hi": "आड़ू"
+      },
+      "name": {
+        "en": "Healthy",
+        "hi": "स्वस्थ"
+      },
+      "healthy": true,
+      "pathogen_type": "none",
+      "scientific_name": null,
+      "summary": {
+        "en": "The peach leaf looks healthy with no visible disease. Keep up good orchard care and regular checks.",
+        "hi": "आड़ू की पत्ती स्वस्थ दिख रही है और कोई रोग नज़र नहीं आ रहा। बाग़ की अच्छी देखभाल और नियमित जाँच जारी रखें।"
+      },
+      "symptoms": {
+        "en": [
+          "Leaves are evenly green with no spots, shot-holes or curling.",
+          "No yellowing or early leaf drop.",
+          "Twigs have no sunken cankers or gum oozing."
+        ],
+        "hi": [
+          "पत्तियाँ एक जैसी हरी हैं, कोई धब्बा, छेद या मुड़ाव नहीं।",
+          "पीलापन या समय से पहले पत्ती गिरना नहीं।",
+          "टहनियों पर धँसे घाव या गोंद निकलना नहीं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Warm, wet and windy weather favours bacterial spot and shot-hole diseases.",
+          "Low, shaded or poorly drained sites and stressed trees are more prone to disease.",
+          "Note: nitrogen deficiency can cause leaf spotting that looks like bacterial spot."
+        ],
+        "hi": [
+          "गर्म, गीला और हवादार मौसम बैक्टीरियल स्पॉट और शॉट-होल रोगों को बढ़ाता है।",
+          "निचली, छायादार या पानी रुकने वाली जगहें और कमज़ोर पेड़ रोग के प्रति ज़्यादा संवेदनशील होते हैं।",
+          "ध्यान दें: नाइट्रोजन की कमी से भी पत्तियों पर बैक्टीरियल स्पॉट जैसे धब्बे दिख सकते हैं।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Choose resistant varieties suitable for your area.",
+          "Prune every year in dry weather and remove cankered or dead twigs.",
+          "Give balanced fertilizer based on soil test and ensure good drainage.",
+          "Inspect the orchard every week."
+        ],
+        "hi": [
+          "अपने क्षेत्र के लिए उपयुक्त रोग-रोधी किस्में चुनें।",
+          "हर साल सूखे मौसम में छँटाई करें और घाव वाली या सूखी टहनियाँ हटाएँ।",
+          "मिट्टी जाँच के आधार पर संतुलित खाद दें और अच्छा जल-निकास रखें।",
+          "हर हफ़्ते बाग़ की जाँच करें।"
+        ]
+      },
+      "organic_treatment": null,
+      "chemical_treatment": null,
+      "sources": [
+        {
+          "title": "AESA based IPM Package - Peach",
+          "publisher": "NIPHM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India",
+          "url": "https://niphm.gov.in/IPMPackages/Peach.pdf",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Bacterial Spot of Stone Fruits (PLPATH-FRU-38)",
+          "publisher": "Ohio State University Extension (Ohioline)",
+          "url": "https://ohioline.osu.edu/factsheet/plpath-fru-38",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Pepper,_bell___Bacterial_spot",
+      "slug": "pepper-bell-bacterial-spot",
+      "crop": {
+        "en": "Bell pepper",
+        "hi": "शिमला मिर्च"
+      },
+      "name": {
+        "en": "Bacterial spot",
+        "hi": "जीवाणु धब्बा रोग (बैक्टीरियल स्पॉट)"
+      },
+      "healthy": false,
+      "pathogen_type": "bacterium",
+      "scientific_name": "Xanthomonas spp. (X. euvesicatoria and related species)",
+      "summary": {
+        "en": "Bacterial spot is a common bacterial disease of capsicum and tomato. It causes water-soaked leaf spots that turn brown-black, heavy leaf drop and rough, scabby spots on fruit; it spreads fast in warm, wet weather.",
+        "hi": "बैक्टीरियल स्पॉट शिमला मिर्च और टमाटर का आम जीवाणु रोग है। इसमें पत्तियों पर पानी भरे जैसे धब्बे बनते हैं जो भूरे-काले हो जाते हैं, पत्तियाँ बहुत गिरती हैं और फलों पर खुरदरे पपड़ीदार धब्बे बनते हैं; गर्म और गीले मौसम में यह तेज़ी से फैलता है।"
+      },
+      "symptoms": {
+        "en": [
+          "Small yellow-green, water-soaked spots, first on older lower leaves.",
+          "Spots become brown to black, often with a yellow halo.",
+          "Heavy leaf drop can lead to flower drop and sunscald of fruit.",
+          "Fruit shows dark, water-soaked spots that become raised, cracked and warty."
+        ],
+        "hi": [
+          "छोटे पीले-हरे, पानी भरे जैसे धब्बे, पहले नीचे की पुरानी पत्तियों पर।",
+          "धब्बे भूरे से काले हो जाते हैं, अक्सर पीले घेरे के साथ।",
+          "ज़्यादा पत्ती गिरने से फूल झड़ सकते हैं और फलों पर धूप से झुलसन हो सकती है।",
+          "फलों पर गहरे पानी भरे धब्बे बनते हैं, जो उभरे, फटे और मस्से जैसे हो जाते हैं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Caused by Xanthomonas bacteria.",
+          "Carried on infected seed and transplants that may look healthy, and in crop debris and volunteer plants.",
+          "Spread by splashing rain or irrigation, handling wet plants, and contaminated tools.",
+          "Long periods of moisture, high humidity, warm temperatures and excess nitrogen favour the disease."
+        ],
+        "hi": [
+          "यह रोग Xanthomonas जीवाणुओं से होता है।",
+          "संक्रमित बीज और देखने में स्वस्थ लगने वाली पौध, फसल अवशेष और अपने-आप उगे पौधों के ज़रिए फैलता है।",
+          "बारिश या सिंचाई के छींटों, गीले पौधों को छूने और दूषित औज़ारों से फैलता है।",
+          "लंबे समय तक नमी, ज़्यादा आर्द्रता, गर्म तापमान और ज़्यादा नाइट्रोजन रोग को बढ़ाते हैं।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Use certified, disease-free seed and healthy transplants.",
+          "Grow resistant capsicum varieties where available.",
+          "Avoid overhead irrigation and do not work in the field when plants are wet.",
+          "Remove weeds, volunteer plants and crop debris; plough debris in soon after harvest and rotate crops.",
+          "Keep fertilizer balanced and avoid excess nitrogen."
+        ],
+        "hi": [
+          "प्रमाणित, रोग-मुक्त बीज और स्वस्थ पौध इस्तेमाल करें।",
+          "जहाँ मिलें रोग-रोधी शिमला मिर्च किस्में लगाएँ।",
+          "ऊपर से (फव्वारा) सिंचाई से बचें और पौधे गीले हों तब खेत में काम न करें।",
+          "खरपतवार, अपने-आप उगे पौधे और फसल अवशेष हटाएँ; कटाई के बाद अवशेष जल्दी जोतकर मिलाएँ और फसल चक्र अपनाएँ।",
+          "खाद संतुलित रखें और ज़्यादा नाइट्रोजन से बचें।"
+        ]
+      },
+      "organic_treatment": {
+        "en": [
+          "Some copper formulations are accepted in organic production (UC IPM); copper only protects and works better before infection.",
+          "Strict sanitation and clean planting material are the most reliable non-chemical tools."
+        ],
+        "hi": [
+          "कुछ तांबा आधारित दवाएँ जैविक खेती में मान्य हैं (UC IPM); तांबा केवल बचाव करता है और संक्रमण से पहले ज़्यादा असरदार है।",
+          "सख्त साफ़-सफ़ाई और साफ़ पौध सामग्री सबसे भरोसेमंद गैर-रासायनिक उपाय हैं।"
+        ]
+      },
+      "chemical_treatment": {
+        "en": [
+          "Fixed copper products are the main field treatment reported by Alabama Extension; mixing copper with mancozeb improves its effect.",
+          "Copper resistance is common in the bacteria, so sprays give only partial control - combine them with clean seed and cultural practices.",
+          "Use only products registered for this crop in India (CIB&RC), follow the product label exactly, and consult your local KVK or agriculture officer before spraying."
+        ],
+        "hi": [
+          "Alabama Extension के अनुसार फिक्स्ड कॉपर (तांबा) उत्पाद खेत में मुख्य उपाय हैं; तांबे के साथ mancozeb मिलाने से असर बढ़ता है।",
+          "जीवाणुओं में तांबे के प्रति प्रतिरोध आम है, इसलिए छिड़काव से केवल आंशिक नियंत्रण होता है - इसे साफ़ बीज और खेती के अच्छे तरीकों के साथ अपनाएँ।",
+          "भारत में इस फसल के लिए CIB&RC द्वारा पंजीकृत (रजिस्टर्ड) दवा ही इस्तेमाल करें, दवा के लेबल पर लिखे निर्देशों का ठीक-ठीक पालन करें, और छिड़काव से पहले अपने नज़दीकी KVK या कृषि अधिकारी से सलाह लें।"
+        ],
+        "active_ingredients": [
+          "copper (fixed copper, e.g. copper hydroxide)",
+          "mancozeb"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Bacterial Spot in Peppers and Tomatoes",
+          "publisher": "Alabama Cooperative Extension System",
+          "url": "https://www.aces.edu/?p=57992",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Bacterial Spot - Tomato Pest Management Guidelines",
+          "publisher": "UC Statewide IPM Program, University of California",
+          "url": "https://ipm.ucanr.edu/PMG/r783101711.html",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Pepper,_bell___healthy",
+      "slug": "pepper-bell-healthy",
+      "crop": {
+        "en": "Bell pepper",
+        "hi": "शिमला मिर्च"
+      },
+      "name": {
+        "en": "Healthy",
+        "hi": "स्वस्थ"
+      },
+      "healthy": true,
+      "pathogen_type": "none",
+      "scientific_name": null,
+      "summary": {
+        "en": "The capsicum leaf looks healthy with no visible disease. Keep using clean seed, good field hygiene and regular checks.",
+        "hi": "शिमला मिर्च की पत्ती स्वस्थ दिख रही है और कोई रोग नज़र नहीं आ रहा। साफ़ बीज, खेत की अच्छी सफ़ाई और नियमित जाँच जारी रखें।"
+      },
+      "symptoms": {
+        "en": [
+          "Leaves are evenly green and glossy with no water-soaked or dark spots.",
+          "No yellow halos, curling or mottling.",
+          "No heavy leaf drop from the lower canopy."
+        ],
+        "hi": [
+          "पत्तियाँ एक जैसी हरी और चमकदार हैं, पानी भरे या गहरे धब्बे नहीं।",
+          "पीले घेरे, मुड़ाव या चितकबरापन नहीं।",
+          "नीचे की पत्तियों का ज़्यादा गिरना नहीं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Infected seed or transplants can bring bacterial spot into a clean field.",
+          "Warm, wet weather and overhead irrigation increase disease spread.",
+          "Excess nitrogen makes plants more prone to disease."
+        ],
+        "hi": [
+          "संक्रमित बीज या पौध साफ़ खेत में बैक्टीरियल स्पॉट ला सकते हैं।",
+          "गर्म, गीला मौसम और ऊपर से सिंचाई रोग का फैलाव बढ़ाते हैं।",
+          "ज़्यादा नाइट्रोजन से पौधे रोग के प्रति ज़्यादा संवेदनशील होते हैं।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Use certified seed and disease-free transplants.",
+          "Use drip or furrow irrigation instead of overhead sprinklers.",
+          "Remove weeds and crop debris and follow crop rotation.",
+          "Keep fertilizer balanced and inspect plants weekly."
+        ],
+        "hi": [
+          "प्रमाणित बीज और रोग-मुक्त पौध इस्तेमाल करें।",
+          "फव्वारे के बजाय ड्रिप या नाली से सिंचाई करें।",
+          "खरपतवार और फसल अवशेष हटाएँ और फसल चक्र अपनाएँ।",
+          "खाद संतुलित रखें और हर हफ़्ते पौधों की जाँच करें।"
+        ]
+      },
+      "organic_treatment": null,
+      "chemical_treatment": null,
+      "sources": [
+        {
+          "title": "Bacterial Spot in Peppers and Tomatoes",
+          "publisher": "Alabama Cooperative Extension System",
+          "url": "https://www.aces.edu/?p=57992",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Potato___Early_blight",
+      "slug": "potato-early-blight",
+      "crop": {
+        "en": "Potato",
+        "hi": "आलू"
+      },
+      "name": {
+        "en": "Early blight",
+        "hi": "अगेती झुलसा"
+      },
+      "healthy": false,
+      "pathogen_type": "fungus",
+      "scientific_name": "Alternaria solani",
+      "summary": {
+        "en": "Early blight is a common fungal disease of potato that causes dark brown spots with target-like rings on older leaves. It also affects stems and tubers and reduces yield, especially when the crop is stressed.",
+        "hi": "अगेती झुलसा आलू का आम फफूंद रोग है, जिसमें पुरानी पत्तियों पर निशाने (टारगेट) जैसे छल्लों वाले गहरे भूरे धब्बे बनते हैं। यह तने और कंदों को भी प्रभावित करता है और उपज घटाता है, खासकर जब फसल कमज़ोर हो।"
+      },
+      "symptoms": {
+        "en": [
+          "Small brown spots on older, lower leaves that enlarge and show concentric rings (target spot).",
+          "Leaf tissue around spots turns yellow; spots may join and leaves dry up.",
+          "Dark, elongated lesions can appear on stems and leaf stalks.",
+          "Tubers show dark, sunken spots with dry, corky tissue below."
+        ],
+        "hi": [
+          "नीचे की पुरानी पत्तियों पर छोटे भूरे धब्बे, जो बढ़कर गोल छल्लों वाले (निशाने जैसे) हो जाते हैं।",
+          "धब्बों के आसपास पत्ती पीली हो जाती है; धब्बे मिल सकते हैं और पत्तियाँ सूख जाती हैं।",
+          "तने और पत्ती के डंठल पर गहरे, लंबे धब्बे दिख सकते हैं।",
+          "कंदों पर गहरे, धँसे धब्बे बनते हैं जिनके नीचे का गूदा सूखा और कॉर्क जैसा होता है।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Caused by the fungus Alternaria solani, which also attacks tomato and brinjal.",
+          "Survives on infected crop debris, seed tubers, volunteer potatoes and weed hosts.",
+          "Spores spread by wind, rain splash and irrigation water.",
+          "Warm weather with alternating wet and dry periods favours it; older leaves and stressed or poorly fed plants are most affected."
+        ],
+        "hi": [
+          "यह रोग Alternaria solani फफूंद से होता है, जो टमाटर और बैंगन पर भी लगती है।",
+          "संक्रमित फसल अवशेष, बीज कंद, अपने-आप उगे आलू और खरपतवारों पर जीवित रहती है।",
+          "बीजाणु हवा, बारिश के छींटों और सिंचाई के पानी से फैलते हैं।",
+          "गर्म मौसम में बारी-बारी से गीला और सूखा रहना इसे बढ़ाता है; पुरानी पत्तियाँ और कमज़ोर या कम पोषण वाले पौधे ज़्यादा प्रभावित होते हैं।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Use disease-free seed tubers.",
+          "Rotate with non-host crops for a few years and destroy crop debris and weed hosts.",
+          "Give balanced fertilizer (avoid nitrogen shortage), irrigate at critical stages and avoid waterlogging.",
+          "Grow tolerant varieties where available (KAU reports Kufri Sindhuri as resistant in the plains).",
+          "Avoid injuring tubers at harvest and cure them before storage."
+        ],
+        "hi": [
+          "रोग-मुक्त बीज कंद इस्तेमाल करें।",
+          "कुछ साल तक ऐसी फसलें लें जिन पर यह रोग न लगे, और फसल अवशेष व खरपतवार नष्ट करें।",
+          "संतुलित खाद दें (नाइट्रोजन की कमी न हो), ज़रूरी अवस्थाओं में सिंचाई करें और पानी रुकने न दें।",
+          "जहाँ मिलें सहनशील किस्में लगाएँ (KAU के अनुसार मैदानी क्षेत्रों में Kufri Sindhuri रोग-रोधी है)।",
+          "खुदाई के समय कंदों को चोट न पहुँचाएँ और भंडारण से पहले उन्हें सुखाकर पक्का करें।"
+        ]
+      },
+      "organic_treatment": {
+        "en": [
+          "Field sanitation and removal of infected debris may help reduce the source of the disease.",
+          "Good crop nutrition and avoiding plant stress help plants resist infection."
+        ],
+        "hi": [
+          "खेत की साफ़-सफ़ाई और संक्रमित अवशेष हटाने से रोग का स्रोत कम करने में मदद मिल सकती है।",
+          "फसल का अच्छा पोषण और पौधों को तनाव से बचाना संक्रमण से लड़ने में मदद करता है।"
+        ]
+      },
+      "chemical_treatment": {
+        "en": [
+          "Fungicide options reported by KAU and NDSU include mancozeb and copper oxychloride (KAU) and chlorothalonil (NDSU) as protectants.",
+          "NDSU notes that under high disease pressure systemic fungicides with different modes of action (e.g. fluopyram, pydiflumetofen) are needed and should be rotated; some strobilurins (azoxystrobin) no longer work well due to resistance.",
+          "Use only products registered for this crop in India (CIB&RC), follow the product label exactly, and consult your local KVK or agriculture officer before spraying."
+        ],
+        "hi": [
+          "KAU और NDSU द्वारा बताए गए बचाव वाले विकल्प: mancozeb और copper oxychloride (KAU) तथा chlorothalonil (NDSU)।",
+          "NDSU के अनुसार ज़्यादा प्रकोप में अलग-अलग तरीके से काम करने वाली सिस्टमिक दवाएँ (जैसे fluopyram, pydiflumetofen) बदल-बदल कर चाहिए; प्रतिरोध के कारण कुछ स्ट्रोबिल्यूरिन (azoxystrobin) अब ठीक से काम नहीं करतीं।",
+          "भारत में इस फसल के लिए CIB&RC द्वारा पंजीकृत (रजिस्टर्ड) दवा ही इस्तेमाल करें, दवा के लेबल पर लिखे निर्देशों का ठीक-ठीक पालन करें, और छिड़काव से पहले अपने नज़दीकी KVK या कृषि अधिकारी से सलाह लें।"
+        ],
+        "active_ingredients": [
+          "mancozeb",
+          "copper oxychloride",
+          "chlorothalonil",
+          "fluopyram",
+          "pydiflumetofen"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Potato - Early blight (Alternaria solani)",
+          "publisher": "KAU Agri-Infotech Portal, Kerala Agricultural University",
+          "url": "https://celkau.in/crops/vegetables/potato/earlybight.php",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Early Blight of Potato (PP1892)",
+          "publisher": "NDSU Extension, North Dakota State University",
+          "url": "https://www.ndsu.edu/agriculture/ag-hub/publications/early-blight-potato",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Potato___Late_blight",
+      "slug": "potato-late-blight",
+      "crop": {
+        "en": "Potato",
+        "hi": "आलू"
+      },
+      "name": {
+        "en": "Late blight",
+        "hi": "पछेती झुलसा"
+      },
+      "healthy": false,
+      "pathogen_type": "oomycete",
+      "scientific_name": "Phytophthora infestans",
+      "summary": {
+        "en": "Late blight is a very destructive disease of potato caused by a water mould. In cool, cloudy, humid weather it can kill the foliage within days and rot the tubers, so preventive action is essential.",
+        "hi": "पछेती झुलसा आलू का बहुत विनाशकारी रोग है, जो एक जल-फफूंद (water mould) से होता है। ठंडे, बादल वाले और नम मौसम में यह कुछ ही दिनों में पत्तियाँ नष्ट कर सकता है और कंद सड़ा सकता है, इसलिए पहले से बचाव बहुत ज़रूरी है।"
+      },
+      "symptoms": {
+        "en": [
+          "Water-soaked spots on leaves that quickly enlarge and turn purplish-brown to black.",
+          "White fungal growth on the underside of leaves around the spots, especially in the morning.",
+          "Stems turn dark and may break at the nodes; the whole crop can look burnt.",
+          "Tubers show rusty-brown rot that spreads inward from the skin."
+        ],
+        "hi": [
+          "पत्तियों पर पानी भरे जैसे धब्बे, जो तेज़ी से बढ़कर बैंगनी-भूरे से काले हो जाते हैं।",
+          "धब्बों के आसपास पत्तियों की निचली सतह पर सफेद फफूंद, खासकर सुबह के समय।",
+          "तने काले पड़ जाते हैं और गाँठों से टूट सकते हैं; पूरी फसल झुलसी हुई दिख सकती है।",
+          "कंदों पर जंग जैसी भूरी सड़न होती है, जो छिलके से अंदर की ओर फैलती है।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Caused by Phytophthora infestans, an oomycete (water mould).",
+          "Infected seed tubers and soil are the main source; diseased tubers carry it from one season to the next.",
+          "Spores (sporangia) are carried by air and start new infections quickly.",
+          "High humidity, cool nights, cloudy weather and light rain or drizzle strongly favour the disease."
+        ],
+        "hi": [
+          "यह रोग Phytophthora infestans से होता है, जो एक ऊमाइसीट (जल-फफूंद) है।",
+          "संक्रमित बीज कंद और मिट्टी मुख्य स्रोत हैं; रोगी कंद इसे एक मौसम से अगले मौसम तक ले जाते हैं।",
+          "बीजाणु (स्पोरेंजिया) हवा से फैलते हैं और जल्दी नया संक्रमण करते हैं।",
+          "ज़्यादा नमी, ठंडी रातें, बादल वाला मौसम और हल्की बारिश या बूंदाबांदी इस रोग को बहुत बढ़ाते हैं।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Use healthy, disease-free seed tubers.",
+          "Grow resistant varieties (TNAU lists Kufri Naveen, Kufri Jeevan, Kufri Alankar, Kufri Khasi Garo and Kufri Moti).",
+          "Ensure good field drainage and keep watch on the crop during cool, cloudy, humid weather.",
+          "Destroy the haulm (foliage) before harvest, avoid injuring tubers, and remove infected tubers before storage."
+        ],
+        "hi": [
+          "स्वस्थ, रोग-मुक्त बीज कंद इस्तेमाल करें।",
+          "रोग-रोधी किस्में लगाएँ (TNAU ने Kufri Naveen, Kufri Jeevan, Kufri Alankar, Kufri Khasi Garo और Kufri Moti बताई हैं)।",
+          "खेत में अच्छा जल-निकास रखें और ठंडे, बादल वाले, नम मौसम में फसल पर खास नज़र रखें।",
+          "खुदाई से पहले पौधों के ऊपरी हिस्से (हॉल्म) नष्ट करें, कंदों को चोट न पहुँचाएँ और भंडारण से पहले रोगी कंद अलग कर दें।"
+        ]
+      },
+      "organic_treatment": {
+        "en": [
+          "Removing infected plants and tubers and destroying cull piles may help reduce the source of infection.",
+          "The sources consulted do not report an organic spray for potato late blight; rely on healthy seed, resistant varieties and good drainage."
+        ],
+        "hi": [
+          "रोगी पौधे और कंद हटाने और बेकार कंदों के ढेर नष्ट करने से संक्रमण का स्रोत कम करने में मदद मिल सकती है।",
+          "देखे गए स्रोतों में आलू के पछेती झुलसा के लिए कोई जैविक छिड़काव नहीं बताया गया; स्वस्थ बीज, रोग-रोधी किस्मों और अच्छे जल-निकास पर भरोसा करें।"
+        ]
+      },
+      "chemical_treatment": {
+        "en": [
+          "Protective spraying with mancozeb or zineb is the option reported by TNAU; sprays work best when applied before the disease appears.",
+          "Do not wait for the disease to spread - act early when weather forecasts favour late blight.",
+          "Use only products registered for this crop in India (CIB&RC), follow the product label exactly, and consult your local KVK or agriculture officer before spraying."
+        ],
+        "hi": [
+          "TNAU के अनुसार mancozeb या zineb का बचाव के लिए छिड़काव विकल्प है; रोग दिखने से पहले छिड़काव सबसे असरदार होता है।",
+          "रोग फैलने का इंतज़ार न करें - जब मौसम पछेती झुलसा के अनुकूल हो तभी जल्दी कदम उठाएँ।",
+          "भारत में इस फसल के लिए CIB&RC द्वारा पंजीकृत (रजिस्टर्ड) दवा ही इस्तेमाल करें, दवा के लेबल पर लिखे निर्देशों का ठीक-ठीक पालन करें, और छिड़काव से पहले अपने नज़दीकी KVK या कृषि अधिकारी से सलाह लें।"
+        ],
+        "active_ingredients": [
+          "mancozeb",
+          "zineb"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Late blight of potato (Phytophthora infestans)",
+          "publisher": "TNAU Agritech Portal, Tamil Nadu Agricultural University",
+          "url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_veg_potato_1.html",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Potato___healthy",
+      "slug": "potato-healthy",
+      "crop": {
+        "en": "Potato",
+        "hi": "आलू"
+      },
+      "name": {
+        "en": "Healthy",
+        "hi": "स्वस्थ"
+      },
+      "healthy": true,
+      "pathogen_type": "none",
+      "scientific_name": null,
+      "summary": {
+        "en": "The potato leaf looks healthy with no visible disease. Keep using healthy seed and watch the crop closely during cool, humid or cloudy weather.",
+        "hi": "आलू की पत्ती स्वस्थ दिख रही है और कोई रोग नज़र नहीं आ रहा। स्वस्थ बीज इस्तेमाल करते रहें और ठंडे, नम या बादल वाले मौसम में फसल पर खास नज़र रखें।"
+      },
+      "symptoms": {
+        "en": [
+          "Leaves are evenly green with no spots, rings or water-soaked patches.",
+          "No white growth on the underside of leaves.",
+          "Stems are firm and green, not blackened."
+        ],
+        "hi": [
+          "पत्तियाँ एक जैसी हरी हैं, कोई धब्बा, छल्ला या पानी भरे जैसे निशान नहीं।",
+          "पत्तियों की निचली सतह पर सफेद फफूंद नहीं।",
+          "तने मज़बूत और हरे हैं, काले नहीं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Cool, cloudy, humid weather raises the risk of late blight.",
+          "Warm weather with alternating wet and dry spells and plant stress favour early blight.",
+          "Infected seed tubers and crop debris carry disease into new fields."
+        ],
+        "hi": [
+          "ठंडा, बादल वाला, नम मौसम पछेती झुलसा का खतरा बढ़ाता है।",
+          "गर्म मौसम में बारी-बारी गीला-सूखा रहना और पौधों का तनाव अगेती झुलसा को बढ़ाते हैं।",
+          "संक्रमित बीज कंद और फसल अवशेष नए खेतों में रोग ले जाते हैं।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Use certified, disease-free seed tubers and resistant varieties.",
+          "Follow crop rotation and destroy crop debris and volunteer plants.",
+          "Give balanced nutrition and ensure good drainage.",
+          "Scout the field regularly, especially after cloudy or rainy days."
+        ],
+        "hi": [
+          "प्रमाणित, रोग-मुक्त बीज कंद और रोग-रोधी किस्में इस्तेमाल करें।",
+          "फसल चक्र अपनाएँ और फसल अवशेष व अपने-आप उगे पौधे नष्ट करें।",
+          "संतुलित पोषण दें और अच्छा जल-निकास रखें।",
+          "खेत की नियमित जाँच करें, खासकर बादल या बारिश वाले दिनों के बाद।"
+        ]
+      },
+      "organic_treatment": null,
+      "chemical_treatment": null,
+      "sources": [
+        {
+          "title": "Late blight of potato (Phytophthora infestans)",
+          "publisher": "TNAU Agritech Portal, Tamil Nadu Agricultural University",
+          "url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_veg_potato_1.html",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Early Blight of Potato (PP1892)",
+          "publisher": "NDSU Extension, North Dakota State University",
+          "url": "https://www.ndsu.edu/agriculture/ag-hub/publications/early-blight-potato",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Raspberry___healthy",
+      "slug": "raspberry-healthy",
+      "crop": {
+        "en": "Raspberry",
+        "hi": "रसभरी (रास्पबेरी)"
+      },
+      "name": {
+        "en": "Healthy",
+        "hi": "स्वस्थ"
+      },
+      "healthy": true,
+      "pathogen_type": "none",
+      "scientific_name": null,
+      "summary": {
+        "en": "The raspberry leaf looks healthy with no visible disease. Clean planting material, good air circulation and removing old canes keep plantings productive.",
+        "hi": "रास्पबेरी की पत्ती स्वस्थ दिख रही है और कोई रोग नज़र नहीं आ रहा। साफ़ पौध सामग्री, अच्छी हवा और पुरानी बेंतें (केन) हटाने से पौधे लंबे समय तक अच्छी उपज देते हैं।"
+      },
+      "symptoms": {
+        "en": [
+          "Leaves are evenly green with no spots, mottling or powdery growth.",
+          "Leaves are not curled or distorted (curling or mosaic can indicate virus).",
+          "Canes have no purple spots, cankers or wilting tips."
+        ],
+        "hi": [
+          "पत्तियाँ एक जैसी हरी हैं, कोई धब्बा, चितकबरापन या पाउडर जैसी परत नहीं।",
+          "पत्तियाँ मुड़ी या बिगड़ी नहीं हैं (मुड़ना या मोज़ेक विषाणु का संकेत हो सकता है)।",
+          "बेंतों पर बैंगनी धब्बे, घाव या मुरझाए सिरे नहीं हैं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Wild or abandoned brambles nearby can be a source of diseases, especially viruses.",
+          "Long periods of wetness on leaves and canes favour fungal diseases.",
+          "Planting where tomato, potato, brinjal or strawberry grew recently increases shared disease risk."
+        ],
+        "hi": [
+          "पास की जंगली या छोड़ी हुई झाड़ियाँ रोगों, खासकर विषाणुओं का स्रोत हो सकती हैं।",
+          "पत्तियों और बेंतों का लंबे समय तक गीला रहना फफूंद रोगों को बढ़ाता है।",
+          "जहाँ हाल में टमाटर, आलू, बैंगन या स्ट्रॉबेरी उगी हो वहाँ लगाने से साझा रोगों का खतरा बढ़ता है।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Plant only certified, disease-free plants from reliable nurseries.",
+          "After harvest, remove and destroy fruited, weak or diseased canes.",
+          "Thin canes, prune and control weeds to improve air circulation.",
+          "Choose a well-drained, sunny site with good air drainage; monitor the planting every week."
+        ],
+        "hi": [
+          "भरोसेमंद नर्सरी से केवल प्रमाणित, रोग-मुक्त पौधे लगाएँ।",
+          "तुड़ाई के बाद फल दे चुकी, कमज़ोर या रोगी बेंतें हटाकर नष्ट करें।",
+          "बेंतें कम करें, छँटाई करें और खरपतवार नियंत्रित करें ताकि हवा अच्छी चले।",
+          "अच्छे जल-निकास वाली, धूप वाली और हवादार जगह चुनें; हर हफ़्ते पौधों की जाँच करें।"
+        ]
+      },
+      "organic_treatment": null,
+      "chemical_treatment": null,
+      "sources": [
+        {
+          "title": "Growing Raspberries in Wisconsin (A1610)",
+          "publisher": "University of Wisconsin-Madison Extension",
+          "url": "https://hort.extension.wisc.edu/files/2023/12/A1610.pdf",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "AESA based IPM Package - Raspberry",
+          "publisher": "NIPHM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India",
+          "url": "https://niphm.gov.in/IPMPackages/Raspberry.pdf",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Soybean___healthy",
+      "slug": "soybean-healthy",
+      "crop": {
+        "en": "Soybean",
+        "hi": "सोयाबीन"
+      },
+      "name": {
+        "en": "Healthy",
+        "hi": "स्वस्थ"
+      },
+      "healthy": true,
+      "pathogen_type": "none",
+      "scientific_name": null,
+      "summary": {
+        "en": "The soybean leaf looks healthy with no visible disease. Follow good crop practices and regular field monitoring to keep the crop healthy.",
+        "hi": "सोयाबीन की पत्ती स्वस्थ दिख रही है और कोई रोग नज़र नहीं आ रहा। फसल को स्वस्थ रखने के लिए अच्छे खेती के तरीके और खेत की नियमित निगरानी जारी रखें।"
+      },
+      "symptoms": {
+        "en": [
+          "Leaflets are evenly green with no spots, pustules or mottling.",
+          "No yellowing, curling or holes from insect feeding.",
+          "Plants are upright with normal growth."
+        ],
+        "hi": [
+          "पत्तियाँ एक जैसी हरी हैं, कोई धब्बा, फुंसी या चितकबरापन नहीं।",
+          "पीलापन, मुड़ाव या कीटों से बने छेद नहीं।",
+          "पौधे सीधे खड़े हैं और सामान्य रूप से बढ़ रहे हैं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Infected seed and crop residues can carry diseases into the field.",
+          "Excess nitrogen and weedy fields make the crop more prone to pests and diseases.",
+          "Growing soybean repeatedly on the same land builds up disease."
+        ],
+        "hi": [
+          "संक्रमित बीज और फसल अवशेष खेत में रोग ला सकते हैं।",
+          "ज़्यादा नाइट्रोजन और खरपतवार वाले खेत में फसल पर कीट-रोग ज़्यादा लगते हैं।",
+          "एक ही खेत में बार-बार सोयाबीन लेने से रोग बढ़ते हैं।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Use healthy, treated seed of tolerant varieties.",
+          "Rotate with non-host crops; intercropping with pigeonpea, maize or sorghum is recommended by TNAU.",
+          "Avoid excess nitrogen, apply potash, and keep the field weed-free in the early weeks.",
+          "Monitor pests and diseases regularly and remove diseased plants early."
+        ],
+        "hi": [
+          "सहनशील किस्मों का स्वस्थ, उपचारित बीज इस्तेमाल करें।",
+          "ऐसी फसलों के साथ फसल चक्र अपनाएँ जिन पर ये रोग न लगें; TNAU ने अरहर, मक्का या ज्वार के साथ अंतरफसल की सलाह दी है।",
+          "ज़्यादा नाइट्रोजन से बचें, पोटाश दें, और शुरुआती हफ़्तों में खेत खरपतवार-मुक्त रखें।",
+          "कीट-रोगों की नियमित निगरानी करें और रोगी पौधे जल्दी हटाएँ।"
+        ]
+      },
+      "organic_treatment": null,
+      "chemical_treatment": null,
+      "sources": [
+        {
+          "title": "Crop protection :: IPM :: Soybean",
+          "publisher": "TNAU Agritech Portal, Tamil Nadu Agricultural University",
+          "url": "https://agritech.tnau.ac.in/crop_protection/crop_prot_ipm_soybean.html",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Squash___Powdery_mildew",
+      "slug": "squash-powdery-mildew",
+      "crop": {
+        "en": "Squash",
+        "hi": "कद्दू (स्क्वैश)"
+      },
+      "name": {
+        "en": "Powdery mildew",
+        "hi": "पाउडरी मिल्ड्यू (सफेद चूर्ण रोग)"
+      },
+      "healthy": false,
+      "pathogen_type": "fungus",
+      "scientific_name": "Podosphaera xanthii (also Golovinomyces cichoracearum)",
+      "summary": {
+        "en": "Powdery mildew is a common fungal disease of squash and other cucurbits that covers leaves with a white, powdery growth. Badly affected leaves turn yellow, then brown and papery, reducing yield and fruit quality.",
+        "hi": "पाउडरी मिल्ड्यू कद्दू और दूसरी कद्दूवर्गीय फसलों का आम फफूंद रोग है, जिसमें पत्तियों पर सफेद पाउडर जैसी परत छा जाती है। ज़्यादा प्रभावित पत्तियाँ पीली, फिर भूरी और कागज़ जैसी सूखी हो जाती हैं, जिससे उपज और फल की गुणवत्ता घटती है।"
+      },
+      "symptoms": {
+        "en": [
+          "Pale yellow spots on leaves, stems and leaf stalks.",
+          "Spots develop a white, fluffy-powdery coating that spreads over the leaf.",
+          "Affected leaves become dull and yellow and may wilt in afternoon heat.",
+          "Leaves finally turn brown and papery."
+        ],
+        "hi": [
+          "पत्तियों, तनों और डंठलों पर हल्के पीले धब्बे।",
+          "धब्बों पर सफेद, रुई-पाउडर जैसी परत बनती है जो पूरी पत्ती पर फैल जाती है।",
+          "प्रभावित पत्तियाँ फीकी और पीली हो जाती हैं और दोपहर की गर्मी में मुरझा सकती हैं।",
+          "आखिर में पत्तियाँ भूरी और कागज़ जैसी हो जाती हैं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Caused mainly by the fungus Podosphaera xanthii (and less often Golovinomyces cichoracearum).",
+          "The fungus survives on weeds and other cucurbits; wind carries spores long distances.",
+          "Moderate temperatures, moderate-to-high humidity and vigorous, dense plant growth favour the disease; it does not need rain."
+        ],
+        "hi": [
+          "यह रोग मुख्य रूप से Podosphaera xanthii फफूंद से होता है (कभी-कभी Golovinomyces cichoracearum से)।",
+          "फफूंद खरपतवारों और दूसरी कद्दूवर्गीय फसलों पर जीवित रहती है; हवा बीजाणुओं को दूर तक ले जाती है।",
+          "मध्यम तापमान, मध्यम से ज़्यादा नमी और घनी, तेज़ बढ़वार रोग को बढ़ाते हैं; इसके लिए बारिश ज़रूरी नहीं।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Plant resistant varieties where available, but keep monitoring because new races can overcome resistance.",
+          "Keep the field and borders free of weeds and remove old crop debris.",
+          "Check plants from the vegetative stage through fruit development."
+        ],
+        "hi": [
+          "जहाँ मिलें रोग-रोधी किस्में लगाएँ, पर निगरानी जारी रखें क्योंकि नई नस्लें प्रतिरोध तोड़ सकती हैं।",
+          "खेत और मेड़ों को खरपतवार-मुक्त रखें और पुराने फसल अवशेष हटाएँ।",
+          "पौधों की जाँच बढ़वार की अवस्था से लेकर फल बनने तक करें।"
+        ]
+      },
+      "organic_treatment": {
+        "en": [
+          "Micronized sulphur and potassium bicarbonate are organic-acceptable options reported by UC IPM; they may help reduce the disease. Sulphur can burn plants in very hot weather and some varieties are sulphur-sensitive.",
+          "Cinnamaldehyde (a botanical product) is also listed by UC IPM."
+        ],
+        "hi": [
+          "UC IPM के अनुसार माइक्रोनाइज़्ड सल्फर और पोटैशियम बाइकार्बोनेट जैविक खेती में मान्य विकल्प हैं; ये रोग कम करने में मदद कर सकते हैं। बहुत गर्म मौसम में सल्फर पौधों को झुलसा सकता है और कुछ किस्में सल्फर के प्रति संवेदनशील होती हैं।",
+          "UC IPM ने cinnamaldehyde (वनस्पति आधारित उत्पाद) भी बताया है।"
+        ]
+      },
+      "chemical_treatment": {
+        "en": [
+          "Fungicide options reported by UC IPM include myclobutanil, triflumizole, penthiopyrad, cyflufenamid, quinoxyfen and pyraclostrobin + boscalid.",
+          "Resistance to strobilurin fungicides is widespread; rotate fungicide groups when more than one spray is needed.",
+          "Use only products registered for this crop in India (CIB&RC), follow the product label exactly, and consult your local KVK or agriculture officer before spraying."
+        ],
+        "hi": [
+          "UC IPM द्वारा बताए गए विकल्प: myclobutanil, triflumizole, penthiopyrad, cyflufenamid, quinoxyfen और pyraclostrobin + boscalid।",
+          "स्ट्रोबिल्यूरिन दवाओं के प्रति प्रतिरोध आम है; एक से ज़्यादा छिड़काव की ज़रूरत हो तो अलग-अलग समूह की दवाएँ बदल-बदल कर डालें।",
+          "भारत में इस फसल के लिए CIB&RC द्वारा पंजीकृत (रजिस्टर्ड) दवा ही इस्तेमाल करें, दवा के लेबल पर लिखे निर्देशों का ठीक-ठीक पालन करें, और छिड़काव से पहले अपने नज़दीकी KVK या कृषि अधिकारी से सलाह लें।"
+        ],
+        "active_ingredients": [
+          "myclobutanil",
+          "triflumizole",
+          "penthiopyrad",
+          "cyflufenamid",
+          "quinoxyfen",
+          "pyraclostrobin",
+          "boscalid",
+          "sulphur",
+          "potassium bicarbonate"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Powdery Mildew - Cucurbits Pest Management Guidelines",
+          "publisher": "UC Statewide IPM Program, University of California",
+          "url": "https://ipm.ucanr.edu/agriculture/cucurbits/powdery-mildew",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Strawberry___Leaf_scorch",
+      "slug": "strawberry-leaf-scorch",
+      "crop": {
+        "en": "Strawberry",
+        "hi": "स्ट्रॉबेरी"
+      },
+      "name": {
+        "en": "Leaf scorch",
+        "hi": "पत्ती झुलसन (लीफ स्कॉर्च)"
+      },
+      "healthy": false,
+      "pathogen_type": "fungus",
+      "scientific_name": "Diplocarpon earlianum",
+      "summary": {
+        "en": "Leaf scorch is a common fungal leaf disease of strawberry. Many small dark purple spots join until the leaf looks scorched; heavy infection weakens plants and can reduce yield.",
+        "hi": "पत्ती झुलसन स्ट्रॉबेरी का आम फफूंद वाला पत्ती रोग है। बहुत सारे छोटे गहरे बैंगनी धब्बे मिलकर पत्ती को झुलसी हुई बना देते हैं; ज़्यादा संक्रमण से पौधे कमज़ोर होते हैं और उपज घट सकती है।"
+      },
+      "symptoms": {
+        "en": [
+          "Small, irregular, dark purple spots on the upper leaf surface.",
+          "Spots stay purple (no white or tan centre, unlike common leaf spot).",
+          "Spots join into purple-red patches; leaves turn brown, dry and curl at the edges, looking scorched.",
+          "Leaf stalks, runners, fruit stalks and fruit can also be infected."
+        ],
+        "hi": [
+          "पत्ती की ऊपरी सतह पर छोटे, बेढंगे, गहरे बैंगनी धब्बे।",
+          "धब्बे बैंगनी ही रहते हैं (साधारण पत्ती धब्बे की तरह सफेद या भूरा बीच नहीं बनता)।",
+          "धब्बे मिलकर बैंगनी-लाल चकत्ते बनाते हैं; पत्तियाँ भूरी, सूखी और किनारों से मुड़ी हुई - झुलसी-सी - दिखती हैं।",
+          "पत्ती के डंठल, रनर, फल के डंठल और फल भी संक्रमित हो सकते हैं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Caused by the fungus Diplocarpon earlianum.",
+          "The fungus survives on old infected leaves; spores spread by rain splash and wind.",
+          "Leaf wetness in warm weather favours infection; older plantings of susceptible varieties suffer most."
+        ],
+        "hi": [
+          "यह रोग Diplocarpon earlianum फफूंद से होता है।",
+          "फफूंद पुरानी संक्रमित पत्तियों पर जीवित रहती है; बीजाणु बारिश के छींटों और हवा से फैलते हैं।",
+          "गर्म मौसम में पत्तियों का गीला रहना संक्रमण बढ़ाता है; संवेदनशील किस्मों के पुराने पौधे सबसे ज़्यादा प्रभावित होते हैं।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Grow resistant varieties - the most effective control according to Ohio State.",
+          "Remove old and infected leaves from runner plants before planting, and remove foliage/debris after harvest.",
+          "Plant in a sunny, well-drained site with good airflow and proper spacing; control weeds.",
+          "Use drip instead of overhead irrigation and avoid excess spring nitrogen."
+        ],
+        "hi": [
+          "रोग-रोधी किस्में लगाएँ - Ohio State के अनुसार यह सबसे असरदार उपाय है।",
+          "लगाने से पहले रनर पौधों की पुरानी और संक्रमित पत्तियाँ हटाएँ, और तुड़ाई के बाद पत्तियाँ/अवशेष हटाएँ।",
+          "धूप वाली, अच्छे जल-निकास और हवादार जगह पर सही दूरी पर लगाएँ; खरपतवार नियंत्रित करें।",
+          "ऊपर से सिंचाई के बजाय ड्रिप इस्तेमाल करें और वसंत में ज़्यादा नाइट्रोजन से बचें।"
+        ]
+      },
+      "organic_treatment": {
+        "en": [
+          "Removing infected leaves and renovating plantings after harvest may help reduce the amount of disease.",
+          "Copper-based products are listed by the PNW Handbook; check that the product is allowed for organic use."
+        ],
+        "hi": [
+          "संक्रमित पत्तियाँ हटाने और तुड़ाई के बाद क्यारियों का नवीनीकरण करने से रोग की मात्रा कम करने में मदद मिल सकती है।",
+          "PNW Handbook ने तांबा आधारित उत्पाद बताए हैं; जाँच लें कि उत्पाद जैविक उपयोग के लिए मान्य है।"
+        ]
+      },
+      "chemical_treatment": {
+        "en": [
+          "Fungicide options reported by the PNW Plant Disease Management Handbook include iprodione (active on leaf scorch when used against grey mould) and copper-based products.",
+          "NC State notes that fungicides are most useful during flowering and in late summer and autumn.",
+          "Use only products registered for this crop in India (CIB&RC), follow the product label exactly, and consult your local KVK or agriculture officer before spraying."
+        ],
+        "hi": [
+          "PNW Plant Disease Management Handbook द्वारा बताए गए विकल्प: iprodione (ग्रे मोल्ड के लिए छिड़काव करने पर लीफ स्कॉर्च पर भी असर) और तांबा आधारित उत्पाद।",
+          "NC State के अनुसार फफूंदनाशक फूल आने के समय और गर्मी के अंत व पतझड़ में सबसे उपयोगी होते हैं।",
+          "भारत में इस फसल के लिए CIB&RC द्वारा पंजीकृत (रजिस्टर्ड) दवा ही इस्तेमाल करें, दवा के लेबल पर लिखे निर्देशों का ठीक-ठीक पालन करें, और छिड़काव से पहले अपने नज़दीकी KVK या कृषि अधिकारी से सलाह लें।"
+        ],
+        "active_ingredients": [
+          "iprodione",
+          "copper"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Leaf Scorch of Strawberry",
+          "publisher": "NC State Extension Publications",
+          "url": "https://content.ces.ncsu.edu/leaf-scorch-of-strawberry",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Strawberry Leaf Diseases (PLPATH-FRU-35)",
+          "publisher": "Ohio State University Extension (Ohioline)",
+          "url": "https://ohioline.osu.edu/factsheet/plpath-fru-35",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Strawberry (Fragaria spp.) - Leaf Scorch",
+          "publisher": "Pacific Northwest Plant Disease Management Handbook (OSU, WSU, UI)",
+          "url": "https://pnwhandbooks.org/plantdisease/host-disease/strawberry-fragaria-spp-leaf-scorch",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Strawberry___healthy",
+      "slug": "strawberry-healthy",
+      "crop": {
+        "en": "Strawberry",
+        "hi": "स्ट्रॉबेरी"
+      },
+      "name": {
+        "en": "Healthy",
+        "hi": "स्वस्थ"
+      },
+      "healthy": true,
+      "pathogen_type": "none",
+      "scientific_name": null,
+      "summary": {
+        "en": "The strawberry leaf looks healthy with no visible disease. Keep using resistant varieties, clean planting material and good field hygiene.",
+        "hi": "स्ट्रॉबेरी की पत्ती स्वस्थ दिख रही है और कोई रोग नज़र नहीं आ रहा। रोग-रोधी किस्में, साफ़ पौध सामग्री और खेत की अच्छी सफ़ाई जारी रखें।"
+      },
+      "symptoms": {
+        "en": [
+          "Leaves are evenly green with no purple, brown or white spots.",
+          "Leaf edges are not dry, brown or curled.",
+          "No powdery growth or upward curling of leaves."
+        ],
+        "hi": [
+          "पत्तियाँ एक जैसी हरी हैं, कोई बैंगनी, भूरा या सफेद धब्बा नहीं।",
+          "पत्ती के किनारे सूखे, भूरे या मुड़े नहीं हैं।",
+          "पाउडर जैसी परत या पत्तियों का ऊपर की ओर मुड़ना नहीं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Long leaf wetness from rain or overhead irrigation favours leaf diseases.",
+          "Old infected leaves carry disease from one season to the next.",
+          "Crowded plants and weeds keep the canopy humid."
+        ],
+        "hi": [
+          "बारिश या ऊपर से सिंचाई से पत्तियों का लंबे समय तक गीला रहना पत्ती रोगों को बढ़ाता है।",
+          "पुरानी संक्रमित पत्तियाँ रोग को एक मौसम से अगले मौसम तक ले जाती हैं।",
+          "घने पौधे और खरपतवार पत्तियों के बीच नमी बनाए रखते हैं।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Use healthy, disease-free planting material and resistant varieties.",
+          "Keep proper spacing and control weeds for good air circulation.",
+          "Prefer drip irrigation and remove old or diseased leaves.",
+          "Monitor the field every week and give nutrients based on soil test."
+        ],
+        "hi": [
+          "स्वस्थ, रोग-मुक्त पौध सामग्री और रोग-रोधी किस्में इस्तेमाल करें।",
+          "अच्छी हवा के लिए सही दूरी रखें और खरपतवार नियंत्रित करें।",
+          "ड्रिप सिंचाई अपनाएँ और पुरानी या रोगी पत्तियाँ हटाएँ।",
+          "हर हफ़्ते खेत की जाँच करें और मिट्टी जाँच के आधार पर पोषक तत्व दें।"
+        ]
+      },
+      "organic_treatment": null,
+      "chemical_treatment": null,
+      "sources": [
+        {
+          "title": "AESA based IPM Package - Strawberry",
+          "publisher": "NIPHM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India",
+          "url": "https://niphm.gov.in/IPMPackages/Strawberry.pdf",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Strawberry Leaf Diseases (PLPATH-FRU-35)",
+          "publisher": "Ohio State University Extension (Ohioline)",
+          "url": "https://ohioline.osu.edu/factsheet/plpath-fru-35",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Tomato___Bacterial_spot",
+      "slug": "tomato-bacterial-spot",
+      "crop": {
+        "en": "Tomato",
+        "hi": "टमाटर"
+      },
+      "name": {
+        "en": "Bacterial spot",
+        "hi": "जीवाणु धब्बा रोग (बैक्टीरियल स्पॉट)"
+      },
+      "healthy": false,
+      "pathogen_type": "bacterium",
+      "scientific_name": "Xanthomonas spp. (X. campestris pv. vesicatoria group)",
+      "summary": {
+        "en": "Bacterial spot is a seed-borne bacterial disease of tomato that causes small dark leaf spots, leaf drop and raised, scabby spots on green fruit. It spreads quickly with splashing water in warm, humid weather.",
+        "hi": "बैक्टीरियल स्पॉट टमाटर का बीज से फैलने वाला जीवाणु रोग है, जिसमें पत्तियों पर छोटे गहरे धब्बे, पत्ती गिरना और हरे फलों पर उभरे, पपड़ीदार धब्बे बनते हैं। गर्म और नम मौसम में पानी के छींटों से यह तेज़ी से फैलता है।"
+      },
+      "symptoms": {
+        "en": [
+          "Small, water-soaked spots on leaves (first on lower leaves) that turn dark brown to black, often with a yellow halo.",
+          "Spot centres dry and tear, giving leaves a ragged look; heavy infection causes leaf drop.",
+          "Green fruit shows small raised spots that become brown, scabby and slightly sunken.",
+          "Ripe fruit is not usually infected."
+        ],
+        "hi": [
+          "पत्तियों पर (पहले नीचे की पत्तियों पर) छोटे पानी भरे धब्बे, जो गहरे भूरे से काले हो जाते हैं, अक्सर पीले घेरे के साथ।",
+          "धब्बों का बीच सूखकर फट जाता है और पत्ती फटी-सी दिखती है; ज़्यादा संक्रमण से पत्तियाँ गिरती हैं।",
+          "हरे फलों पर छोटे उभरे धब्बे बनते हैं जो भूरे, पपड़ीदार और हल्के धँसे हो जाते हैं।",
+          "पके फल आमतौर पर संक्रमित नहीं होते।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Caused by Xanthomonas bacteria.",
+          "Carried on seed and transplants; survives in crop debris, volunteer tomatoes and some weeds.",
+          "Spread within the field by rain splash, sprinkler irrigation and handling wet plants.",
+          "High humidity, free water on leaves and warm temperatures favour the disease; heavy rainstorms often start outbreaks."
+        ],
+        "hi": [
+          "यह रोग Xanthomonas जीवाणुओं से होता है।",
+          "बीज और पौध के साथ आता है; फसल अवशेष, अपने-आप उगे टमाटर और कुछ खरपतवारों में जीवित रहता है।",
+          "खेत में बारिश के छींटों, फव्वारा सिंचाई और गीले पौधों को छूने से फैलता है।",
+          "ज़्यादा नमी, पत्तियों पर पानी और गर्म तापमान रोग को बढ़ाते हैं; तेज़ बारिश के बाद अक्सर प्रकोप शुरू होता है।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Use pathogen-free seed and disease-free transplants.",
+          "Avoid sprinkler (overhead) irrigation; do not handle plants when wet.",
+          "Rotate with non-host crops and remove volunteer tomatoes, weeds and cull piles.",
+          "Disinfect stakes and tools between seasons."
+        ],
+        "hi": [
+          "रोग-मुक्त बीज और रोग-मुक्त पौध इस्तेमाल करें।",
+          "फव्वारा (ऊपर से) सिंचाई से बचें; पौधे गीले हों तब उन्हें न छुएँ।",
+          "ऐसी फसलों के साथ फसल चक्र अपनाएँ जिन पर यह रोग न लगे, और अपने-आप उगे टमाटर, खरपतवार व बेकार फलों के ढेर हटाएँ।",
+          "मौसमों के बीच डंडे (स्टेक) और औज़ार कीटाणु-रहित करें।"
+        ]
+      },
+      "organic_treatment": {
+        "en": [
+          "Some copper formulations are acceptable for organic production (UC IPM); copper is a protectant and must be applied before infection.",
+          "Clean seed, rotation and sanitation are the most reliable non-chemical tools."
+        ],
+        "hi": [
+          "कुछ तांबा आधारित दवाएँ जैविक खेती में मान्य हैं (UC IPM); तांबा केवल बचाव करता है और संक्रमण से पहले डालना ज़रूरी है।",
+          "साफ़ बीज, फसल चक्र और साफ़-सफ़ाई सबसे भरोसेमंद गैर-रासायनिक उपाय हैं।"
+        ]
+      },
+      "chemical_treatment": {
+        "en": [
+          "Options reported by UC IPM and Alabama Extension: copper hydroxide (fixed copper), often combined with mancozeb, which improves copper's effect.",
+          "Older Indian IPM packages (NIPHM) list the antibiotic combination streptomycin + tetracycline (streptocycline); the Government of India has moved to prohibit this antibiotic in agriculture (draft order, complete ban proposed from 1 January 2024) — do not use it unless your agriculture officer confirms it is currently permitted.",
+          "Sprays give only partial control, especially where copper-resistant bacteria are present.",
+          "Use only products registered for this crop in India (CIB&RC), follow the product label exactly, and consult your local KVK or agriculture officer before spraying."
+        ],
+        "hi": [
+          "UC IPM और Alabama Extension द्वारा बताए गए विकल्प: copper hydroxide (फिक्स्ड कॉपर), अक्सर mancozeb के साथ, जिससे तांबे का असर बढ़ता है।",
+          "पुराने भारतीय IPM पैकेज (NIPHM) में एंटीबायोटिक streptomycin + tetracycline (स्ट्रेप्टोसाइक्लिन) का ज़िक्र है; भारत सरकार ने खेती में इस एंटीबायोटिक पर रोक लगाने की प्रक्रिया शुरू की है (मसौदा आदेश, 1 जनवरी 2024 से पूरी रोक का प्रस्ताव) — जब तक कृषि अधिकारी यह पुष्टि न करें कि इसकी अभी अनुमति है, इसका इस्तेमाल न करें।",
+          "छिड़काव से केवल आंशिक नियंत्रण होता है, खासकर जहाँ तांबे के प्रति प्रतिरोधी जीवाणु मौजूद हों।",
+          "भारत में इस फसल के लिए CIB&RC द्वारा पंजीकृत (रजिस्टर्ड) दवा ही इस्तेमाल करें, दवा के लेबल पर लिखे निर्देशों का ठीक-ठीक पालन करें, और छिड़काव से पहले अपने नज़दीकी KVK या कृषि अधिकारी से सलाह लें।"
+        ],
+        "active_ingredients": [
+          "copper hydroxide",
+          "mancozeb"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Bacterial Spot - Tomato Pest Management Guidelines",
+          "publisher": "UC Statewide IPM Program, University of California",
+          "url": "https://ipm.ucanr.edu/PMG/r783101711.html",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Bacterial Spot in Peppers and Tomatoes",
+          "publisher": "Alabama Cooperative Extension System",
+          "url": "https://www.aces.edu/?p=57992",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "AESA based IPM Package - Tomato",
+          "publisher": "NIPHM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India",
+          "url": "https://www.niphm.gov.in/IPMPackages/Tomato.pdf",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Union agriculture ministry prohibits use of TB antibiotics on crops (draft order on streptomycin + tetracycline)",
+          "publisher": "Down To Earth (Centre for Science and Environment)",
+          "url": "https://www.downtoearth.org.in/agriculture/union-agriculture-ministry-prohibits-use-of-tb-antibiotics-on-crops-80785",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Tomato___Early_blight",
+      "slug": "tomato-early-blight",
+      "crop": {
+        "en": "Tomato",
+        "hi": "टमाटर"
+      },
+      "name": {
+        "en": "Early blight",
+        "hi": "अगेती झुलसा"
+      },
+      "healthy": false,
+      "pathogen_type": "fungus",
+      "scientific_name": "Alternaria solani",
+      "summary": {
+        "en": "Early blight is a common fungal disease of tomato that causes brown spots with concentric 'bull's-eye' rings, usually starting on older leaves. It can defoliate plants and also rots fruit near the stem end in warm, humid weather.",
+        "hi": "अगेती झुलसा टमाटर का आम फफूंद रोग है, जिसमें भूरे धब्बों पर गोल 'निशाने जैसे' छल्ले बनते हैं, जो आमतौर पर पुरानी पत्तियों से शुरू होते हैं। गर्म और नम मौसम में पौधों की पत्तियाँ झड़ सकती हैं और डंठल के पास से फल भी सड़ सकते हैं।"
+      },
+      "symptoms": {
+        "en": [
+          "Small dark spots on older leaves that enlarge with concentric rings (bull's-eye pattern).",
+          "Leaf tissue around the spots turns yellow; much of the foliage may die in hot, humid weather.",
+          "Similar lesions on stems can girdle the plant near the soil.",
+          "Fruit develops dark ringed spots, usually near the calyx or stem attachment."
+        ],
+        "hi": [
+          "पुरानी पत्तियों पर छोटे गहरे धब्बे, जो गोल छल्लों (निशाने जैसे) के साथ बढ़ते हैं।",
+          "धब्बों के आसपास पत्ती पीली हो जाती है; गर्म और नम मौसम में ज़्यादातर पत्तियाँ सूख सकती हैं।",
+          "तने पर भी ऐसे ही धब्बे बनते हैं जो मिट्टी के पास तने को घेर सकते हैं।",
+          "फलों पर छल्लेदार गहरे धब्बे बनते हैं, आमतौर पर डंठल या बाह्यदल (calyx) के पास।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Caused by the fungus Alternaria solani.",
+          "Survives in infected plant debris and can be seed-borne.",
+          "Spores spread by rain, wind, insects, people and machinery.",
+          "Warm, humid, rainy weather favours the disease."
+        ],
+        "hi": [
+          "यह रोग Alternaria solani फफूंद से होता है।",
+          "संक्रमित पौधों के अवशेषों में जीवित रहती है और बीज से भी आ सकती है।",
+          "बीजाणु बारिश, हवा, कीटों, लोगों और मशीनों से फैलते हैं।",
+          "गर्म, नम और बारिश वाला मौसम रोग को बढ़ाता है।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Remove and destroy crop debris and practise crop rotation.",
+          "Use resistant or tolerant varieties and healthy seed.",
+          "Change the nursery location every season and remove weeds and volunteer tomato plants.",
+          "Fertilize properly and avoid planting overlapping tomato crops in adjacent fields."
+        ],
+        "hi": [
+          "फसल अवशेष हटाकर नष्ट करें और फसल चक्र अपनाएँ।",
+          "रोग-रोधी या सहनशील किस्में और स्वस्थ बीज इस्तेमाल करें।",
+          "हर मौसम नर्सरी की जगह बदलें और खरपतवार व अपने-आप उगे टमाटर के पौधे हटाएँ।",
+          "सही मात्रा में खाद दें और पास के खेतों में एक के बाद एक लगातार टमाटर न लगाएँ।"
+        ]
+      },
+      "organic_treatment": {
+        "en": [
+          "Seed treatment with Trichoderma asperellum is an option reported by TNAU; it may help reduce seed-borne infection.",
+          "Removing infected lower leaves and keeping the field clean may help slow spread."
+        ],
+        "hi": [
+          "TNAU ने Trichoderma asperellum से बीज उपचार का विकल्प बताया है; यह बीज से आने वाले संक्रमण को कम करने में मदद कर सकता है।",
+          "संक्रमित नीचे की पत्तियाँ हटाना और खेत साफ़ रखना फैलाव धीमा करने में मदद कर सकता है।"
+        ]
+      },
+      "chemical_treatment": {
+        "en": [
+          "Fungicide options reported by TNAU and NIPHM include mancozeb, zineb, metiram, copper oxychloride, captan, iprodione, azoxystrobin and pyraclostrobin.",
+          "Combination products reported by TNAU include azoxystrobin + difenoconazole, metiram + pyraclostrobin and tebuconazole + trifloxystrobin.",
+          "Alternate fungicide groups to slow resistance.",
+          "Use only products registered for this crop in India (CIB&RC), follow the product label exactly, and consult your local KVK or agriculture officer before spraying."
+        ],
+        "hi": [
+          "TNAU और NIPHM द्वारा बताए गए विकल्प: mancozeb, zineb, metiram, copper oxychloride, captan, iprodione, azoxystrobin और pyraclostrobin।",
+          "TNAU द्वारा बताए गए मिश्रण उत्पाद: azoxystrobin + difenoconazole, metiram + pyraclostrobin और tebuconazole + trifloxystrobin।",
+          "प्रतिरोध से बचने के लिए अलग-अलग समूह की दवाएँ बदल-बदल कर इस्तेमाल करें।",
+          "भारत में इस फसल के लिए CIB&RC द्वारा पंजीकृत (रजिस्टर्ड) दवा ही इस्तेमाल करें, दवा के लेबल पर लिखे निर्देशों का ठीक-ठीक पालन करें, और छिड़काव से पहले अपने नज़दीकी KVK या कृषि अधिकारी से सलाह लें।"
+        ],
+        "active_ingredients": [
+          "mancozeb",
+          "zineb",
+          "metiram",
+          "copper oxychloride",
+          "captan",
+          "iprodione",
+          "azoxystrobin",
+          "pyraclostrobin",
+          "difenoconazole",
+          "tebuconazole",
+          "trifloxystrobin"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Early blight of tomato (Alternaria solani)",
+          "publisher": "TNAU Agritech Portal, Tamil Nadu Agricultural University",
+          "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_2.html",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "AESA based IPM Package - Tomato",
+          "publisher": "NIPHM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India",
+          "url": "https://www.niphm.gov.in/IPMPackages/Tomato.pdf",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Tomato___Late_blight",
+      "slug": "tomato-late-blight",
+      "crop": {
+        "en": "Tomato",
+        "hi": "टमाटर"
+      },
+      "name": {
+        "en": "Late blight",
+        "hi": "पछेती झुलसा"
+      },
+      "healthy": false,
+      "pathogen_type": "oomycete",
+      "scientific_name": "Phytophthora infestans",
+      "summary": {
+        "en": "Late blight is a fast-spreading, destructive disease of tomato caused by a water mould. Under cool nights and wet, foggy weather it can kill leaves within days and cause brown, rotting fruit.",
+        "hi": "पछेती झुलसा टमाटर का तेज़ी से फैलने वाला विनाशकारी रोग है, जो एक जल-फफूंद (water mould) से होता है। ठंडी रातों और गीले, कोहरे वाले मौसम में यह कुछ ही दिनों में पत्तियाँ नष्ट कर सकता है और फलों को भूरा करके सड़ा सकता है।"
+      },
+      "symptoms": {
+        "en": [
+          "Large, irregular, water-soaked greenish-black lesions on leaves that spread quickly until the whole leaf dies.",
+          "White fungal growth on the leaf underside around lesions in humid weather.",
+          "Dark lesions on stems and leaf stalks.",
+          "Fruit shows dark brown lesions that later turn into a soft rot."
+        ],
+        "hi": [
+          "पत्तियों पर बड़े, बेढंगे, पानी भरे जैसे हरे-काले धब्बे, जो तेज़ी से फैलकर पूरी पत्ती सुखा देते हैं।",
+          "नम मौसम में धब्बों के आसपास पत्ती की निचली सतह पर सफेद फफूंद।",
+          "तनों और पत्ती के डंठलों पर गहरे धब्बे।",
+          "फलों पर गहरे भूरे धब्बे बनते हैं जो बाद में नरम सड़न में बदल जाते हैं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Caused by Phytophthora infestans, an oomycete (water mould) that also attacks potato.",
+          "Survives in infected debris (and infected potato tubers); spores spread by wind.",
+          "Cool nights, mild days and long wet periods from rain or fog favour the disease."
+        ],
+        "hi": [
+          "यह रोग Phytophthora infestans से होता है, जो एक ऊमाइसीट (जल-फफूंद) है और आलू पर भी लगता है।",
+          "संक्रमित अवशेषों (और संक्रमित आलू कंदों) में जीवित रहता है; बीजाणु हवा से फैलते हैं।",
+          "ठंडी रातें, हल्के गर्म दिन और बारिश या कोहरे से लंबे समय तक नमी रोग को बढ़ाते हैं।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Ensure good drainage and practise crop rotation; avoid growing near potato fields with late blight.",
+          "Keep the field clean, destroy infected plants and debris, and destroy alternate hosts.",
+          "Give light irrigation and avoid wetting foliage; stake plants for airflow.",
+          "Watch the crop closely during cool, foggy or rainy spells."
+        ],
+        "hi": [
+          "अच्छा जल-निकास रखें और फसल चक्र अपनाएँ; पछेती झुलसा वाले आलू के खेतों के पास टमाटर न लगाएँ।",
+          "खेत साफ़ रखें, रोगी पौधे और अवशेष नष्ट करें, और दूसरे मेज़बान पौधे नष्ट करें।",
+          "हल्की सिंचाई करें और पत्तियाँ गीली न करें; हवा के लिए पौधों को सहारा (स्टेकिंग) दें।",
+          "ठंडे, कोहरे या बारिश वाले दिनों में फसल पर खास नज़र रखें।"
+        ]
+      },
+      "organic_treatment": {
+        "en": [
+          "Soil application of Trichoderma asperellum (viride) is an option reported by TNAU; it may help reduce disease but will not stop an epidemic in favourable weather.",
+          "Removing infected plants promptly may help slow spread."
+        ],
+        "hi": [
+          "TNAU ने मिट्टी में Trichoderma asperellum (viride) देने का विकल्प बताया है; यह रोग कम करने में मदद कर सकता है, पर अनुकूल मौसम में फैलाव पूरी तरह नहीं रोकता।",
+          "रोगी पौधे जल्दी हटाने से फैलाव धीमा करने में मदद मिल सकती है।"
+        ]
+      },
+      "chemical_treatment": {
+        "en": [
+          "Fungicide options reported by TNAU and NIPHM include mancozeb, zineb, metiram, copper oxychloride, cyazofamid, azoxystrobin, cymoxanil + mancozeb and famoxadone + cymoxanil.",
+          "Protective sprays work best before the disease appears; act early when the weather turns cool and wet.",
+          "Use only products registered for this crop in India (CIB&RC), follow the product label exactly, and consult your local KVK or agriculture officer before spraying."
+        ],
+        "hi": [
+          "TNAU और NIPHM द्वारा बताए गए विकल्प: mancozeb, zineb, metiram, copper oxychloride, cyazofamid, azoxystrobin, cymoxanil + mancozeb और famoxadone + cymoxanil।",
+          "बचाव वाले छिड़काव रोग दिखने से पहले सबसे असरदार होते हैं; मौसम ठंडा और गीला होते ही जल्दी कदम उठाएँ।",
+          "भारत में इस फसल के लिए CIB&RC द्वारा पंजीकृत (रजिस्टर्ड) दवा ही इस्तेमाल करें, दवा के लेबल पर लिखे निर्देशों का ठीक-ठीक पालन करें, और छिड़काव से पहले अपने नज़दीकी KVK या कृषि अधिकारी से सलाह लें।"
+        ],
+        "active_ingredients": [
+          "mancozeb",
+          "zineb",
+          "metiram",
+          "copper oxychloride",
+          "cyazofamid",
+          "azoxystrobin",
+          "cymoxanil",
+          "famoxadone"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Late blight of tomato (Phytophthora infestans)",
+          "publisher": "TNAU Agritech Portal, Tamil Nadu Agricultural University",
+          "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_8.html",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "AESA based IPM Package - Tomato",
+          "publisher": "NIPHM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India",
+          "url": "https://www.niphm.gov.in/IPMPackages/Tomato.pdf",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Tomato___Leaf_Mold",
+      "slug": "tomato-leaf-mold",
+      "crop": {
+        "en": "Tomato",
+        "hi": "टमाटर"
+      },
+      "name": {
+        "en": "Leaf mold",
+        "hi": "पत्ती फफूंद (लीफ मोल्ड)"
+      },
+      "healthy": false,
+      "pathogen_type": "fungus",
+      "scientific_name": "Passalora fulva (syn. Fulvia fulva, Cladosporium fulvum)",
+      "summary": {
+        "en": "Leaf mold is a fungal disease of tomato that thrives in very humid conditions, especially in polyhouses and high tunnels. It causes yellow patches on the upper leaf and olive-green to brown velvety mould underneath.",
+        "hi": "लीफ मोल्ड टमाटर का फफूंद रोग है, जो बहुत ज़्यादा नमी में, खासकर पॉलीहाउस और हाई-टनल में, ज़्यादा फैलता है। इसमें पत्ती के ऊपर पीले धब्बे और नीचे जैतूनी-हरी से भूरी मखमली फफूंद बनती है।"
+      },
+      "symptoms": {
+        "en": [
+          "Pale green to yellow spots on the upper leaf surface.",
+          "Olive-green to brown velvety mould on the underside, directly below the spots.",
+          "Starts on lower, older leaves and moves up; leaves wither and drop.",
+          "Can be confused with magnesium deficiency or grey mould."
+        ],
+        "hi": [
+          "पत्ती की ऊपरी सतह पर हल्के हरे से पीले धब्बे।",
+          "धब्बों के ठीक नीचे पत्ती की निचली सतह पर जैतूनी-हरी से भूरी मखमली फफूंद।",
+          "नीचे की पुरानी पत्तियों से शुरू होकर ऊपर जाता है; पत्तियाँ मुरझाकर गिर जाती हैं।",
+          "इसे मैग्नीशियम की कमी या ग्रे मोल्ड समझने की गलती हो सकती है।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Caused by the fungus Passalora fulva.",
+          "Spores spread by air currents, water splash, tools and workers; the fungus survives on debris and seed.",
+          "Very high relative humidity with moderate temperatures favours it; common in polyhouses and in cool, damp weather."
+        ],
+        "hi": [
+          "यह रोग Passalora fulva फफूंद से होता है।",
+          "बीजाणु हवा, पानी के छींटों, औज़ारों और मज़दूरों से फैलते हैं; फफूंद अवशेषों और बीज पर जीवित रहती है।",
+          "बहुत ज़्यादा नमी और मध्यम तापमान इसे बढ़ाते हैं; पॉलीहाउस में और ठंडे, नम मौसम में आम है।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Improve ventilation in polyhouses and avoid overhead watering.",
+          "Space, stake and prune plants for airflow; remove lower leaves as trusses are harvested.",
+          "Remove and destroy infected material and sanitize tools and structures between seasons.",
+          "Rotate crops and use tolerant varieties."
+        ],
+        "hi": [
+          "पॉलीहाउस में हवा का आवागमन बढ़ाएँ और ऊपर से पानी न दें।",
+          "हवा के लिए पौधों में दूरी रखें, सहारा दें और छँटाई करें; गुच्छे तोड़ने के साथ नीचे की पत्तियाँ हटाएँ।",
+          "संक्रमित हिस्से हटाकर नष्ट करें और मौसमों के बीच औज़ार व ढाँचे कीटाणु-रहित करें।",
+          "फसल चक्र अपनाएँ और सहनशील किस्में लगाएँ।"
+        ]
+      },
+      "organic_treatment": {
+        "en": [
+          "Reducing humidity (ventilation, drip irrigation, pruning) is the main non-chemical control and may greatly reduce the disease.",
+          "Copper-based sprays are among the options named by Pacific Pests; check that the product is allowed for organic use."
+        ],
+        "hi": [
+          "नमी कम करना (हवा का आवागमन, ड्रिप सिंचाई, छँटाई) मुख्य गैर-रासायनिक उपाय है और इससे रोग काफ़ी कम हो सकता है।",
+          "Pacific Pests द्वारा बताए गए विकल्पों में तांबा आधारित छिड़काव भी है; जाँच लें कि उत्पाद जैविक उपयोग के लिए मान्य है।"
+        ]
+      },
+      "chemical_treatment": {
+        "en": [
+          "Fungicide options reported by Pacific Pests, Pathogens, Weeds & Pesticides: copper, mancozeb and chlorothalonil, starting when spots first appear.",
+          "UConn Extension advises alternating between chemical families to avoid resistance.",
+          "Use only products registered for this crop in India (CIB&RC), follow the product label exactly, and consult your local KVK or agriculture officer before spraying."
+        ],
+        "hi": [
+          "Pacific Pests, Pathogens, Weeds & Pesticides द्वारा बताए गए विकल्प: copper, mancozeb और chlorothalonil, धब्बे दिखते ही शुरू करें।",
+          "UConn Extension प्रतिरोध से बचने के लिए अलग-अलग रासायनिक समूह बदल-बदल कर इस्तेमाल करने की सलाह देता है।",
+          "भारत में इस फसल के लिए CIB&RC द्वारा पंजीकृत (रजिस्टर्ड) दवा ही इस्तेमाल करें, दवा के लेबल पर लिखे निर्देशों का ठीक-ठीक पालन करें, और छिड़काव से पहले अपने नज़दीकी KVK या कृषि अधिकारी से सलाह लें।"
+        ],
+        "active_ingredients": [
+          "copper",
+          "mancozeb",
+          "chlorothalonil"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Tomato Leaf Mold",
+          "publisher": "UConn Extension IPM, University of Connecticut",
+          "url": "https://ipm.cahnr.uconn.edu/?p=15437",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Tomato leaf mould (Fact sheet 076)",
+          "publisher": "Pacific Pests, Pathogens, Weeds & Pesticides (Pacific Community / ACIAR)",
+          "url": "https://apps.lucidcentral.org/pppw_v12/text/web_mini/entities/tomato_leaf_mould_076.htm",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Tomato___Septoria_leaf_spot",
+      "slug": "tomato-septoria-leaf-spot",
+      "crop": {
+        "en": "Tomato",
+        "hi": "टमाटर"
+      },
+      "name": {
+        "en": "Septoria leaf spot",
+        "hi": "सेप्टोरिया पत्ती धब्बा"
+      },
+      "healthy": false,
+      "pathogen_type": "fungus",
+      "scientific_name": "Septoria lycopersici",
+      "summary": {
+        "en": "Septoria leaf spot is a fungal disease that causes many small round spots with grey centres and dark borders on tomato leaves. Spots join and cause leaves to dry and drop, starting from the bottom of the plant.",
+        "hi": "सेप्टोरिया पत्ती धब्बा एक फफूंद रोग है, जिसमें टमाटर की पत्तियों पर धूसर बीच और गहरे किनारे वाले बहुत सारे छोटे गोल धब्बे बनते हैं। धब्बे मिलकर पत्तियों को सुखा देते हैं और पत्तियाँ पौधे के नीचे से गिरने लगती हैं।"
+      },
+      "symptoms": {
+        "en": [
+          "Many small, round to irregular spots with a grey centre and dark brown border.",
+          "Spots first appear on lower leaves and move upward.",
+          "Spots join, leaves yellow and dry, and plants can lose most of their leaves.",
+          "Stems and flowers can also be affected."
+        ],
+        "hi": [
+          "धूसर बीच और गहरे भूरे किनारे वाले बहुत सारे छोटे, गोल से बेढंगे धब्बे।",
+          "धब्बे पहले नीचे की पत्तियों पर दिखते हैं और ऊपर की ओर बढ़ते हैं।",
+          "धब्बे मिल जाते हैं, पत्तियाँ पीली होकर सूखती हैं और पौधे की ज़्यादातर पत्तियाँ गिर सकती हैं।",
+          "तने और फूल भी प्रभावित हो सकते हैं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Caused by the fungus Septoria lycopersici.",
+          "Survives in infected plant debris.",
+          "Spores spread by rain splash and wind.",
+          "High humidity favours the disease."
+        ],
+        "hi": [
+          "यह रोग Septoria lycopersici फफूंद से होता है।",
+          "संक्रमित पौधों के अवशेषों में जीवित रहती है।",
+          "बीजाणु बारिश के छींटों और हवा से फैलते हैं।",
+          "ज़्यादा नमी रोग को बढ़ाती है।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Remove and destroy affected plant parts and crop debris.",
+          "Rotate crops and avoid overhead irrigation.",
+          "Stake plants and keep good spacing so leaves dry quickly.",
+          "Use healthy seed and transplants."
+        ],
+        "hi": [
+          "प्रभावित हिस्से और फसल अवशेष हटाकर नष्ट करें।",
+          "फसल चक्र अपनाएँ और ऊपर से सिंचाई न करें।",
+          "पौधों को सहारा दें और सही दूरी रखें ताकि पत्तियाँ जल्दी सूखें।",
+          "स्वस्थ बीज और पौध इस्तेमाल करें।"
+        ]
+      },
+      "organic_treatment": {
+        "en": [
+          "Seed treatment with Trichoderma asperellum is an option reported by TNAU; it may help reduce early infection.",
+          "Removing spotted lower leaves early may help slow the disease."
+        ],
+        "hi": [
+          "TNAU ने Trichoderma asperellum से बीज उपचार का विकल्प बताया है; यह शुरुआती संक्रमण कम करने में मदद कर सकता है।",
+          "धब्बे वाली नीचे की पत्तियाँ जल्दी हटाने से रोग धीमा हो सकता है।"
+        ]
+      },
+      "chemical_treatment": {
+        "en": [
+          "Fungicide options reported by NIPHM (mancozeb) and TNAU (fluxapyroxad + pyraclostrobin).",
+          "Start protection when the first spots appear on lower leaves.",
+          "Use only products registered for this crop in India (CIB&RC), follow the product label exactly, and consult your local KVK or agriculture officer before spraying."
+        ],
+        "hi": [
+          "NIPHM (mancozeb) और TNAU (fluxapyroxad + pyraclostrobin) द्वारा बताए गए विकल्प।",
+          "नीचे की पत्तियों पर पहले धब्बे दिखते ही बचाव शुरू करें।",
+          "भारत में इस फसल के लिए CIB&RC द्वारा पंजीकृत (रजिस्टर्ड) दवा ही इस्तेमाल करें, दवा के लेबल पर लिखे निर्देशों का ठीक-ठीक पालन करें, और छिड़काव से पहले अपने नज़दीकी KVK या कृषि अधिकारी से सलाह लें।"
+        ],
+        "active_ingredients": [
+          "mancozeb",
+          "fluxapyroxad",
+          "pyraclostrobin"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Septoria leaf spot of tomato",
+          "publisher": "TNAU Agritech Portal, Tamil Nadu Agricultural University",
+          "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_4.html",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "AESA based IPM Package - Tomato",
+          "publisher": "NIPHM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India",
+          "url": "https://www.niphm.gov.in/IPMPackages/Tomato.pdf",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Tomato___Spider_mites Two-spotted_spider_mite",
+      "slug": "tomato-two-spotted-spider-mite",
+      "crop": {
+        "en": "Tomato",
+        "hi": "टमाटर"
+      },
+      "name": {
+        "en": "Spider mites (Two-spotted spider mite)",
+        "hi": "लाल मकड़ी (दो-धब्बेदार माइट)"
+      },
+      "healthy": false,
+      "pathogen_type": "mite",
+      "scientific_name": "Tetranychus urticae",
+      "summary": {
+        "en": "Spider mites are tiny eight-legged pests (not insects) that suck sap from the underside of tomato leaves. They cause fine yellow speckling, bronzing and webbing, and multiply very fast in hot, dry, dusty weather.",
+        "hi": "लाल मकड़ी (माइट) बहुत छोटे आठ पैरों वाले जीव हैं (कीट नहीं), जो टमाटर की पत्तियों की निचली सतह से रस चूसते हैं। इनसे पत्तियों पर बारीक पीले बिंदु, कांसे जैसा रंग और जाले बनते हैं, और गर्म, सूखे, धूल भरे मौसम में ये बहुत तेज़ी से बढ़ते हैं।"
+      },
+      "symptoms": {
+        "en": [
+          "Fine, light yellow speckles (stippling) on leaves.",
+          "Leaves turn bronze, then yellowish or reddish, dry and drop.",
+          "Fine webbing on the leaf underside and between leaves and stems in heavy infestations.",
+          "Tiny moving dots (mites) visible on the leaf underside, best seen with a hand lens."
+        ],
+        "hi": [
+          "पत्तियों पर बारीक हल्के पीले बिंदु (चित्तियाँ)।",
+          "पत्तियाँ कांसे जैसी, फिर पीली या लाल होकर सूखती और गिरती हैं।",
+          "ज़्यादा प्रकोप में पत्ती की निचली सतह पर और पत्तियों-तनों के बीच बारीक जाले।",
+          "पत्ती की निचली सतह पर चलते हुए छोटे बिंदु (माइट), जो हैंड लेंस से अच्छी तरह दिखते हैं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Caused by the two-spotted spider mite, Tetranychus urticae (a mite, not a fungus or insect).",
+          "Hot, dry, dusty conditions and water-stressed plants favour rapid build-up.",
+          "Broad-spectrum insecticide sprays (e.g. some pyrethroids, carbaryl) kill natural enemies and can trigger mite outbreaks.",
+          "Mites move in from weeds, dusty field edges and nearby infested crops."
+        ],
+        "hi": [
+          "यह दो-धब्बेदार लाल मकड़ी Tetranychus urticae से होता है (यह माइट है, फफूंद या कीट नहीं)।",
+          "गर्म, सूखा, धूल भरा मौसम और पानी की कमी वाले पौधे इनकी तेज़ बढ़त में मदद करते हैं।",
+          "व्यापक असर वाले कीटनाशक (जैसे कुछ पाइरेथ्रॉइड, carbaryl) प्राकृतिक दुश्मनों को मार देते हैं और माइट का प्रकोप बढ़ा सकते हैं।",
+          "माइट खरपतवारों, धूल भरे खेत के किनारों और पास की संक्रमित फसलों से आते हैं।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Irrigate adequately so plants are not water-stressed; reduce dust on paths and field edges.",
+          "Remove weeds and badly infested plants (field sanitation).",
+          "Grow tall border crops such as maize or sorghum (NIPHM).",
+          "Avoid unnecessary broad-spectrum insecticide sprays that kill natural enemies."
+        ],
+        "hi": [
+          "पर्याप्त सिंचाई करें ताकि पौधों में पानी की कमी न हो; रास्तों और खेत के किनारों पर धूल कम करें।",
+          "खरपतवार और ज़्यादा प्रभावित पौधे हटाएँ (खेत की सफ़ाई)।",
+          "मेड़ पर मक्का या ज्वार जैसी ऊँची फसलें लगाएँ (NIPHM)।",
+          "प्राकृतिक दुश्मनों को मारने वाले व्यापक असर के कीटनाशकों का बेवजह छिड़काव न करें।"
+        ]
+      },
+      "organic_treatment": {
+        "en": [
+          "Conserve natural enemies such as predatory mites (Phytoseiulus, Amblyseius), lady beetles, lacewings, predatory thrips and minute pirate bugs (NIPHM, UC IPM).",
+          "Insecticidal soap and horticultural or plant oils (e.g. neem oil) are options reported by UC IPM; they may help reduce mites but must hit the leaf underside.",
+          "Strong water sprays on leaf undersides can knock down mite numbers in small plots (UC IPM).",
+          "Do not spray oils or soaps on water-stressed plants or in very hot weather."
+        ],
+        "hi": [
+          "प्राकृतिक दुश्मनों को बचाएँ, जैसे शिकारी माइट (Phytoseiulus, Amblyseius), लेडी बीटल, लेसविंग, शिकारी थ्रिप्स और माइन्यूट पाइरेट बग (NIPHM, UC IPM)।",
+          "UC IPM के अनुसार कीटनाशी साबुन और बागवानी या वनस्पति तेल (जैसे नीम तेल) विकल्प हैं; ये माइट कम करने में मदद कर सकते हैं, पर पत्ती की निचली सतह तक पहुँचना ज़रूरी है।",
+          "छोटे खेतों में पत्तियों की निचली सतह पर पानी की तेज़ धार से माइट कम हो सकते हैं (UC IPM)।",
+          "पानी की कमी वाले पौधों पर या बहुत गर्म मौसम में तेल या साबुन का छिड़काव न करें।"
+        ]
+      },
+      "chemical_treatment": {
+        "en": [
+          "Miticide (acaricide) options reported by NIPHM: fenazaquin and spiromesifen; UC IPM also lists sulphur.",
+          "Spray the underside of leaves thoroughly and rotate miticide groups because mites develop resistance quickly.",
+          "Use only products registered for this crop in India (CIB&RC), follow the product label exactly, and consult your local KVK or agriculture officer before spraying."
+        ],
+        "hi": [
+          "NIPHM द्वारा बताए गए माइटनाशक (एकेरिसाइड) विकल्प: fenazaquin और spiromesifen; UC IPM ने sulphur भी बताया है।",
+          "पत्तियों की निचली सतह पर अच्छी तरह छिड़काव करें और माइटनाशक समूह बदलते रहें, क्योंकि माइट में प्रतिरोध जल्दी बनता है।",
+          "भारत में इस फसल के लिए CIB&RC द्वारा पंजीकृत (रजिस्टर्ड) दवा ही इस्तेमाल करें, दवा के लेबल पर लिखे निर्देशों का ठीक-ठीक पालन करें, और छिड़काव से पहले अपने नज़दीकी KVK या कृषि अधिकारी से सलाह लें।"
+        ],
+        "active_ingredients": [
+          "fenazaquin",
+          "spiromesifen",
+          "sulphur"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Spider Mites - Pest Notes",
+          "publisher": "UC Statewide IPM Program, University of California",
+          "url": "https://ipm.ucanr.edu/PMG/PESTNOTES/pn7405.html",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "AESA based IPM Package - Tomato",
+          "publisher": "NIPHM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India",
+          "url": "https://www.niphm.gov.in/IPMPackages/Tomato.pdf",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Tomato___Target_Spot",
+      "slug": "tomato-target-spot",
+      "crop": {
+        "en": "Tomato",
+        "hi": "टमाटर"
+      },
+      "name": {
+        "en": "Target spot",
+        "hi": "टारगेट स्पॉट (निशाना धब्बा)"
+      },
+      "healthy": false,
+      "pathogen_type": "fungus",
+      "scientific_name": "Corynespora cassiicola",
+      "summary": {
+        "en": "Target spot is a fungal disease of tomato in warm, humid regions. It causes small spots with yellow margins that can grow into ringed 'target' lesions, leading to rapid leaf drop and spotted fruit.",
+        "hi": "टारगेट स्पॉट गर्म और नम क्षेत्रों में टमाटर का फफूंद रोग है। इसमें पीले किनारे वाले छोटे धब्बे बनते हैं जो बढ़कर छल्लेदार 'निशाने जैसे' धब्बे बन सकते हैं, जिससे पत्तियाँ तेज़ी से गिरती हैं और फलों पर भी धब्बे होते हैं।"
+      },
+      "symptoms": {
+        "en": [
+          "Tiny irregular spots with yellow margins, starting on older, lower leaves.",
+          "Some spots enlarge and show concentric rings like a target.",
+          "Leaves yellow, collapse and drop quickly in windy, wet weather.",
+          "Long thin spots on stems; small light-brown spots with dark margins, or pitted lesions, on fruit."
+        ],
+        "hi": [
+          "नीचे की पुरानी पत्तियों पर पीले किनारे वाले बहुत छोटे बेढंगे धब्बे।",
+          "कुछ धब्बे बड़े होकर निशाने जैसे गोल छल्ले दिखाते हैं।",
+          "हवादार और गीले मौसम में पत्तियाँ पीली होकर जल्दी झड़ जाती हैं।",
+          "तनों पर लंबे पतले धब्बे; फलों पर गहरे किनारे वाले छोटे हल्के भूरे धब्बे या गड्ढेदार घाव।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Caused by the fungus Corynespora cassiicola, which has a wide host range (e.g. papaya, cucumber, legumes).",
+          "Spores spread by wind-blown rain; inoculum comes from crop residue, older crops and other hosts.",
+          "Warm, wet conditions favour the disease."
+        ],
+        "hi": [
+          "यह रोग Corynespora cassiicola फफूंद से होता है, जो कई फसलों (जैसे पपीता, खीरा, दलहन) पर लगती है।",
+          "बीजाणु हवा के साथ बारिश से फैलते हैं; संक्रमण फसल अवशेष, पुरानी फसलों और दूसरे मेज़बान पौधों से आता है।",
+          "गर्म और गीला मौसम रोग को बढ़ाता है।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Do not plant near older infected tomato crops or papaya; discard spotted nursery seedlings.",
+          "Remove lower branches for airflow and remove and destroy spotted lower leaves.",
+          "Control weeds and avoid overhead irrigation.",
+          "After harvest, collect and destroy crop residue and rotate away from tomato for a few seasons."
+        ],
+        "hi": [
+          "पुरानी संक्रमित टमाटर फसल या पपीते के पास न लगाएँ; धब्बे वाली नर्सरी पौध फेंक दें।",
+          "हवा के लिए नीचे की शाखाएँ हटाएँ और धब्बे वाली नीचे की पत्तियाँ हटाकर नष्ट करें।",
+          "खरपतवार नियंत्रित करें और ऊपर से सिंचाई न करें।",
+          "तुड़ाई के बाद फसल अवशेष इकट्ठा करके नष्ट करें और कुछ मौसम तक उस खेत में टमाटर न लगाएँ।"
+        ]
+      },
+      "organic_treatment": {
+        "en": [
+          "Sanitation, removing lower leaves and crop rotation are the main non-chemical tools; no specific organic product was named by the sources consulted."
+        ],
+        "hi": [
+          "साफ़-सफ़ाई, नीचे की पत्तियाँ हटाना और फसल चक्र मुख्य गैर-रासायनिक उपाय हैं; देखे गए स्रोतों में कोई खास जैविक उत्पाद नहीं बताया गया।"
+        ]
+      },
+      "chemical_treatment": {
+        "en": [
+          "Fungicide options reported by Pacific Pests: chlorothalonil, copper oxychloride or mancozeb, starting when the first spots appear and covering both leaf surfaces.",
+          "Schlub et al. (Acta Horticulturae) also report azoxystrobin, pyraclostrobin, boscalid and famoxadone + mancozeb as reducing target spot severity.",
+          "Use only products registered for this crop in India (CIB&RC), follow the product label exactly, and consult your local KVK or agriculture officer before spraying."
+        ],
+        "hi": [
+          "Pacific Pests द्वारा बताए गए विकल्प: chlorothalonil, copper oxychloride या mancozeb, पहले धब्बे दिखते ही शुरू करें और पत्ती की दोनों सतहों पर छिड़कें।",
+          "Schlub et al. (Acta Horticulturae) ने azoxystrobin, pyraclostrobin, boscalid और famoxadone + mancozeb को भी टारगेट स्पॉट कम करने वाला बताया है।",
+          "भारत में इस फसल के लिए CIB&RC द्वारा पंजीकृत (रजिस्टर्ड) दवा ही इस्तेमाल करें, दवा के लेबल पर लिखे निर्देशों का ठीक-ठीक पालन करें, और छिड़काव से पहले अपने नज़दीकी KVK या कृषि अधिकारी से सलाह लें।"
+        ],
+        "active_ingredients": [
+          "chlorothalonil",
+          "copper oxychloride",
+          "mancozeb",
+          "azoxystrobin",
+          "pyraclostrobin",
+          "boscalid",
+          "famoxadone"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Tomato target spot (Fact sheet 163)",
+          "publisher": "Pacific Pests, Pathogens, Weeds & Pesticides (Pacific Community / ACIAR)",
+          "url": "https://apps.lucidcentral.org/pppw_v12/text/web_full/entities/tomato_target_spot_163.htm",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "An overview of target spot of tomato caused by Corynespora cassiicola (Acta Horticulturae 808, 2009)",
+          "publisher": "Schlub et al., via LSU Digital Commons",
+          "url": "https://repository.lsu.edu/plantcrop_pubs/105",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+      "slug": "tomato-yellow-leaf-curl-virus",
+      "crop": {
+        "en": "Tomato",
+        "hi": "टमाटर"
+      },
+      "name": {
+        "en": "Tomato yellow leaf curl virus (leaf curl)",
+        "hi": "टमाटर पीला पत्ती मोड़क विषाणु (लीफ कर्ल)"
+      },
+      "healthy": false,
+      "pathogen_type": "virus",
+      "scientific_name": "Tomato yellow leaf curl virus (Begomovirus; related tomato leaf curl viruses occur in India)",
+      "summary": {
+        "en": "Leaf curl is a viral disease spread by whiteflies. Infected plants become stunted and bushy with small, curled, yellowing leaves and set very little fruit. There is no cure for infected plants; management focuses on clean seedlings and whitefly control.",
+        "hi": "लीफ कर्ल (पत्ती मोड़क) सफेद मक्खी से फैलने वाला विषाणु (वायरस) रोग है। संक्रमित पौधे बौने और झाड़ीनुमा हो जाते हैं, पत्तियाँ छोटी, मुड़ी और पीली होती हैं और फल बहुत कम लगते हैं। संक्रमित पौधे का कोई इलाज नहीं है; प्रबंधन साफ़ पौध और सफेद मक्खी नियंत्रण पर केंद्रित है।"
+      },
+      "symptoms": {
+        "en": [
+          "Leaves are small, curled (upward or downward), crinkled and yellow at the edges.",
+          "Plants are stunted with short internodes and a bushy appearance.",
+          "Older leaves become thick, leathery and brittle.",
+          "Flowers drop and fruit set is greatly reduced."
+        ],
+        "hi": [
+          "पत्तियाँ छोटी, (ऊपर या नीचे) मुड़ी, सिकुड़ी और किनारों से पीली होती हैं।",
+          "पौधे बौने रहते हैं, गाँठों के बीच की दूरी कम होती है और पौधा झाड़ी जैसा दिखता है।",
+          "पुरानी पत्तियाँ मोटी, चमड़े जैसी और भुरभुरी हो जाती हैं।",
+          "फूल झड़ जाते हैं और फल बहुत कम लगते हैं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Caused by tomato leaf curl viruses (begomoviruses), including Tomato yellow leaf curl virus.",
+          "Spread by the whitefly Bemisia tabaci; it does not spread through soil.",
+          "Infected transplants carry the virus to new fields and areas.",
+          "Weed hosts (e.g. Abutilon indicum) and older infected crops nearby act as sources of virus."
+        ],
+        "hi": [
+          "यह टमाटर लीफ कर्ल विषाणुओं (बेगोमोवायरस) से होता है, जिनमें Tomato yellow leaf curl virus भी शामिल है।",
+          "यह सफेद मक्खी Bemisia tabaci से फैलता है; मिट्टी से नहीं फैलता।",
+          "संक्रमित पौध विषाणु को नए खेतों और क्षेत्रों तक ले जाती है।",
+          "खरपतवार मेज़बान (जैसे Abutilon indicum, कंघी बूटी) और पास की पुरानी संक्रमित फसलें विषाणु का स्रोत बनती हैं।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Grow resistant/tolerant varieties and use virus-free, whitefly-free seedlings.",
+          "Raise nurseries under insect-proof net; do not transplant seedlings showing symptoms.",
+          "Grow barrier crops such as maize, sorghum or bajra around the field and use yellow sticky traps.",
+          "Remove and destroy infected plants early, and remove weed hosts and old crop residues.",
+          "Avoid planting next to older tomato fields."
+        ],
+        "hi": [
+          "रोग-रोधी/सहनशील किस्में लगाएँ और विषाणु-मुक्त, सफेद मक्खी-मुक्त पौध इस्तेमाल करें।",
+          "नर्सरी कीट-रोधी जाली के अंदर तैयार करें; लक्षण वाली पौध न रोपें।",
+          "खेत के चारों ओर मक्का, ज्वार या बाजरा जैसी अवरोधक फसल लगाएँ और पीले चिपचिपे ट्रैप लगाएँ।",
+          "संक्रमित पौधे जल्दी उखाड़कर नष्ट करें, और खरपतवार मेज़बान व पुराने फसल अवशेष हटाएँ।",
+          "पुराने टमाटर के खेतों के पास नई फसल न लगाएँ।"
+        ]
+      },
+      "organic_treatment": {
+        "en": [
+          "There is no organic cure for the virus. Neem seed kernel extract or azadirachtin (neem) sprays, reported by NIPHM, may help reduce whitefly numbers.",
+          "Conserve natural enemies of whitefly such as Encarsia and Eretmocerus parasitoids, lacewings and lady beetles (NIPHM).",
+          "Yellow sticky traps and fine-mesh covers reduce whitefly contact with plants."
+        ],
+        "hi": [
+          "इस विषाणु का कोई जैविक इलाज नहीं है। NIPHM द्वारा बताए गए नीम बीज गिरी अर्क (NSKE) या azadirachtin (नीम) के छिड़काव सफेद मक्खी की संख्या कम करने में मदद कर सकते हैं।",
+          "सफेद मक्खी के प्राकृतिक दुश्मनों जैसे Encarsia और Eretmocerus परजीवी, लेसविंग और लेडी बीटल को बचाएँ (NIPHM)।",
+          "पीले चिपचिपे ट्रैप और बारीक जाली के कवर पौधों तक सफेद मक्खी की पहुँच कम करते हैं।"
+        ]
+      },
+      "chemical_treatment": {
+        "en": [
+          "There is NO chemical cure for the virus; insecticides only target the whitefly vector to slow spread.",
+          "Whitefly control options reported by TNAU and NIPHM include imidacloprid, thiamethoxam, dimethoate and spiromesifen.",
+          "Rotate insecticide groups because whiteflies develop resistance quickly.",
+          "Use only products registered for this crop in India (CIB&RC), follow the product label exactly, and consult your local KVK or agriculture officer before spraying."
+        ],
+        "hi": [
+          "इस विषाणु का कोई रासायनिक इलाज नहीं है; कीटनाशक केवल सफेद मक्खी (वाहक) पर काम करते हैं ताकि फैलाव धीमा हो।",
+          "TNAU और NIPHM द्वारा सफेद मक्खी नियंत्रण के लिए बताए गए विकल्प: imidacloprid, thiamethoxam, dimethoate और spiromesifen।",
+          "कीटनाशक समूह बदलते रहें, क्योंकि सफेद मक्खी में प्रतिरोध जल्दी बनता है।",
+          "भारत में इस फसल के लिए CIB&RC द्वारा पंजीकृत (रजिस्टर्ड) दवा ही इस्तेमाल करें, दवा के लेबल पर लिखे निर्देशों का ठीक-ठीक पालन करें, और छिड़काव से पहले अपने नज़दीकी KVK या कृषि अधिकारी से सलाह लें।"
+        ],
+        "active_ingredients": [
+          "imidacloprid",
+          "thiamethoxam",
+          "dimethoate",
+          "spiromesifen"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Tomato leaf curl (Tomato leaf curl virus)",
+          "publisher": "TNAU Agritech Portal, Tamil Nadu Agricultural University",
+          "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_6.html",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "AESA based IPM Package - Tomato",
+          "publisher": "NIPHM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India",
+          "url": "https://www.niphm.gov.in/IPMPackages/Tomato.pdf",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Tomato Yellow Leaf Curl - Tomato Pest Management Guidelines",
+          "publisher": "UC Statewide IPM Program, University of California",
+          "url": "https://ipm.ucanr.edu/agriculture/tomato/tomato-yellow-leaf-curl/",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Tomato___Tomato_mosaic_virus",
+      "slug": "tomato-mosaic-virus",
+      "crop": {
+        "en": "Tomato",
+        "hi": "टमाटर"
+      },
+      "name": {
+        "en": "Tomato mosaic virus",
+        "hi": "टमाटर मोज़ेक विषाणु"
+      },
+      "healthy": false,
+      "pathogen_type": "virus",
+      "scientific_name": "Tomato mosaic virus (ToMV, Tobamovirus)",
+      "summary": {
+        "en": "Tomato mosaic is a viral disease that causes light and dark green mottling and distorted, 'fern-like' leaves. The virus is very stable and spreads easily by hands, tools and seed; there is no cure, so prevention and sanitation are essential.",
+        "hi": "टमाटर मोज़ेक एक विषाणु (वायरस) रोग है, जिसमें पत्तियों पर हल्के और गहरे हरे रंग का चितकबरापन और बिगड़ी हुई 'फर्न जैसी' पत्तियाँ बनती हैं। यह विषाणु बहुत टिकाऊ है और हाथों, औज़ारों और बीज से आसानी से फैलता है; इसका कोई इलाज नहीं है, इसलिए बचाव और साफ़-सफ़ाई बहुत ज़रूरी है।"
+      },
+      "symptoms": {
+        "en": [
+          "Light and dark green mosaic or mottling on leaves.",
+          "Leaflets are distorted, puckered and smaller than normal; sometimes narrow 'fern-leaf' shapes.",
+          "Young leaves may wilt on sunny days soon after infection.",
+          "Plants look stunted, pale green and spindly."
+        ],
+        "hi": [
+          "पत्तियों पर हल्के और गहरे हरे रंग का मोज़ेक या चितकबरापन।",
+          "पत्तियाँ बिगड़ी, सिकुड़ी और सामान्य से छोटी; कभी-कभी पतली 'फर्न जैसी' आकृति।",
+          "संक्रमण के बाद धूप वाले दिनों में नई पत्तियाँ मुरझा सकती हैं।",
+          "पौधे बौने, हल्के हरे और कमज़ोर दिखते हैं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Caused by Tomato mosaic virus (a tobamovirus closely related to Tobacco mosaic virus).",
+          "Spread mechanically by contaminated hands, tools, clothing, plant debris and during grafting or pruning.",
+          "Can be carried on seed; it is not spread by insect vectors.",
+          "The virus survives a long time in dry plant debris."
+        ],
+        "hi": [
+          "यह Tomato mosaic virus से होता है (टोबैमोवायरस, जो तंबाकू मोज़ेक विषाणु से मिलता-जुलता है)।",
+          "दूषित हाथों, औज़ारों, कपड़ों, पौधों के अवशेषों और ग्राफ्टिंग या छँटाई के दौरान छूने से फैलता है।",
+          "बीज के साथ आ सकता है; यह कीटों से नहीं फैलता।",
+          "यह विषाणु सूखे पौधों के अवशेषों में लंबे समय तक जीवित रहता है।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Use seed from disease-free healthy plants and resistant varieties.",
+          "Remove and destroy infected nursery plants; never transplant seedlings showing mosaic.",
+          "Wash hands and disinfect tools between plants; avoid tobacco use while handling plants.",
+          "Rotate with crops other than tobacco, potato, chilli, capsicum, brinjal and other solanaceous crops (NIPHM)."
+        ],
+        "hi": [
+          "रोग-मुक्त स्वस्थ पौधों के बीज और रोग-रोधी किस्में इस्तेमाल करें।",
+          "संक्रमित नर्सरी पौधे हटाकर नष्ट करें; मोज़ेक वाली पौध कभी न रोपें।",
+          "पौधों के बीच हाथ धोएँ और औज़ार कीटाणु-रहित करें; पौधों को छूते समय तंबाकू का इस्तेमाल न करें।",
+          "तंबाकू, आलू, मिर्च, शिमला मिर्च, बैंगन और दूसरी सोलेनेसी फसलों के अलावा दूसरी फसलों के साथ फसल चक्र अपनाएँ (NIPHM)।"
+        ]
+      },
+      "organic_treatment": {
+        "en": [
+          "There is no organic cure. Rogue out infected plants carefully (wash hands afterwards) and keep strict sanitation of tools, hands and plant debris."
+        ],
+        "hi": [
+          "कोई जैविक इलाज नहीं है। संक्रमित पौधे सावधानी से उखाड़ें (बाद में हाथ धोएँ) और औज़ारों, हाथों और पौधों के अवशेषों की सख्त सफ़ाई रखें।"
+        ]
+      },
+      "chemical_treatment": null,
+      "sources": [
+        {
+          "title": "Tomato Mosaic - Vegetable Disease Facts",
+          "publisher": "The Ohio State University, Dept. of Plant Pathology",
+          "url": "https://u.osu.edu/vegetablediseasefacts/?p=1269",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "AESA based IPM Package - Tomato",
+          "publisher": "NIPHM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India",
+          "url": "https://www.niphm.gov.in/IPMPackages/Tomato.pdf",
+          "accessed": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "id": "Tomato___healthy",
+      "slug": "tomato-healthy",
+      "crop": {
+        "en": "Tomato",
+        "hi": "टमाटर"
+      },
+      "name": {
+        "en": "Healthy",
+        "hi": "स्वस्थ"
+      },
+      "healthy": true,
+      "pathogen_type": "none",
+      "scientific_name": null,
+      "summary": {
+        "en": "The tomato leaf looks healthy with no visible disease or pest damage. Keep up good nursery and field practices and check the crop regularly.",
+        "hi": "टमाटर की पत्ती स्वस्थ दिख रही है और कोई रोग या कीट नुकसान नज़र नहीं आ रहा। नर्सरी और खेत के अच्छे तरीके अपनाते रहें और फसल की नियमित जाँच करें।"
+      },
+      "symptoms": {
+        "en": [
+          "Leaves are evenly green with no spots, rings, mould or mottling.",
+          "Leaves are flat and normal in size - not curled, crinkled or fern-like.",
+          "No fine speckling, webbing or insects on the leaf underside."
+        ],
+        "hi": [
+          "पत्तियाँ एक जैसी हरी हैं, कोई धब्बा, छल्ला, फफूंद या चितकबरापन नहीं।",
+          "पत्तियाँ सपाट और सामान्य आकार की हैं - मुड़ी, सिकुड़ी या फर्न जैसी नहीं।",
+          "पत्ती की निचली सतह पर बारीक चित्तियाँ, जाले या कीट नहीं।"
+        ]
+      },
+      "causes": {
+        "en": [
+          "Warm, humid or rainy weather favours blights and leaf spots; cool, foggy weather favours late blight.",
+          "Whiteflies spread leaf curl virus; hot, dry weather favours spider mites.",
+          "Infected seed, seedlings and crop debris bring diseases into the field."
+        ],
+        "hi": [
+          "गर्म, नम या बारिश वाला मौसम झुलसा और पत्ती धब्बों को बढ़ाता है; ठंडा, कोहरे वाला मौसम पछेती झुलसा को।",
+          "सफेद मक्खी लीफ कर्ल विषाणु फैलाती है; गर्म, सूखा मौसम लाल मकड़ी को बढ़ाता है।",
+          "संक्रमित बीज, पौध और फसल अवशेष खेत में रोग लाते हैं।"
+        ]
+      },
+      "prevention": {
+        "en": [
+          "Use healthy seed and raise seedlings under insect-proof net.",
+          "Follow crop rotation, remove crop debris and weeds, and change nursery site each season.",
+          "Stake plants, keep proper spacing, and avoid overhead irrigation.",
+          "Use yellow sticky traps and check the crop every week, especially leaf undersides."
+        ],
+        "hi": [
+          "स्वस्थ बीज इस्तेमाल करें और पौध कीट-रोधी जाली के अंदर तैयार करें।",
+          "फसल चक्र अपनाएँ, फसल अवशेष और खरपतवार हटाएँ, और हर मौसम नर्सरी की जगह बदलें।",
+          "पौधों को सहारा दें, सही दूरी रखें और ऊपर से सिंचाई न करें।",
+          "पीले चिपचिपे ट्रैप लगाएँ और हर हफ़्ते फसल की जाँच करें, खासकर पत्तियों की निचली सतह की।"
+        ]
+      },
+      "organic_treatment": null,
+      "chemical_treatment": null,
+      "sources": [
+        {
+          "title": "AESA based IPM Package - Tomato",
+          "publisher": "NIPHM / Directorate of Plant Protection, Quarantine & Storage, Govt. of India",
+          "url": "https://www.niphm.gov.in/IPMPackages/Tomato.pdf",
+          "accessed": "2026-11-04"
+        },
+        {
+          "title": "Early blight of tomato (Alternaria solani)",
+          "publisher": "TNAU Agritech Portal, Tamil Nadu Agricultural University",
+          "url": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_2.html",
+          "accessed": "2026-11-04"
+        }
+      ]
+    }
+  ]
+}

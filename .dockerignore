@@ -1,0 +1,9 @@
+# The backend image is built from the repo root: send only what it COPYs.
+**
+!backend/requirements.txt
+!backend/app/**
+!advisory/diseases.json
+!ml/datasets/metadata/class_mapping.json
+!ml/artifacts/serving/**
+!ml/artifacts/evaluation/summary.json
+**/__pycache__

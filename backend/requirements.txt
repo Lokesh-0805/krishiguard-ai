@@ -1,0 +1,13 @@
+# Runtime dependencies for the API (CPU inference). torch/torchvision are installed from the CPU wheel index in Docker.
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pydantic>=2.7
+pydantic-settings>=2.3
+python-multipart>=0.0.9
+slowapi>=0.1.9
+sqlalchemy>=2.0
+psycopg[binary]>=3.1
+pillow>=10.3
+numpy>=1.26
+timm>=1.0
+torch>=2.3

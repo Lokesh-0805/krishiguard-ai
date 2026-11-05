@@ -1,0 +1,5 @@
+{
+  "confident_tomato_early_blight": "plantvillage/color/Tomato___Early_blight/004cbe60-8ff9-4965-92df-e86694d5e9ba___RS_Erly.B 8253.JPG",
+  "unrecognized_field_image": "plantdoc/test/Apple Scab Leaf/1b321015-6e33-4f18-aade-888f4383fe92.jpeg.jpg",
+  "_note": "Selected automatically from cached test-set predictions of the deployed model (ml/artifacts/evaluation/effnet_b0_224/logits.npz)."
+}
