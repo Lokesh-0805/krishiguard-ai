@@ -24,7 +24,10 @@ class Settings(BaseSettings):
     max_upload_mb: float = 8.0
     max_batch_files: int = 8
     min_image_side: int = 64
-    allowed_mime: tuple[str, ...] = ("image/jpeg", "image/png", "image/webp")
+    allowed_mime: tuple[str, ...] = (
+        "image/jpeg", "image/png", "image/webp", "image/avif", "image/heic", "image/heif",
+        "image/bmp", "image/x-ms-bmp", "image/tiff", "image/gif",
+    )
     blur_warning_threshold: float | None = None  # None -> value from serving config
 
     # persistence

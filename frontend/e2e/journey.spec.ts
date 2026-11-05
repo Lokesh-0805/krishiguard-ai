@@ -105,6 +105,33 @@ test("'New diagnosis' after a previous diagnosis starts fresh (regression)", asy
   await expect(page.getByTestId("feedback-done")).toHaveCount(0);
 });
 
+for (const file of ["leaf.avif", "leaf.heic"]) {
+  test(`accepts ${file.split(".")[1].toUpperCase()} photos`, async ({ page }) => {
+    await page.goto("/detect");
+    await page.getByTestId("file-input").setInputFiles(path.join(__dirname, "fixtures", file));
+    await expect(page.getByTestId("preview")).toBeVisible(); // image, or a "preview unavailable" note for HEIC
+    await page.getByTestId("analyse").click();
+    await expect(page).toHaveURL(/\/results/);
+    await expect(page.getByTestId("disease-name")).toContainText(/early blight/i);
+  });
+}
+
+test("pasting an image (Ctrl/⌘+V) loads it and it can be analysed", async ({ page }) => {
+  await page.goto("/detect");
+  await expect(page.getByTestId("dropzone")).toBeVisible();
+  const b64 = fs.readFileSync(img(FIX.confident_tomato_early_blight)).toString("base64");
+  await page.evaluate((data) => {
+    const bytes = Uint8Array.from(atob(data), (c) => c.charCodeAt(0));
+    const dt = new DataTransfer();
+    dt.items.add(new File([bytes], "image.png", { type: "image/jpeg" }));
+    window.dispatchEvent(new ClipboardEvent("paste", { clipboardData: dt, bubbles: true }));
+  }, b64);
+  await expect(page.getByTestId("preview")).toBeVisible();
+  await page.getByTestId("analyse").click();
+  await expect(page).toHaveURL(/\/results/);
+  await expect(page.getByTestId("disease-name")).toContainText(/early blight/i);
+});
+
 test("rejects a non-image upload with a clear error", async ({ page }) => {
   await page.goto("/detect");
   await page.getByTestId("file-input").setInputFiles({ name: "notes.txt", mimeType: "text/plain", buffer: Buffer.from("hello") });

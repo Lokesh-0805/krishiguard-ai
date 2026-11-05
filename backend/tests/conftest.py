@@ -16,6 +16,9 @@ from pathlib import Path
 import numpy as np
 import pytest
 from PIL import Image
+from pillow_heif import register_heif_opener
+
+register_heif_opener()  # lets the test helper write HEIC files
 
 BACKEND = Path(__file__).resolve().parents[1]
 ROOT = BACKEND.parent

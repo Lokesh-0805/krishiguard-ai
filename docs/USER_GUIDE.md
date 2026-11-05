@@ -3,9 +3,9 @@
 ## English
 
 1. **Open the site** and tap **Diagnose a leaf**. Use the **हिंदी / English** button (top right) to switch language at any time.
-2. **Add a photo**: drag a photo onto the box, tap **Choose file**, or tap **Use camera** (your browser will ask for camera permission; on phones the rear camera is used).
+2. **Add a photo**: drag a photo onto the box, tap **Choose file**, tap **Use camera** (your browser will ask for camera permission; on phones the rear camera is used), or **paste** a copied image with **Ctrl+V / ⌘+V** or the **Paste image** button.
    - One leaf, in focus, filling most of the frame; daylight, no harsh shadows; show the affected side.
-   - JPEG, PNG or WebP up to 8 MB. You can **Replace** or **Remove** the photo before analysing.
+   - JPEG, PNG, WebP, AVIF, HEIC (iPhone), BMP, TIFF or GIF, up to 8 MB. You can **Replace** or **Remove** the photo before analysing.
 3. Tap **Analyse leaf**. In a few seconds you see the **Results** page:
    - **Status banner** — *Confident*, *Uncertain* or *Not recognised*.
    - **Crop**, **condition**, **Healthy/Diseased** and the **confidence** (a calibrated estimate — it can still be wrong).
@@ -23,7 +23,7 @@
 ## हिंदी
 
 1. वेबसाइट खोलें और **पत्ती की जाँच करें** दबाएँ। ऊपर दाईं ओर **हिंदी / English** बटन से भाषा बदलें।
-2. **फ़ोटो जोड़ें**: फ़ोटो को बॉक्स में खींचकर छोड़ें, **फ़ाइल चुनें** दबाएँ, या **कैमरा चलाएँ** दबाएँ (ब्राउज़र कैमरे की अनुमति माँगेगा)।
+2. **फ़ोटो जोड़ें**: फ़ोटो को बॉक्स में खींचकर छोड़ें, **फ़ाइल चुनें** दबाएँ, **कैमरा चलाएँ** दबाएँ, या कॉपी की हुई फ़ोटो **Ctrl+V / ⌘+V** या **फ़ोटो पेस्ट करें** बटन से पेस्ट करें। JPEG, PNG, WebP, AVIF, HEIC (iPhone), BMP, TIFF, GIF — 8 MB तक।
    - एक ही पत्ती, साफ़ फ़ोकस में, फ़ोटो का ज़्यादातर हिस्सा भरे; दिन की रोशनी; रोग वाला हिस्सा दिखाएँ।
 3. **जाँच शुरू करें** दबाएँ। नतीजे में दिखेगा: नतीजे की स्थिति (भरोसेमंद / अनिश्चित / पहचान नहीं हुई), फसल, रोग, भरोसा, अन्य संभावनाएँ, Grad-CAM हीटमैप, और भरोसेमंद नतीजे पर लक्षण, बचाव, जैविक और रासायनिक उपाय।
 4. **अनिश्चित नतीजा?** बेहतर रोशनी में एक पत्ती की साफ़ फ़ोटो दोबारा लें, और अपने नज़दीकी कृषि विज्ञान केंद्र (KVK) से सलाह लें।

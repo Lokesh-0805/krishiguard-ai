@@ -13,7 +13,7 @@ All errors share one shape:
 |---|---|---|
 | `validation_error` | 422 | missing/invalid fields (details.errors lists them) |
 | `invalid_image` | 422 | empty, undecodable, too small, too many batch files, unknown feedback class |
-| `unsupported_media_type` | 415 | not JPEG/PNG/WebP (declared **or** sniffed content) |
+| `unsupported_media_type` | 415 | not JPEG/PNG/WebP/AVIF/HEIC/BMP/TIFF/GIF (declared **or** sniffed content) |
 | `payload_too_large` | 413 | file > `KG_MAX_UPLOAD_MB` (default 8 MB) |
 | `not_found` | 404 | unknown disease id / prediction id |
 | `rate_limited` | 429 | default 120/min per IP; predict 30/min; feedback 20/min |
@@ -37,7 +37,7 @@ the model-selection rule.
 ## `POST /api/predict`  (multipart/form-data)
 | Field | Type | Default | |
 |---|---|---|---|
-| `file` | file | — | JPEG/PNG/WebP leaf photo |
+| `file` | file | — | leaf photo: JPEG, PNG, WebP, AVIF, HEIC/HEIF, BMP, TIFF or GIF (first frame) |
 | `lang` | `en` \| `hi` | `en` | language of labels, status message and advisory |
 | `explain` | bool | `true` | include Grad-CAM images |
 

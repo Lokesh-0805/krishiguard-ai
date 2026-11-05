@@ -10,7 +10,9 @@ from app.core.errors import InvalidImageError, PayloadTooLargeError, Unsupported
 from app.ml.inference import blur_score, decode_upload, model_view, to_array
 from tests.conftest import ROOT, jpeg_bytes
 
-KW = dict(max_bytes=8 * 1024 * 1024, allowed=("image/jpeg", "image/png", "image/webp"), min_side=64)
+from app.core.config import Settings
+
+KW = dict(max_bytes=8 * 1024 * 1024, allowed=Settings().allowed_mime, min_side=64)
 
 
 def test_matches_training_eval_transform():
@@ -25,10 +27,24 @@ def test_matches_training_eval_transform():
     assert torch.allclose(ours, ref, atol=1e-5)
 
 
-def test_decode_valid_jpeg_and_png():
-    for fmt, mime in (("JPEG", "image/jpeg"), ("PNG", "image/png"), ("WEBP", "image/webp")):
-        d = decode_upload(jpeg_bytes(fmt=fmt), mime, **KW)
-        assert d.mime == mime and d.width == 320 and d.height == 280 and len(d.sha256) == 64
+@pytest.mark.parametrize(
+    "fmt,mime,expected",
+    [
+        ("JPEG", "image/jpeg", "image/jpeg"),
+        ("PNG", "image/png", "image/png"),
+        ("WEBP", "image/webp", "image/webp"),
+        ("AVIF", "image/avif", "image/avif"),
+        ("HEIF", "image/heic", "image/heic"),   # iPhone photos
+        ("HEIF", "", "image/heic"),             # some browsers send no type for .heic
+        ("BMP", "image/bmp", "image/bmp"),
+        ("TIFF", "image/tiff", "image/tiff"),
+        ("GIF", "image/gif", "image/gif"),
+        ("JPEG", "application/octet-stream", "image/jpeg"),
+    ],
+)
+def test_decode_supported_formats(fmt, mime, expected):
+    d = decode_upload(jpeg_bytes(fmt=fmt), mime, **KW)
+    assert d.mime == expected and (d.width, d.height) == (320, 280) and d.image.mode == "RGB" and len(d.sha256) == 64
 
 
 @pytest.mark.parametrize(
@@ -37,8 +53,9 @@ def test_decode_valid_jpeg_and_png():
         (b"", "image/jpeg", InvalidImageError),
         (b"not an image at all", "image/jpeg", InvalidImageError),
         (jpeg_bytes(), "text/plain", UnsupportedMediaError),
-        (jpeg_bytes(fmt="GIF"), "image/gif", UnsupportedMediaError),
-        (jpeg_bytes(fmt="GIF"), "image/jpeg", UnsupportedMediaError),  # header lies -> content sniffing wins
+        (jpeg_bytes(fmt="ICO"), "image/x-icon", UnsupportedMediaError),
+        (jpeg_bytes(fmt="ICO"), "image/jpeg", UnsupportedMediaError),  # header lies -> content sniffing wins
+        (b"%PDF-1.4 not an image", "image/jpeg", InvalidImageError),
         (jpeg_bytes((40, 40)), "image/jpeg", InvalidImageError),
     ],
 )

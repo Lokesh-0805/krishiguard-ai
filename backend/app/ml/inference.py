@@ -18,9 +18,19 @@ from app.ml.gradcam import render
 
 logger = logging.getLogger(__name__)
 Image.MAX_IMAGE_PIXELS = 40_000_000  # decompression-bomb guard
+try:  # HEIC/HEIF (default iPhone photo format); AVIF is built into Pillow >= 11.3
+    from pillow_heif import register_heif_opener
+
+    register_heif_opener()
+except ImportError:  # pragma: no cover - optional dependency
+    pass
 IMAGENET_MEAN = np.array([0.485, 0.456, 0.406], dtype=np.float32)
 IMAGENET_STD = np.array([0.229, 0.224, 0.225], dtype=np.float32)
-PIL_FORMAT_TO_MIME = {"JPEG": "image/jpeg", "PNG": "image/png", "WEBP": "image/webp", "MPO": "image/jpeg"}
+PIL_FORMAT_TO_MIME = {
+    "JPEG": "image/jpeg", "MPO": "image/jpeg", "PNG": "image/png", "WEBP": "image/webp", "AVIF": "image/avif",
+    "HEIF": "image/heic", "BMP": "image/bmp", "TIFF": "image/tiff", "GIF": "image/gif",
+}
+SUPPORTED_HINT = "Upload a JPEG, PNG, WebP, AVIF, HEIC, BMP, TIFF or GIF photo."
 
 
 @dataclass
@@ -39,7 +49,7 @@ def decode_upload(data: bytes, declared_mime: str | None, *, max_bytes: int, all
     if len(data) > max_bytes:
         raise PayloadTooLargeError(f"File is larger than the {max_bytes // (1024 * 1024)} MB limit.")
     if declared_mime and declared_mime.split(";")[0].strip().lower() not in allowed + ("application/octet-stream",):
-        raise UnsupportedMediaError(f"Unsupported file type '{declared_mime}'. Upload a JPEG, PNG or WebP photo.")
+        raise UnsupportedMediaError(f"Unsupported file type '{declared_mime}'. {SUPPORTED_HINT}")
     try:
         with Image.open(io.BytesIO(data)) as probe:
             fmt = probe.format
@@ -50,7 +60,7 @@ def decode_upload(data: bytes, declared_mime: str | None, *, max_bytes: int, all
         raise InvalidImageError("The file could not be read as an image.", details={"reason": type(e).__name__}) from e
     mime = PIL_FORMAT_TO_MIME.get(fmt or "")
     if mime not in allowed:  # content sniffing beats the declared header
-        raise UnsupportedMediaError(f"Detected format '{fmt}' is not supported. Upload a JPEG, PNG or WebP photo.")
+        raise UnsupportedMediaError(f"Detected format '{fmt}' is not supported. {SUPPORTED_HINT}")
     img = ImageOps.exif_transpose(img).convert("RGB")
     if min(img.size) < min_side:
         raise InvalidImageError(f"Image is too small ({img.width}x{img.height}). Minimum side is {min_side}px.")

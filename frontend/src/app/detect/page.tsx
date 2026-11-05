@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { AlertCircle, Camera, CheckCircle2, ImagePlus, Loader2, RefreshCw, ScanSearch, Trash2, Upload } from "lucide-react";
+import { AlertCircle, Camera, CheckCircle2, ClipboardPaste, ImagePlus, Loader2, RefreshCw, ScanSearch, Trash2, Upload } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -14,7 +14,13 @@ import { saveResult } from "@/lib/result-store";
 import { cn } from "@/lib/utils";
 
 const MAX_BYTES = 8 * 1024 * 1024;
-const TYPES = ["image/jpeg", "image/png", "image/webp"];
+const TYPES = [
+  "image/jpeg", "image/png", "image/webp", "image/avif", "image/heic", "image/heif",
+  "image/bmp", "image/x-ms-bmp", "image/tiff", "image/gif",
+];
+// Chrome/Windows often report HEIC (iPhone) files with an empty type, so the extension is checked too.
+const EXTENSIONS = [".jpg", ".jpeg", ".jfif", ".png", ".webp", ".avif", ".heic", ".heif", ".bmp", ".tif", ".tiff", ".gif"];
+const isSupported = (f: File) => TYPES.includes(f.type) || EXTENSIONS.some((e) => f.name.toLowerCase().endsWith(e));
 
 export default function DetectPage() {
   const { t, lang } = useLang();
@@ -25,6 +31,7 @@ export default function DetectPage() {
   const [busy, setBusy] = useState(false);
   const [drag, setDrag] = useState(false);
   const [camOpen, setCamOpen] = useState(false);
+  const [previewFailed, setPreviewFailed] = useState(false); // e.g. HEIC in browsers that cannot display it
   const inputRef = useRef<HTMLInputElement>(null);
   const captureRef = useRef<HTMLInputElement>(null);
   const diseases = useDiseases(lang);
@@ -35,11 +42,44 @@ export default function DetectPage() {
   const accept = useCallback((f: File | undefined | null) => {
     setError(null);
     if (!f) return;
-    if (!TYPES.includes(f.type)) return setError(t("err_type"));
+    if (!isSupported(f)) return setError(t("err_type"));
     if (f.size > MAX_BYTES) return setError(t("err_size"));
     setFile(f);
+    setPreviewFailed(false);
     setPreview((old) => { if (old) URL.revokeObjectURL(old); return URL.createObjectURL(f); });
   }, [t]);
+
+  // Paste support: Ctrl/⌘+V anywhere on this page. The listener is removed while the page is hidden.
+  useEffect(() => {
+    const onPaste = (e: ClipboardEvent) => {
+      if (busy) return;
+      const item = Array.from(e.clipboardData?.files ?? []).find((f) => f.type.startsWith("image/"));
+      if (!item) return;
+      e.preventDefault();
+      setCamOpen(false);
+      accept(new File([item], item.name && item.name !== "image.png" ? item.name : `pasted-${Date.now()}.${item.type.split("/")[1] || "png"}`, { type: item.type }));
+    };
+    window.addEventListener("paste", onPaste);
+    return () => window.removeEventListener("paste", onPaste);
+  }, [accept, busy]);
+
+  // "Paste image" button (useful on phones, where there is no keyboard shortcut)
+  const pasteFromClipboard = async () => {
+    setError(null);
+    try {
+      if (!navigator.clipboard?.read) throw new Error("unsupported");
+      for (const entry of await navigator.clipboard.read()) {
+        const type = entry.types.find((ty) => ty.startsWith("image/"));
+        if (type) {
+          const blob = await entry.getType(type);
+          return accept(new File([blob], `pasted-${Date.now()}.${type.split("/")[1] || "png"}`, { type }));
+        }
+      }
+      setError(t("paste_empty"));
+    } catch {
+      setError(t("paste_unsupported"));
+    }
+  };
 
   const clear = () => { setFile(null); setPreview(null); setError(null); if (inputRef.current) inputRef.current.value = ""; };
 
@@ -85,8 +125,16 @@ export default function DetectPage() {
               />
             ) : preview ? (
               <div className="relative bg-muted/40">
-                {/* eslint-disable-next-line @next/next/no-img-element -- local object URL preview */}
-                <img src={preview} alt="Selected leaf" className="mx-auto max-h-[480px] w-full object-contain" data-testid="preview" />
+                {previewFailed ? (
+                  <div className="flex min-h-[280px] flex-col items-center justify-center gap-2 p-8 text-center text-sm text-muted-foreground" data-testid="preview">
+                    <ImagePlus className="size-8" />
+                    {t("preview_unavailable")}
+                  </div>
+                ) : (
+                  // eslint-disable-next-line @next/next/no-img-element -- local object URL preview
+                  <img src={preview} alt="Selected leaf" className="mx-auto max-h-[480px] w-full object-contain" data-testid="preview"
+                    onError={() => setPreviewFailed(true)} />
+                )}
                 <div className="absolute left-3 top-3 inline-flex max-w-[calc(100%-1.5rem)] items-center gap-1.5 rounded-full bg-background/90 px-3 py-1 text-xs font-medium shadow">
                   <CheckCircle2 className="size-3.5 shrink-0 text-success" /> <span className="truncate">{file?.name}</span> <span className="shrink-0">· {((file?.size ?? 0) / 1024 / 1024).toFixed(2)} MB</span>
                 </div>
@@ -116,10 +164,14 @@ export default function DetectPage() {
                   <Button type="button" variant="outline" size="lg" className="h-9" onClick={(e) => { e.preventDefault(); openCamera(); }}>
                     <Camera /> {t("camera")}
                   </Button>
+                  <Button type="button" variant="outline" size="lg" className="h-9" onClick={(e) => { e.preventDefault(); pasteFromClipboard(); }} data-testid="paste-button">
+                    <ClipboardPaste /> {t("paste_btn")}
+                  </Button>
                 </div>
+                <div className="text-xs text-muted-foreground">{t("paste_hint")}</div>
               </label>
             )}
-            <input id="leaf-file" ref={inputRef} type="file" accept={TYPES.join(",")} className="sr-only" data-testid="file-input"
+            <input id="leaf-file" ref={inputRef} type="file" accept={[...TYPES, ...EXTENSIONS].join(",")} className="sr-only" data-testid="file-input"
               onChange={(e) => accept(e.target.files?.[0])} />
             <input ref={captureRef} type="file" accept="image/*" capture="environment" className="sr-only"
               onChange={(e) => accept(e.target.files?.[0])} />
@@ -131,6 +183,7 @@ export default function DetectPage() {
               </Button>
               <Button variant="outline" size="lg" onClick={() => inputRef.current?.click()} disabled={busy}><RefreshCw /> {t("replace")}</Button>
               <Button variant="outline" size="lg" onClick={openCamera} disabled={busy}><Camera /> {t("camera")}</Button>
+              <Button variant="outline" size="lg" onClick={pasteFromClipboard} disabled={busy}><ClipboardPaste /> {t("paste_btn")}</Button>
               <Button variant="ghost" size="lg" onClick={clear} disabled={busy}><Trash2 /> {t("remove")}</Button>
             </div>
           )}
