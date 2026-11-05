@@ -1,5 +1,8 @@
 # KrishiGuard AI — Crop Disease Detection & Advisory (College Project)
 
+**Live demo:** https://krishiguard-ai-five.vercel.app · **API docs:** https://krishiguard-api.vercel.app/docs
+(both on Vercel's free plan)
+
 A responsive web application where a farmer uploads or photographs a crop leaf and gets:
 
 1. the **crop** and the **disease** (or *healthy*) — 14 crops, 38 classes,
