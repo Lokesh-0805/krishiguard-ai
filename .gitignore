@@ -31,3 +31,4 @@ frontend/playwright-report/
 !.env.example
 .DS_Store
 backend/krishiguard_demo.db
+docs/report/screens/

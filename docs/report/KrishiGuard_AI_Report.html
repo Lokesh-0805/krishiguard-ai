@@ -1,0 +1,437 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>KrishiGuard AI — Project Report</title>
+<style>
+@page { size: A4; margin: 16mm 14mm 18mm 14mm; }
+* { box-sizing: border-box; }
+body { font-family: -apple-system, "Segoe UI", Helvetica, Arial, "Kohinoor Devanagari", "Noto Sans Devanagari", sans-serif;
+       color: #1d2a22; font-size: 10.2pt; line-height: 1.5; margin: 0; }
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; color: #1f5135; }
+h2 { font-size: 19pt; border-bottom: 2px solid #cfe1c9; padding-bottom: 4px; margin: 0 0 10px; }
+h3 { font-size: 12.5pt; margin: 14px 0 6px; break-after: avoid; page-break-after: avoid; }
+h2 { break-after: avoid; }
+section { page-break-before: always; }
+section.cover { page-break-before: auto; }
+p { margin: 6px 0; text-align: justify; }
+a { color: #2f7d4f; text-decoration: none; }
+code { font-size: 9pt; background: #f1f4ee; padding: 0 3px; border-radius: 3px; }
+table { width: 100%; border-collapse: collapse; margin: 8px 0 12px; font-size: 9.2pt; page-break-inside: auto; }
+tr { page-break-inside: avoid; }
+th { background: #2f7d4f; color: #fff; text-align: left; padding: 5px 7px; font-weight: 600; }
+td { border-bottom: 1px solid #e3e8df; padding: 4px 7px; vertical-align: top; }
+tbody tr:nth-child(even) td { background: #f7f9f5; }
+table.small { font-size: 8.3pt; }
+table.small td, table.small th { padding: 3px 6px; }
+td.ok { color: #1f7a3f; font-weight: 600; }
+figure { margin: 10px auto; text-align: center; page-break-inside: avoid; }
+figure img { border: 1px solid #e3e8df; border-radius: 6px; max-width: 100%; max-height: 222mm; object-fit: contain; }
+figcaption, .caption { font-size: 8.6pt; color: #56625a; margin-top: 4px; text-align: center; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-items: start; }
+.three { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; align-items: start; }
+.note { background: #fff6dd; border: 1px solid #f0d58a; padding: 6px 10px; border-radius: 6px; font-size: 9pt; }
+.kw { font-size: 9pt; color: #56625a; }
+.kpis { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin: 8px 0; }
+.kpis div { border: 1px solid #cfe1c9; border-radius: 8px; padding: 8px; text-align: center; font-size: 8.6pt; color: #56625a; }
+.kpis span { display: block; font-family: Georgia, serif; font-size: 16pt; color: #1f5135; font-weight: 700; }
+.cover-band { background: linear-gradient(135deg, #1f5135, #2f7d4f 60%, #6a9f3a); color: #fff; border-radius: 14px;
+              padding: 34px 32px 30px; margin-top: 4px; }
+.cover-band h1 { color: #fff; font-size: 40pt; margin: 6px 0 4px; }
+.cover-band .kicker { text-transform: uppercase; letter-spacing: .14em; font-size: 9pt; opacity: .85; }
+.cover-band .subtitle { font-size: 14pt; opacity: .95; }
+.cover-band .logo { font-size: 30pt; }
+.cover-meta { margin: 18px 0 8px; }
+table.meta td:first-child { width: 28%; color: #56625a; font-weight: 600; }
+table.meta tbody tr:nth-child(even) td { background: none; }
+.cover-shot img { max-height: 92mm; object-fit: cover; object-position: top; }
+.toc ol { font-size: 11.5pt; line-height: 1.9; }
+.arch { display: flex; align-items: stretch; gap: 8px; margin: 10px 0 4px; }
+.arch .lane { flex: 1; border: 1px dashed #b9cfb2; border-radius: 10px; padding: 8px; }
+.arch .lane-title { font-size: 8pt; text-transform: uppercase; letter-spacing: .1em; color: #56625a; margin-bottom: 4px; }
+.arch .box { background: #eef5ea; border: 1px solid #b9cfb2; border-radius: 8px; padding: 7px; font-size: 8.8pt; text-align: center; margin-bottom: 5px; }
+.arch .box.sub { background: #fff; }
+.arch .arrow { align-self: center; font-size: 16pt; color: #2f7d4f; text-align: center; }
+.arch.offline { align-items: center; }
+.arch.offline .box { flex: 1; margin: 0; background: #fff8e6; border-color: #eed59a; }
+.refs { font-size: 9.2pt; }
+h2 .chno { display: block; font-size: 10pt; letter-spacing: .14em; text-transform: uppercase; color: #6a9f3a; font-family: -apple-system, Helvetica, sans-serif; }
+.toc-list { list-style: none; padding: 0; font-size: 11.5pt; line-height: 2; }
+.toc-list li.un { font-style: italic; }
+.figs { list-style: none; padding: 0; font-size: 9pt; line-height: 1.6; }
+.cover-top { text-align: center; letter-spacing: .3em; font-size: 10pt; color: #56625a; margin: 6px 0 10px; }
+.cover-sub { text-align: center; font-size: 11pt; color: #56625a; margin-top: 12px; font-style: italic; }
+table.hi td { font-size: 9pt; }
+</style></head><body><section class="cover">
+  <div class="cover-top">A PROJECT REPORT ON</div>
+  <div class="cover-band">
+    <div class="logo">🌿</div>
+    <h1>KrishiGuard AI</h1>
+    <div class="subtitle">Intelligent Crop Disease Detection and Advisory System<br/>using Deep Learning (Transfer Learning with EfficientNet-B0)</div>
+  </div>
+  <div class="cover-sub">Submitted as a Deep Learning project</div>
+  <div class="cover-meta">
+    <table class="meta">
+      <tr><td>Domain</td><td>Computer Vision · Deep Learning · Agriculture</td></tr>
+      <tr><td>Model</td><td>EfficientNet-B0 (ImageNet-pretrained, fine-tuned in PyTorch); served with ONNX Runtime</td></tr>
+      <tr><td>Dataset</td><td>PlantVillage — 54,305 images, 38 classes, 14 crops; external field datasets PlantDoc and Tomato (Pakistan)</td></tr>
+      <tr><td>Headline result</td><td><b>99.56%</b> accuracy and <b>99.49%</b> macro-F1 on 7,751 held-out test images</td></tr>
+      <tr><td>Application</td><td>Responsive bilingual (English / Hindi) web application — <a href="https://krishiguard-ai-five.vercel.app">krishiguard-ai-five.vercel.app</a></td></tr>
+      <tr><td>Report date</td><td>November 2026</td></tr>
+    </table>
+  </div>
+  <figure class="cover-shot"><img src="assets/docs_report_screens_results-en.jpg" style="width:100%"/><figcaption>Diagnosis result page of the application (real model output)</figcaption></figure>
+</section><section>
+<h2>Abstract</h2>
+<p>Plant diseases cause large yield losses, and farmers often lack quick access to an expert. <b>KrishiGuard AI</b> is a
+responsive web application in which a farmer uploads, photographs or pastes an image of a crop leaf and receives the
+<b>crop</b>, the <b>disease (or healthy)</b>, a <b>calibrated confidence</b>, a <b>heat-map explanation</b> and <b>advisory in
+English and Hindi</b> (symptoms, causes, prevention, organic and chemical options with cited agricultural sources).</p>
+<p>An ImageNet-pretrained <b>EfficientNet-B0</b> convolutional neural network was fine-tuned with transfer learning on the
+PlantVillage dataset (54,305 images, 38 classes, 14 crops) using a <b>leakage-free, group-level
+split</b>. On 7,751 held-out test images it reaches <b>99.56% accuracy</b>, 99.46% macro
+precision, 99.52% macro recall and <b>99.49% macro-F1</b>. Testing on two independent
+real-field datasets (PlantDoc and a tomato field dataset from Pakistan) shows the well-known <i>lab-to-field gap</i>
+(31.1% and 26.5% accuracy); the system therefore uses temperature scaling and validation-selected
+thresholds to label results as <i>confident</i>, <i>uncertain</i> or <i>not recognised</i>, and shows treatment advice only for
+confident results.</p>
+<p>The model is served with ONNX Runtime from a FastAPI backend and a Next.js frontend, both deployed free on Vercel.
+The project includes 44 backend tests, 6 component tests and 16 end-to-end browser tests (desktop and mobile), all passing.</p>
+<p class="kw"><b>Keywords:</b> plant disease detection, transfer learning, EfficientNet, PlantVillage, calibration, Grad-CAM,
+ONNX, FastAPI, Next.js, Hindi advisory.</p>
+</section><section class="toc"><h2>Contents</h2><ol class="toc-list"><li class='un'>Abstract</li><li><b>Chapter 1.</b> Introduction</li><li><b>Chapter 2.</b> Literature Review</li><li><b>Chapter 3.</b> Development Environment and Requirements</li><li><b>Chapter 4.</b> System Architecture and Technology Stack</li><li><b>Chapter 5.</b> Datasets and Exploratory Data Analysis</li><li><b>Chapter 6.</b> Data Preprocessing and Leakage-free Splitting</li><li><b>Chapter 7.</b> Model Architecture and Training</li><li><b>Chapter 8.</b> Confidence Calibration and Uncertainty Handling</li><li><b>Chapter 9.</b> Results and Evaluation</li><li><b>Chapter 10.</b> Explainability (Grad-CAM / CAM)</li><li><b>Chapter 11.</b> Bilingual Advisory Engine</li><li><b>Chapter 12.</b> Web Application</li><li><b>Chapter 13.</b> Backend API and Model Serving</li><li><b>Chapter 14.</b> Testing and Quality Assurance</li><li><b>Chapter 15.</b> Deployment</li><li><b>Chapter 16.</b> Limitations and Future Scope</li><li><b>Chapter 17.</b> Conclusion</li><li class='un'>References</li><li class='un'>Appendix A — Per-class results</li><li class='un'>Appendix B — Dataset split per class</li></ol></section>
+<section class="toc"><h2>List of Figures</h2><ol class="figs"><li>Figure 1. Number of images per PlantVillage class.</li><li>Figure 2. Random PlantVillage samples: single leaves on a uniform background (lab-style).</li><li>Figure 3. PlantDoc samples: real backgrounds, multiple leaves, varied light.</li><li>Figure 4. Tomato field samples (Pakistan), smartphone photos.</li><li>Figure 5. Per-image mean colour by dataset — the field datasets differ clearly from PlantVillage (domain shift).</li><li>Figure 6. Per-class distribution of the leakage-free split.</li><li>Figure 7. Training curves: loss (left) and accuracy / macro-F1 (right). Validation accuracy is near its ceiling after epoch 1; field (PlantDoc) performance stays low throughout.</li><li>Figure 8. Risk–coverage: accuracy on the images the model answers as the confidence bar is raised.</li><li>Figure 9. Reliability diagram (PlantDoc test) before and after temperature scaling.</li><li>Figure 10. Row-normalised confusion matrix on the PlantVillage test set (38 classes).</li><li>Figure 11. Internal (lab) vs external (field) macro-F1 of the trained model.</li><li>Figure 12. Confusion matrix — PlantDoc test (classes present).</li><li>Figure 13. Confusion matrix — Tomato field test.</li><li>Figure 14. The most confident mistakes on the PlantVillage test set (true vs predicted, calibrated confidence).</li><li>Figure 15. The most confident mistakes on tomato field photos.</li><li>Figure 16. Model input, heat-map and overlay for lab (top four rows) and field (bottom four rows) images. On lab images the model focuses on the leaf and lesions; on field photos attention is scattered and predictions are wrong with low confidence.</li><li>Figure 17. Treatment tab in the application with organic and chemical options and the label-safety notice.</li><li>Figure 18. Landing page — live metrics are loaded from the evaluation results.</li><li>Figure 19. Diagnose page: upload, camera and paste options, supported formats.</li><li>Figure 20. Selected photo with preview, replace / camera / paste / remove actions.</li><li>Figure 21. Results: status banner, crop and disease, calibrated confidence, top-3 candidates, heat-map and advisory.</li><li>Figure 22. The same result after switching to Hindi.</li><li>Figure 23. Heat-map viewer: model input, heat-map and overlay (also a slider compare mode).</li><li>Figure 24. A field photo outside the training distribution is reported as not recognised; no advice is shown.</li><li>Figure 25. Disease library with search and crop filters.</li><li>Figure 26. Disease detail sheet with cited advisory.</li><li>Figure 27. Model performance dashboard (top part) — KPIs, lab-vs-field chart, risk–coverage and model summary; every number comes from the real evaluation.</li><li>Figure 28. Mobile — landing.</li><li>Figure 29. Mobile — diagnose.</li><li>Figure 30. Mobile — result.</li></ol></section><section>
+<h2><span class='chno'>Chapter 1</span>Introduction</h2>
+<h3>1.1 Problem statement</h3>
+<p>Farmers should be able to photograph a crop leaf and immediately learn whether it is diseased, which disease it is
+likely to be, how sure the system is, and what preventive and treatment options exist — in a language they understand.
+The solution must run in any browser (desktop, tablet, phone) without installing an app.</p>
+<h3>1.2 Objectives</h3>
+<ol>
+<li>Identify the crop and disease (or healthy state) from a single leaf photo.</li>
+<li>Report a confidence score and clearly flag uncertain or unrecognised photos.</li>
+<li>Explain the prediction visually with a heat-map.</li>
+<li>Provide symptoms, causes, prevention, organic and chemical options in <b>English and Hindi</b>, with sources.</li>
+<li>Evaluate honestly on an untouched test set and on independent real-field images.</li>
+<li>Deliver a professional, responsive web application with a real performance dashboard.</li>
+</ol>
+<h3>1.3 Scope</h3>
+<p>38 classes over 14 crops: apple, blueberry, cherry, corn (maize), grape, orange, peach, bell pepper,
+potato, raspberry, soybean, squash, strawberry and tomato (26 diseases + 12 healthy classes). The system is a
+decision-support tool and not a substitute for an agricultural expert.</p>
+<h3>1.4 Organisation of the report</h3>
+<p>The following chapters review related work, describe the development environment, the system architecture, the datasets
+and their preparation, the model and every training experiment performed, calibration, results, explainability, the
+advisory engine, the web application and API, testing and deployment, and finally the limitations and conclusions.</p>
+</section><section>
+<h2><span class='chno'>Chapter 2</span>Literature Review</h2>
+<h3>2.1 Deep learning for plant disease classification</h3>
+<p>Mohanty, Hughes and Salathé (2016) introduced large-scale deep learning for leaf disease recognition on the PlantVillage
+dataset (54,306 images, 38 classes) and reported up to 99.35 % accuracy with GoogLeNet trained by transfer learning. They also
+noted that accuracy fell sharply on images taken under conditions different from the training data — the first
+documented sign of the lab-to-field gap that is examined again in this project.</p>
+<h3>2.2 Real-world (field) datasets</h3>
+<p>Singh et al. (2020) released <b>PlantDoc</b>, a dataset of 2,598 images collected from the internet with natural backgrounds
+and multiple leaves per image. Models trained only on PlantVillage performed poorly on PlantDoc, which motivated using
+PlantDoc and an independent tomato field dataset as <i>external</i> test sets in this work.</p>
+<h3>2.3 Efficient convolutional networks and transfer learning</h3>
+<p>Transfer learning reuses features learned on ImageNet and fine-tunes them on a smaller target dataset, giving high accuracy
+with modest data and compute. <b>EfficientNet</b> (Tan and Le, 2019) scales network depth, width and input resolution jointly;
+its smallest member, EfficientNet-B0 (≈ 5.3 M parameters with the ImageNet head, 4.1 M with a 38-class head), offers a good
+accuracy–cost trade-off for CPU deployment, which is why it was chosen here.</p>
+<h3>2.4 Calibration and explainability</h3>
+<p>Guo et al. (2017) showed that modern neural networks are over-confident and that a single <b>temperature</b> parameter fitted on
+validation data substantially improves calibration. Selvaraju et al. (2017) proposed <b>Grad-CAM</b>, which produces class-specific
+heat-maps from gradients of the last convolutional layer; for networks ending in global average pooling it reduces to the
+Class Activation Map (CAM) of Zhou et al. (2016). Both ideas are used to make the predictions of this system more trustworthy.</p>
+<h3>2.5 Gap addressed by this project</h3>
+<p>Many student and research prototypes report only PlantVillage accuracy with random splits. This project adds (1) a
+leakage-free group split, (2) external field evaluation, (3) calibrated confidence with explicit uncertainty states,
+(4) visual explanations and (5) a bilingual, source-cited advisory delivered through a deployed web application.</p>
+</section><section>
+<h2><span class='chno'>Chapter 3</span>Development Environment and Requirements</h2>
+<h3>3.1 Hardware used for training</h3>
+<table class=""><thead><tr><th>Component</th><th>Specification</th></tr></thead><tbody><tr><td>Machine</td><td>Apple MacBook with Apple M1 chip (8-core CPU: 4 performance + 4 efficiency cores; 7-core GPU)</td></tr><tr><td>Memory</td><td>8 GB unified memory (shared by CPU and GPU)</td></tr><tr><td>GPU backend</td><td>PyTorch MPS (Metal Performance Shaders) — no CUDA GPU available</td></tr><tr><td>Free disk space</td><td>about 8.5 GB at the start of the project</td></tr></tbody></table>
+<h3>3.2 Software</h3>
+<table class=""><thead><tr><th>Purpose</th><th>Software / version</th></tr></thead><tbody><tr><td>Language</td><td>Python 3.12 (ML and backend), TypeScript (frontend), Node.js 22</td></tr><tr><td>Deep learning</td><td>PyTorch 2.15, torchvision 0.29, timm 1.0.31</td></tr><tr><td>Experiment tracking / tuning</td><td>MLflow 3.18 (SQLite store), Optuna 5.0</td></tr><tr><td>Data / evaluation</td><td>NumPy, pandas, Pillow, imagehash, scikit-learn, matplotlib</td></tr><tr><td>Serving</td><td>ONNX 1.23, ONNX Runtime 1.31, FastAPI, Uvicorn</td></tr><tr><td>Web</td><td>Next.js 16, React 19, Tailwind CSS 4, shadcn/ui, Recharts</td></tr><tr><td>Testing</td><td>pytest, Vitest, Playwright 1.64</td></tr></tbody></table>
+<h3>3.3 Measured training throughput (batch 32, 224 px, steady state)</h3>
+<table class=""><thead><tr><th>Model</th><th>Parameters</th><th>Training (images/s)</th><th>Inference (images/s)</th></tr></thead><tbody><tr><td>EfficientNet-B0</td><td>4.1 M</td><td>34.1</td><td>200.7</td></tr><tr><td>ResNet-50</td><td>23.6 M</td><td>22.8</td><td>82.6</td></tr></tbody></table>
+<p>Mixed-precision (fp16) training on the MPS backend was measured to be about 15 times <i>slower</i> than fp32 on this
+software stack (ResNet-50: 1.6 images/s), so all training used fp32. These measurements guided the epoch budgets used below.</p>
+</section><section>
+<h2><span class='chno'>Chapter 4</span>System Architecture and Technology Stack</h2>
+<div class="arch">
+  <div class="lane"><div class="lane-title">User</div><div class="box">Browser (desktop / mobile)<br/><small>upload · camera · paste</small></div></div>
+  <div class="arrow">→</div>
+  <div class="lane"><div class="lane-title">Frontend (Vercel)</div><div class="box">Next.js 16 · React 19 · Tailwind · shadcn/ui<br/><small>7 pages · EN/HI · image resize · report download</small></div></div>
+  <div class="arrow">→<br/><small>/api/*</small></div>
+  <div class="lane"><div class="lane-title">Backend (Vercel Python)</div><div class="box">FastAPI<br/><small>validation · rate limit · logging</small></div>
+    <div class="box sub">ONNX Runtime — EfficientNet-B0<br/><small>logits + CAM heat-map</small></div>
+    <div class="box sub">Advisory store (JSON, EN/HI)</div><div class="box sub">Metrics (evaluation summary)</div><div class="box sub">SQLite / PostgreSQL (metadata only)</div></div>
+</div>
+<div class="arch offline">
+  <div class="box">Raw datasets</div><div class="arrow">→</div><div class="box">build_dataset.py<br/><small>integrity · dedup · group split · EDA</small></div>
+  <div class="arrow">→</div><div class="box">train.py / tune.py<br/><small>PyTorch · Optuna · MLflow</small></div>
+  <div class="arrow">→</div><div class="box">evaluate.py<br/><small>metrics · calibration · thresholds</small></div>
+  <div class="arrow">→</div><div class="box">export_onnx.py<br/><small>model.onnx + model card</small></div>
+</div>
+<p class="caption"><b>Architecture diagram.</b> Online request path (top) and offline machine-learning pipeline (bottom).</p>
+<table class=""><thead><tr><th>Layer</th><th>Technologies</th></tr></thead><tbody><tr><td>Deep learning</td><td>PyTorch 2, timm (EfficientNet-B0, ImageNet weights), scikit-learn, MLflow, Optuna</td></tr><tr><td>Serving</td><td>ONNX Runtime (CPU), NumPy, Pillow (+ AVIF), pillow-heif (HEIC)</td></tr><tr><td>Backend</td><td>FastAPI, Pydantic, SQLAlchemy (PostgreSQL / SQLite), slowapi rate limiting, JSON logging</td></tr><tr><td>Frontend</td><td>Next.js 16, React 19, TypeScript, Tailwind CSS 4, shadcn/ui, Lucide icons, Recharts</td></tr><tr><td>Testing</td><td>pytest, Vitest + Testing Library, Playwright (Chrome, desktop + mobile emulation)</td></tr><tr><td>Deployment</td><td>Vercel (Hobby plan): Next.js project + Python (FastAPI) project; Dockerfiles + docker-compose also provided</td></tr></tbody></table>
+</section><section>
+<h2><span class='chno'>Chapter 5</span>Datasets and Exploratory Data Analysis</h2>
+<h3>5.1 Sources</h3>
+<table class=""><thead><tr><th>Dataset</th><th>Role</th><th>Images</th><th>Classes</th><th>Licence</th><th>Source</th></tr></thead><tbody><tr><td>PlantVillage (colour)</td><td>Train / validation / internal test</td><td>54,305</td><td>38</td><td>CC BY-SA 3.0</td><td>github.com/spMohanty/PlantVillage-Dataset</td></tr><tr><td>PlantDoc</td><td>External validation + external test (field)</td><td>2,572</td><td>28 → mapped</td><td>CC BY 4.0</td><td>github.com/pratikkayal/PlantDoc-Dataset</td></tr><tr><td>Tomato Leaf Disease, Pakistan</td><td>Independent external test (field)</td><td>7,200</td><td>6 → mapped</td><td>CC BY 4.0</td><td>Mendeley Data 3mbnb82mxd</td></tr></tbody></table>
+<p>All datasets were downloaded automatically from the original authors' repositories (Kaggle required an API token)
+and verified file by file. Every PlantDoc and Tomato-field class was mapped by hand onto the matching PlantVillage
+class so that external evaluation compares like with like.</p>
+<h3>5.2 Integrity checks</h3>
+<table class=""><thead><tr><th>Check</th><th>Result</th></tr></thead><tbody><tr><td>Corrupt / unreadable images</td><td>0 of 64,077</td></tr><tr><td>PlantVillage image size</td><td>all 256×256 RGB JPEG</td></tr><tr><td>Exact duplicates (MD5), all sources</td><td>182 groups / 381 images</td></tr><tr><td>Images matched to the PlantVillage leaf-identity map</td><td>41,111 (7,257 leaves have several photos)</td></tr><tr><td>Near-duplicate pairs (perceptual hash, ≤ 4 bits)</td><td>1,165</td></tr><tr><td>Leakage groups after merging</td><td>19,988</td></tr><tr><td>PlantDoc ↔ PlantVillage near-duplicates</td><td>1 (removed)</td></tr><tr><td>PlantDoc test images duplicating PlantDoc train</td><td>14 (removed)</td></tr></tbody></table>
+<h3>5.3 Class balance</h3>
+<p>The dataset is strongly imbalanced: the largest class (<i>Orange — Haunglongbing (Citrus greening)</i>) has 5,507 images and the
+smallest (<i>Potato — healthy</i>) only 152 — a ratio of <b>36.23×</b>.
+This is handled with class-weighted loss and macro-averaged metrics.</p>
+<figure class=""><img src="assets/ml_artifacts_eda_class_distribution_plantvillage.png" style="width:88%"/><figcaption><b>Figure 1.</b> Number of images per PlantVillage class.</figcaption></figure>
+<figure class=""><img src="assets/ml_artifacts_eda_samples_plantvillage.jpg" style="width:72%"/><figcaption><b>Figure 2.</b> Random PlantVillage samples: single leaves on a uniform background (lab-style).</figcaption></figure>
+<div class="two">
+<figure class=""><img src="assets/ml_artifacts_eda_samples_plantdoc.jpg" style="width:100%"/><figcaption><b>Figure 3.</b> PlantDoc samples: real backgrounds, multiple leaves, varied light.</figcaption></figure>
+<figure class=""><img src="assets/ml_artifacts_eda_samples_tomato_pk_field.jpg" style="width:100%"/><figcaption><b>Figure 4.</b> Tomato field samples (Pakistan), smartphone photos.</figcaption></figure>
+</div>
+<figure class=""><img src="assets/ml_artifacts_eda_rgb_distribution.png" style="width:92%"/><figcaption><b>Figure 5.</b> Per-image mean colour by dataset — the field datasets differ clearly from PlantVillage (domain shift).</figcaption></figure>
+</section><section>
+<h2><span class='chno'>Chapter 6</span>Data Preprocessing and Leakage-free Splitting</h2>
+<p>PlantVillage contains several photos of the same physical leaf. A random image-level split would put almost identical
+photos in both training and test sets and inflate accuracy. Images were therefore grouped by (1) the dataset's own
+leaf-identity map, (2) exact byte duplicates and (3) perceptual-hash near-duplicates, and <b>whole groups</b> were
+assigned to train / validation / test (≈ 70/15/15, stratified by class, seed 42). A script assertion guarantees that no
+group crosses splits.</p>
+<table class=""><thead><tr><th>Split</th><th>Images</th><th>Used for</th></tr></thead><tbody><tr><td>train</td><td>39,309</td><td>gradient updates</td></tr><tr><td>validation</td><td>7,245</td><td>early stopping, tuning, calibration, thresholds</td></tr><tr><td>test</td><td>7,751</td><td>final internal evaluation (used once)</td></tr><tr><td>external validation (PlantDoc)</td><td>463</td><td>calibration and thresholds only</td></tr><tr><td>domain-train (PlantDoc)</td><td>1,872</td><td>prepared for future field adaptation (not used)</td></tr><tr><td>external test (PlantDoc + Tomato field)</td><td>7,422</td><td>final external evaluation (used once)</td></tr></tbody></table>
+<figure class=""><img src="assets/ml_artifacts_eda_split_distribution.png" style="width:82%"/><figcaption><b>Figure 6.</b> Per-class distribution of the leakage-free split.</figcaption></figure>
+<h3>6.1 Augmentation and normalisation</h3>
+<ul>
+<li><b>Training:</b> random resized crop to 224 px (scale 0.55–1.0), horizontal and vertical flips, rotation up to 30°,
+brightness / contrast / saturation jitter, very small hue jitter (leaf colour is diagnostic), occasional Gaussian blur.</li>
+<li><b>Evaluation and serving:</b> resize the short side to 256 px, centre-crop 224 px, ImageNet mean/std normalisation.
+The serving code is unit-tested to produce numerically identical input to the training pipeline.</li>
+</ul>
+</section><section>
+<h2><span class='chno'>Chapter 7</span>Model Architecture and Training</h2>
+<h3>7.1 Architecture</h3>
+<p><b>EfficientNet-B0</b> (Tan &amp; Le, 2019) is a compact convolutional network built from mobile inverted-bottleneck
+(MBConv) blocks with squeeze-and-excitation, scaled for depth/width/resolution. The ImageNet-pretrained backbone
+(timm) was kept and its classifier replaced by a new 38-class linear layer with dropout 0.2.
+Parameters: <b>4.06 M</b>; input 224×224×3; exported model size 16.5 MB.</p>
+<h3>7.2 Training setup</h3>
+<table class=""><thead><tr><th>Setting</th><th>Value</th></tr></thead><tbody><tr><td>Framework / hardware</td><td>PyTorch 2 on Apple M1 GPU (MPS, fp32), 8 GB unified memory</td></tr><tr><td>Optimiser</td><td>AdamW; head LR 1.95e-03, backbone LR ×0.40, weight decay 0.0181</td></tr><tr><td>Schedule</td><td>cosine decay with 5 % linear warm-up, per batch</td></tr><tr><td>Loss</td><td>class-weighted (inverse √frequency) cross-entropy, label smoothing 0.12</td></tr><tr><td>Batch size / epochs</td><td>32 / 5 (early stopping on validation macro-F1, patience 2)</td></tr><tr><td>Training time</td><td>103 minutes (5 epochs)</td></tr><tr><td>Best epoch</td><td>5</td></tr><tr><td>Tracking</td><td>MLflow (sqlite) — every epoch logged</td></tr></tbody></table>
+<h3>7.3 Training procedure (step by step)</h3>
+<ol>
+<li><b>Load data:</b> each batch of 32 images is read from the split manifest, decoded, augmented (random resized crop, flips,
+rotation, colour jitter, blur) and normalised; 3 parallel data-loader workers feed the GPU.</li>
+<li><b>Model:</b> EfficientNet-B0 with ImageNet weights; the 1000-class head is replaced by a 38-class linear layer.</li>
+<li><b>Fine-tuning:</b> all layers are trained. The new head uses the base learning rate; the pretrained backbone uses a
+smaller rate (×0.40) so that ImageNet features are adapted gently.</li>
+<li><b>Loss:</b> cross-entropy with label smoothing (0.12) and per-class weights (inverse square root of
+class frequency) to counter the 36× class imbalance.</li>
+<li><b>Schedule:</b> learning rate rises linearly for the first 5 % of steps, then follows a cosine decay to zero.</li>
+<li><b>Validation every epoch:</b> accuracy, macro-F1 and weighted-F1 on the PlantVillage validation split and on the PlantDoc
+external-validation split are logged to MLflow; the checkpoint with the best validation macro-F1 is kept.</li>
+<li><b>Early stopping:</b> training stops if validation macro-F1 does not improve for 2 epochs (here all 5 epochs ran because
+the score kept improving).</li>
+</ol>
+<h3>7.4 Engineering issues during training and how they were solved</h3>
+<table class="small"><thead><tr><th>Problem observed</th><th>Cause found</th><th>Solution</th></tr></thead><tbody><tr><td>Training extremely slow with mixed precision</td><td>fp16 autocast on the MPS backend ~15× slower</td><td>train in fp32; mixed precision enabled only on CUDA</td></tr><tr><td>Training hung on the first batch</td><td>weighted, label-smoothed cross-entropy on MPS forces a GPU sync and stalled under memory pressure</td><td>equivalent loss written with gather/sum (verified identical to PyTorch to 1e-6)</td></tr><tr><td>Very low throughput (&lt; 1 image/s) in a smoke test</td><td>too many persistent data-loader worker processes (~325 MB each) on 8 GB RAM</td><td>3 training workers; validation workers created only during evaluation</td></tr><tr><td>Experiment tracking failed</td><td>MLflow 3 refuses the file-based store</td><td>MLflow with a SQLite backend</td></tr></tbody></table>
+<h3>7.5 Summary of all experiments performed</h3>
+<table class="small"><thead><tr><th>#</th><th>Experiment</th><th>Data used</th><th>Configuration</th><th>Time</th><th>Outcome</th></tr></thead><tbody><tr><td>E1</td><td>Hardware benchmark</td><td>random tensors</td><td>EfficientNet-B0 and ResNet-50, fp32 vs fp16, batch 32</td><td>minutes</td><td>fp32 chosen; B0 34 img/s, ResNet-50 23 img/s</td></tr><tr><td>E2</td><td>Hyper-parameter search (Optuna, TPE)</td><td>4,000 train / 1,500 val images (stratified)</td><td>8 trials × 1 epoch; LR, backbone multiplier, weight decay, label smoothing</td><td>28 min (training only)</td><td>best val macro-F1 0.889 (trial 4)</td></tr><tr><td>E3</td><td>ResNet-50 learning-rate probe (head LR 0.001)</td><td>6,000 train / 1,500 val images</td><td>1 epoch, backbone LR ×0.1</td><td>6.2 min</td><td>val macro-F1 0.400</td></tr><tr><td>E4</td><td>ResNet-50 learning-rate probe (head LR 0.003)</td><td>6,000 train / 1,500 val images</td><td>1 epoch, backbone LR ×0.1</td><td>6.7 min</td><td>val macro-F1 0.863</td></tr><tr><td>E5</td><td><b>EfficientNet-B0 final training</b></td><td>39,309 train images per epoch</td><td>Optuna-best settings, 5 epochs, batch 32</td><td>103 min</td><td><b>val acc 99.72%, val macro-F1 0.9963</b></td></tr><tr><td>E6</td><td>Evaluation pass (inference only)</td><td>22,881 images: validation, external validation, test, external test</td><td>temperature fit, thresholds, metrics, plots</td><td>≈ 4 min</td><td>test acc 99.56%</td></tr><tr><td>E7</td><td>ONNX export and verification</td><td>105 test images</td><td>PyTorch → ONNX (opset 17), CAM output</td><td>&lt; 1 min</td><td>identical predictions; CAM ≡ Grad-CAM</td></tr></tbody></table>
+<p><b>Planned but not run.</b> Full ResNet-50 training (3 epochs), a Vision Transformer (ViT-S/16, 3 epochs), EfficientNet-B2
+(2 epochs) and an EfficientNet-B0 domain-adaptation run on PlantDoc images were prepared in the training queue but stopped
+to keep the computational load suitable for a laptop. The trained EfficientNet-B0 already met the project objectives.</p>
+<h3>7.6 Hyper-parameter search (Optuna)</h3>
+<p>8 TPE trials, each fine-tuning for one epoch on a stratified 4,000-image subset and scored by macro-F1 on 1,500
+validation images. The best trial (bold) was used for the full run. Trials with a very low backbone learning rate barely
+learned in one epoch.</p>
+<table class="small"><thead><tr><th>Trial</th><th>Val macro-F1</th><th>Head LR</th><th>Backbone ×</th><th>Weight decay</th><th>Label smoothing</th></tr></thead><tbody><tr><td>0</td><td>0.8272</td><td>8.61e-04</td><td>0.435</td><td>5.1e-03</td><td>0.090</td></tr><tr><td>1</td><td>0.1727</td><td>4.65e-04</td><td>0.047</td><td>1.6e-05</td><td>0.130</td></tr><tr><td>2</td><td>0.8167</td><td>1.63e-03</td><td>0.220</td><td>1.2e-05</td><td>0.145</td></tr><tr><td>3</td><td>0.7854</td><td>3.12e-03</td><td>0.055</td><td>4.7e-05</td><td>0.028</td></tr><tr><td><b>4</b></td><td><b>0.8895</b></td><td><b>1.95e-03</b></td><td><b>0.401</b></td><td><b>1.8e-02</b></td><td><b>0.120</b></td></tr><tr><td>5</td><td>0.1658</td><td>4.06e-04</td><td>0.060</td><td>8.1e-03</td><td>0.138</td></tr><tr><td>6</td><td>0.8670</td><td>4.46e-03</td><td>0.236</td><td>3.8e-03</td><td>0.088</td></tr><tr><td>7</td><td>0.2419</td><td>4.18e-04</td><td>0.091</td><td>3.8e-02</td><td>0.023</td></tr></tbody></table>
+<p>A short ResNet-50 learning-rate probe (1 epoch, 6,000 images) was also run: head LR 1e-3 → validation macro-F1 0.400; head LR 3e-3 → 0.863. Full ResNet-50 and Vision-Transformer training was not carried out to keep the computational load suitable for a laptop.</p>
+<h3>7.7 Training history</h3>
+<table class="small"><thead><tr><th>Epoch</th><th>Train loss</th><th>Train acc (aug.)</th><th>Val loss</th><th>Val acc</th><th>Val macro-F1</th><th>Field ext-val macro-F1</th><th>Minutes</th></tr></thead><tbody><tr><td>1</td><td>1.464</td><td>88.95%</td><td>0.218</td><td>98.80%</td><td>0.9858</td><td>0.1971</td><td>19.3</td></tr><tr><td>2</td><td>1.123</td><td>97.94%</td><td>0.262</td><td>98.48%</td><td>0.9797</td><td>0.1746</td><td>23.7</td></tr><tr><td>3</td><td>1.074</td><td>98.92%</td><td>0.212</td><td>99.19%</td><td>0.9887</td><td>0.2164</td><td>19.4</td></tr><tr><td>4</td><td>1.045</td><td>99.45%</td><td>0.189</td><td>99.68%</td><td>0.9958</td><td>0.1805</td><td>22.6</td></tr><tr><td>5</td><td>1.031</td><td>99.74%</td><td>0.192</td><td>99.72%</td><td>0.9963</td><td>0.1676</td><td>18.4</td></tr></tbody></table>
+<figure class=""><img src="assets/ml_artifacts_models_effnet_b0_224_curves.png" style="width:92%"/><figcaption><b>Figure 7.</b> Training curves: loss (left) and accuracy / macro-F1 (right). Validation accuracy is near its ceiling after epoch 1; field (PlantDoc) performance stays low throughout.</figcaption></figure>
+</section><section>
+<h2><span class='chno'>Chapter 8</span>Confidence Calibration and Uncertainty Handling</h2>
+<p>A softmax score is not a guarantee of correctness. The system therefore:</p>
+<ol>
+<li>fits a single <b>temperature</b> T = 1.055 on the validation sets (lab and field weighted equally);</li>
+<li>selects a <b>confident threshold</b> τ = 0.730 and a <b>reject threshold</b> τ<sub>r</sub> = 0.647
+on validation data only (rule: target unreachable on some domain -&gt; threshold maximising balanced selective accuracy at &gt;=10% coverage);</li>
+<li>reports <i>confident</i> (p ≥ τ), <i>uncertain</i> (τ<sub>r</sub> ≤ p &lt; τ, advice hidden, top-3 shown) or
+<i>not recognised</i> (p &lt; τ<sub>r</sub>);</li>
+<li>never reports a blurry photo (variance-of-Laplacian below the 1st validation percentile, 36.99) as confident.</li>
+</ol>
+<table class=""><thead><tr><th>Set</th><th>Answered (coverage)</th><th>Accuracy on answered</th><th>Not recognised</th><th>ECE raw → calibrated</th></tr></thead><tbody><tr><td>PlantVillage validation</td><td>77.5%</td><td>99.9%</td><td>1.5%</td><td>0.166 → 0.205</td></tr><tr><td>PlantDoc ext-validation</td><td>12.3%</td><td>43.9%</td><td>78.4%</td><td>0.265 → 0.235</td></tr><tr><td>PlantVillage test</td><td>72.1%</td><td>99.9%</td><td>1.5%</td><td>0.172 → 0.211</td></tr><tr><td>PlantDoc test</td><td>16.2%</td><td>50.0%</td><td>71.6%</td><td>0.196 → 0.171</td></tr><tr><td>Tomato field test</td><td>18.0%</td><td>47.5%</td><td>69.9%</td><td>0.258 → 0.225</td></tr></tbody></table>
+<p>On lab-style photos 72 % of images are answered confidently at 99.9 % accuracy. On field photos most images (~70 %)
+are honestly reported as <i>not recognised</i>, but confident field answers are still only about 50 % correct — a
+limitation that the application states explicitly.</p>
+<div class="two">
+<figure class=""><img src="assets/ml_artifacts_evaluation_effnet_b0_224_risk_coverage.png" style="width:100%"/><figcaption><b>Figure 8.</b> Risk–coverage: accuracy on the images the model answers as the confidence bar is raised.</figcaption></figure>
+<figure class=""><img src="assets/ml_artifacts_evaluation_effnet_b0_224_reliability_external_test_plantdoc.png" style="width:78%"/><figcaption><b>Figure 9.</b> Reliability diagram (PlantDoc test) before and after temperature scaling.</figcaption></figure>
+</div>
+</section><section>
+<h2><span class='chno'>Chapter 9</span>Results and Evaluation</h2>
+<h3>9.1 Internal test set (PlantVillage, never used for training or selection)</h3>
+<div class="kpis">
+  <div><span>99.56%</span>Accuracy</div><div><span>99.46%</span>Macro precision</div>
+  <div><span>99.52%</span>Macro recall</div><div><span>99.49%</span>Macro F1</div>
+  <div><span>99.56%</span>Weighted F1</div>
+</div>
+<p>Only <b>34 of 7,751</b> test images are misclassified. Crop identification accuracy is
+99.96% and top-3 accuracy 99.97%.</p>
+<figure class=""><img src="assets/ml_artifacts_evaluation_effnet_b0_224_confusion_matrix_test_normalized.png" style="width:92%"/><figcaption><b>Figure 10.</b> Row-normalised confusion matrix on the PlantVillage test set (38 classes).</figcaption></figure>
+<h3>9.2 All evaluation sets</h3>
+<table class="small"><thead><tr><th>Set</th><th>n</th><th>Accuracy</th><th>Macro P</th><th>Macro R</th><th>Macro F1</th><th>Weighted F1</th><th>Crop acc.</th><th>Top-3</th></tr></thead><tbody><tr><td>PlantVillage validation</td><td>7,245</td><td>99.72%</td><td>99.58%</td><td>99.70%</td><td>99.63%</td><td>99.72%</td><td>100.0%</td><td>100.0%</td></tr><tr><td>PlantVillage test</td><td>7,751</td><td>99.56%</td><td>99.46%</td><td>99.52%</td><td>99.49%</td><td>99.56%</td><td>100.0%</td><td>100.0%</td></tr><tr><td>PlantDoc test (field)</td><td>222</td><td>31.08%</td><td>35.25%</td><td>31.41%</td><td>28.33%</td><td>28.84%</td><td>58.1%</td><td>53.6%</td></tr><tr><td>Tomato field test (Pakistan)</td><td>7,200</td><td>26.50%</td><td>48.59%</td><td>26.50%</td><td>24.22%</td><td>24.22%</td><td>70.8%</td><td>44.0%</td></tr></tbody></table>
+<figure class=""><img src="assets/ml_artifacts_evaluation_model_comparison.png" style="width:70%"/><figcaption><b>Figure 11.</b> Internal (lab) vs external (field) macro-F1 of the trained model.</figcaption></figure>
+<h3>9.3 External (field) evaluation</h3>
+<p>The drop from lab to field photos (99.6% → 31.1% on PlantDoc and 26.5% on the
+tomato field set) is the classic dataset-bias result reported by the PlantDoc authors: a model trained only on single
+leaves photographed on a plain background does not transfer to cluttered field photos.</p>
+<div class="two">
+<figure class=""><img src="assets/ml_artifacts_evaluation_effnet_b0_224_confusion_matrix_external_test_plantdoc_normalized.png" style="width:100%"/><figcaption><b>Figure 12.</b> Confusion matrix — PlantDoc test (classes present).</figcaption></figure>
+<figure class=""><img src="assets/ml_artifacts_evaluation_effnet_b0_224_confusion_matrix_external_test_tomato_pk_field_normalized.png" style="width:100%"/><figcaption><b>Figure 13.</b> Confusion matrix — Tomato field test.</figcaption></figure>
+</div>
+<h3>9.4 Error analysis</h3>
+<ul>
+<li><b>Internal:</b> errors occur between visually similar lesions on the same crop — e.g.
+Tomato — Tomato Yellow Leaf Curl Virus → Spider mites Two-spotted spider mite (4); Tomato — Late blight → Early blight (4); Corn — Northern Leaf Blight → Cercospora leaf spot Gray leaf spot (4); Grape — Esca (Black Measles) → Black rot (2).</li>
+<li><b>PlantDoc:</b> healthy leaves on the plant are confused with other crops' healthy classes or with blights;
+crop-level accuracy is only 58.1%.</li>
+<li><b>Tomato field:</b> healthy field leaves are called Late or Early blight; Septoria ↔ Early blight and Leaf Mold ↔ Late blight are
+the main confusions — natural light, shadows and soil look like lesions to a lab-trained model.</li>
+</ul>
+<figure class=""><img src="assets/ml_artifacts_evaluation_effnet_b0_224_misclassified_test.jpg" style="width:80%"/><figcaption><b>Figure 14.</b> The most confident mistakes on the PlantVillage test set (true vs predicted, calibrated confidence).</figcaption></figure>
+<figure class=""><img src="assets/ml_artifacts_evaluation_effnet_b0_224_misclassified_external_test_tomato_pk_field.jpg" style="width:80%"/><figcaption><b>Figure 15.</b> The most confident mistakes on tomato field photos.</figcaption></figure>
+</section><section>
+<h2><span class='chno'>Chapter 10</span>Explainability (Grad-CAM / CAM)</h2>
+<p><b>Grad-CAM</b> (Selvaraju et al., 2017) highlights the image regions that most influenced the predicted class score.
+EfficientNet-B0 ends with global average pooling and one linear layer, so Grad-CAM at the last feature map equals the
+classic <b>Class Activation Map</b> (CAM = classifier weights × feature maps) up to a constant factor. The deployed ONNX
+model therefore outputs the CAM directly, without gradients. This equivalence was verified numerically: minimum
+correlation between CAM and Grad-CAM = <b>1.00000000</b>; ONNX predictions agree with PyTorch on
+<b>105</b> test images (max logit difference 1.0e-05).</p>
+<figure class=""><img src="assets/ml_artifacts_evaluation_gradcam_examples.jpg" style="width:78%"/><figcaption><b>Figure 16.</b> Model input, heat-map and overlay for lab (top four rows) and field (bottom four rows) images. On lab images the model focuses on the leaf and lesions; on field photos attention is scattered and predictions are wrong with low confidence.</figcaption></figure>
+<p class="note">Heat-maps show influence on the class score; they are a sanity check, not proof that a diagnosis is correct.</p>
+</section><section>
+<h2><span class='chno'>Chapter 11</span>Bilingual Advisory Engine</h2>
+<p>A structured JSON knowledge base (<code>advisory/diseases.json</code>) holds one entry for each of the 38
+classes with crop and disease names, scientific name, pathogen type, summary, symptoms, causes, prevention, organic
+options and chemical options — every field in <b>English and simple Hindi</b>. It cites <b>52 distinct sources</b> (ICAR /
+NIPHM integrated pest management packages, TNAU Agritech, Kerala Agricultural University, National Horticulture Board,
+FAO and university extension services), each fetched and dated.</p>
+<ul>
+<li><b>No dosages</b> are ever given; chemical options are listed only as "options reported by &lt;source&gt;" and every
+list ends with an instruction to use products registered by CIB&amp;RC, follow the label and consult the local KVK.</li>
+<li>Advice is shown <b>only for confident predictions</b>; for uncertain results the user sees candidate diseases with links.</li>
+<li>A safety review replaced an older recommendation of streptocycline (an antibiotic the Government of India has moved to
+prohibit in agriculture) with a "do not use" warning.</li>
+</ul>
+<p><b>Example entry — Tomato, Early blight (<i>Alternaria solani</i>):</b></p>
+<table class="small"><thead><tr><th>Field</th><th>Content (English version; the Hindi version is stored in parallel)</th></tr></thead><tbody><tr><td>Summary</td><td>Early blight is a common fungal disease of tomato that causes brown spots with concentric &#x27;bull&#x27;s-eye&#x27; rings, usually starting on older leaves. It can defoliate plants and also rots fruit near the stem end in warm, humid weather.</td></tr><tr><td>Symptoms</td><td>• Small dark spots on older leaves that enlarge with concentric rings (bull&#x27;s-eye pattern).<br/>• Leaf tissue around the spots turns yellow; much of the foliage may die in hot, humid weather.<br/>• Similar lesions on stems can girdle the plant near the soil.<br/>• Fruit develops dark ringed spots, usually near the calyx or stem attachment.</td></tr><tr><td>Causes</td><td>• Caused by the fungus Alternaria solani.<br/>• Survives in infected plant debris and can be seed-borne.<br/>• Spores spread by rain, wind, insects, people and machinery.<br/>• Warm, humid, rainy weather favours the disease.</td></tr><tr><td>Prevention</td><td>• Remove and destroy crop debris and practise crop rotation.<br/>• Use resistant or tolerant varieties and healthy seed.<br/>• Change the nursery location every season and remove weeds and volunteer tomato plants.<br/>• Fertilize properly and avoid planting overlapping tomato crops in adjacent fields.</td></tr><tr><td>Organic options</td><td>• Seed treatment with Trichoderma asperellum is an option reported by TNAU; it may help reduce seed-borne infection.<br/>• Removing infected lower leaves and keeping the field clean may help slow spread.</td></tr><tr><td>Chemical options</td><td>• Fungicide options reported by TNAU and NIPHM include mancozeb, zineb, metiram, copper oxychloride, captan, iprodione, azoxystrobin and pyraclostrobin.<br/>• Combination products reported by TNAU include azoxystrobin + difenoconazole, metiram + pyraclostrobin and tebuconazole + trifloxystrobin.<br/>• Alternate fungicide groups to slow resistance.<br/>• Use only products registered for this crop in India (CIB&amp;RC), follow the product label exactly, and consult your local KVK or agriculture officer before spraying.</td></tr><tr><td>Sources</td><td>TNAU Agritech Portal, Tamil Nadu Agricultural University<br/>NIPHM / Directorate of Plant Protection, Quarantine &amp; Storage, Govt. of India</td></tr></tbody></table>
+<figure class=""><img src="assets/docs_report_screens_advisory-treatment-en.png" style="width:80%"/><figcaption><b>Figure 17.</b> Treatment tab in the application with organic and chemical options and the label-safety notice.</figcaption></figure>
+</section><section>
+<h2><span class='chno'>Chapter 12</span>Web Application</h2>
+<p>The website has seven pages: Landing, Diagnose, Results, Disease library, Model performance, Methodology and About.
+It is fully responsive and bilingual, supports drag-and-drop, file selection, browser camera capture and
+<b>pasting an image (Ctrl/⌘+V or a Paste button)</b>, and accepts JPEG, PNG, WebP, AVIF, HEIC (iPhone), BMP, TIFF and GIF.
+Large photos are resized in the browser before upload.</p>
+<figure class=""><img src="assets/docs_report_screens_landing.jpg" style="width:92%"/><figcaption><b>Figure 18.</b> Landing page — live metrics are loaded from the evaluation results.</figcaption></figure>
+<div class="two">
+<figure class=""><img src="assets/docs_report_screens_detect-empty.png" style="width:100%"/><figcaption><b>Figure 19.</b> Diagnose page: upload, camera and paste options, supported formats.</figcaption></figure>
+<figure class=""><img src="assets/docs_report_screens_detect-preview.jpg" style="width:100%"/><figcaption><b>Figure 20.</b> Selected photo with preview, replace / camera / paste / remove actions.</figcaption></figure>
+</div>
+<figure class=""><img src="assets/docs_report_screens_results-en.jpg" style="width:92%"/><figcaption><b>Figure 21.</b> Results: status banner, crop and disease, calibrated confidence, top-3 candidates, heat-map and advisory.</figcaption></figure>
+<figure class=""><img src="assets/docs_report_screens_results-hi.jpg" style="width:92%"/><figcaption><b>Figure 22.</b> The same result after switching to Hindi.</figcaption></figure>
+<div class="two">
+<figure class=""><img src="assets/docs_report_screens_gradcam-viewer.png" style="width:100%"/><figcaption><b>Figure 23.</b> Heat-map viewer: model input, heat-map and overlay (also a slider compare mode).</figcaption></figure>
+<figure class=""><img src="assets/docs_report_screens_results-unrecognized.jpg" style="width:100%"/><figcaption><b>Figure 24.</b> A field photo outside the training distribution is reported as not recognised; no advice is shown.</figcaption></figure>
+</div>
+<div class="two">
+<figure class=""><img src="assets/docs_report_screens_library.png" style="width:100%"/><figcaption><b>Figure 25.</b> Disease library with search and crop filters.</figcaption></figure>
+<figure class=""><img src="assets/docs_report_screens_library-detail.jpg" style="width:100%"/><figcaption><b>Figure 26.</b> Disease detail sheet with cited advisory.</figcaption></figure>
+</div>
+<figure class=""><img src="assets/docs_report_screens_performance-top.jpg" style="width:88%"/><figcaption><b>Figure 27.</b> Model performance dashboard (top part) — KPIs, lab-vs-field chart, risk–coverage and model summary; every number comes from the real evaluation.</figcaption></figure>
+<div class="three">
+<figure class=""><img src="assets/docs_report_screens_mobile-landing.jpg" style="width:100%"/><figcaption><b>Figure 28.</b> Mobile — landing.</figcaption></figure>
+<figure class=""><img src="assets/docs_report_screens_mobile-detect.png" style="width:100%"/><figcaption><b>Figure 29.</b> Mobile — diagnose.</figcaption></figure>
+<figure class=""><img src="assets/docs_report_screens_mobile-results.jpg" style="width:100%"/><figcaption><b>Figure 30.</b> Mobile — result.</figcaption></figure>
+</div>
+<p>Other features: downloadable HTML diagnosis report, print / save-as-PDF, dark mode, feedback (stored as unverified),
+uncertainty warnings, blurry-photo warnings.</p>
+</section><section>
+<h2><span class='chno'>Chapter 13</span>Backend API and Model Serving</h2>
+<table class=""><thead><tr><th>Endpoint</th><th>Purpose</th></tr></thead><tbody><tr><td>GET /api/health</td><td>model / database / advisory status</td></tr><tr><td>GET /api/model/info</td><td>architecture, classes, temperature, thresholds, checksum</td></tr><tr><td>POST /api/predict</td><td>diagnose one photo (lang = en|hi, optional heat-map)</td></tr><tr><td>POST /api/predict/batch</td><td>diagnose up to 8 photos; per-file errors</td></tr><tr><td>GET /api/diseases, /api/diseases/{id}</td><td>disease list and detail (EN/HI)</td></tr><tr><td>GET /api/advisory/{id}</td><td>advisory for one disease in the chosen language</td></tr><tr><td>GET /api/metrics</td><td>evaluation summary for the dashboard (503 if not generated — never synthetic)</td></tr><tr><td>POST /api/feedback</td><td>user feedback, stored as unverified</td></tr></tbody></table>
+<ul>
+<li><b>Validation:</b> 8 MB limit, MIME check plus content sniffing, decompression-bomb guard, EXIF orientation,
+minimum size, blur detection; consistent JSON errors (413, 415, 422, 429, 503).</li>
+<li><b>Serving:</b> the PyTorch model is exported to <b>ONNX</b> (16 MB) and run with ONNX Runtime; the deployment needs no
+PyTorch (≈ 133 MB of dependencies instead of &gt; 1 GB) and inference takes about <b>35 ms</b> per image on the server
+(measured), versus 133 ms for the PyTorch model on the development laptop CPU.</li>
+<li><b>Integrity:</b> the API refuses to load a model whose SHA-256 differs from the model card.</li>
+<li><b>Privacy:</b> uploaded images are never stored — only a hash and prediction metadata.</li>
+</ul>
+</section><section>
+<h2><span class='chno'>Chapter 14</span>Testing and Quality Assurance</h2>
+<table><thead><tr><th>Suite</th><th>Tests</th><th>What is covered</th><th>Result</th></tr></thead><tbody>
+<tr><td>Backend (pytest)</td><td>44</td><td>preprocessing parity with training, 8 image formats, invalid uploads, ONNX loading & checksum,
+CAM = Grad-CAM, API endpoints, feedback, real-model integration</td><td class="ok">all passed</td></tr>
+<tr><td>Frontend components (Vitest)</td><td>6</td><td>i18n switching, advisory rendering, heat-map viewer, report escaping</td><td class="ok">all passed</td></tr>
+<tr><td>End-to-end (Playwright, Chrome)</td><td>16</td><td>desktop + mobile: full journey (upload → result → Hindi → heat-map → report → dashboard),
+library, unrecognised field photo, invalid upload, "New diagnosis" regression, AVIF, HEIC, paste</td><td class="ok">all passed</td></tr>
+<tr><td>Live deployment</td><td>—</td><td>end-to-end suite and API checks run against the deployed Vercel site</td><td class="ok">passed</td></tr>
+</tbody></table>
+<p>Bugs found and fixed during testing included a training hang on Apple MPS (replaced loss implementation), chart
+animation artefacts in print, a stale "Analysing…" state after <i>New diagnosis</i> (Next.js route state preservation) and a
+<code>.gitignore</code> rule that would have excluded the deployed model.</p>
+</section><section>
+<h2><span class='chno'>Chapter 15</span>Deployment</h2>
+<p>Both parts run on <b>Vercel's free (Hobby) plan</b> from the same GitHub repository; every <code>git push</code> redeploys them.</p>
+<table><thead><tr><th>Project</th><th>Root</th><th>URL</th></tr></thead><tbody>
+<tr><td>Website (Next.js)</td><td><code>frontend/</code></td><td><a href="https://krishiguard-ai-five.vercel.app">krishiguard-ai-five.vercel.app</a></td></tr>
+<tr><td>API (FastAPI, Python function)</td><td>repository root (<code>index.py</code>)</td><td><a href="https://krishiguard-api.vercel.app/docs">krishiguard-api.vercel.app/docs</a></td></tr>
+</tbody></table>
+<p>The website proxies <code>/api/*</code> to the API project, so the browser talks to a single origin. Docker files and a
+docker-compose configuration (with PostgreSQL) are also provided for self-hosting.</p>
+</section><section>
+<h2><span class='chno'>Chapter 16</span>Limitations and Future Scope</h2>
+<ul>
+<li><b>Field accuracy:</b> 31.1%–26.5% on real field photos versus 99.6% on lab photos.
+<i>Future:</i> fine-tune on labelled field images (the PlantDoc domain-train split is already prepared) and collect Indian field data.</li>
+<li><b>Closed set:</b> only 38 classes; other crops, pests or nutrient problems are forced onto these labels.</li>
+<li><b>Single architecture:</b> ResNet-50 / Vision Transformer comparisons were planned but not trained, to keep the
+computational load suitable for a laptop; the training scripts support them.</li>
+<li><b>Advisory review:</b> content is source-cited but has not yet been reviewed by an agronomist; pesticide registrations change.</li>
+<li><b>Calibration:</b> one temperature cannot be right for both lab and field photos; confident field answers are still wrong about half the time.</li>
+</ul>
+</section>
+<section>
+<h2><span class='chno'>Chapter 17</span>Conclusion</h2>
+<p>KrishiGuard AI demonstrates a complete, working pipeline from verified public datasets to a deployed, bilingual web
+application. A transfer-learned EfficientNet-B0 reaches <b>99.56% accuracy</b> and <b>99.49% macro-F1</b> on a
+leakage-free held-out test set, explains its decisions with heat-maps, and serves cited English and Hindi advice. Honest
+external testing shows that lab-trained models do not yet generalise to field photos; the application responds to this
+with calibrated confidence, explicit uncertainty states and by withholding advice when unsure.</p>
+</section>
+<section>
+<h2>References</h2>
+<ol class="refs">
+<li>Mohanty, S. P., Hughes, D. P., &amp; Salathé, M. (2016). Using deep learning for image-based plant disease detection. <i>Frontiers in Plant Science</i>, 7, 1419.</li>
+<li>Singh, D., Jain, N., Jain, P., Kayal, P., Kumawat, S., &amp; Batra, N. (2020). PlantDoc: A dataset for visual plant disease detection. <i>CODS-COMAD 2020</i>.</li>
+<li>Tomato Leaf Disease Classification Dataset in Pakistan. Mendeley Data, 3mbnb82mxd (CC BY 4.0).</li>
+<li>Tan, M., &amp; Le, Q. (2019). EfficientNet: Rethinking model scaling for convolutional neural networks. <i>ICML</i>.</li>
+<li>Selvaraju, R. R., et al. (2017). Grad-CAM: Visual explanations from deep networks via gradient-based localization. <i>ICCV</i>.</li>
+<li>Zhou, B., et al. (2016). Learning deep features for discriminative localization (CAM). <i>CVPR</i>.</li>
+<li>Guo, C., Pleiss, G., Sun, Y., &amp; Weinberger, K. Q. (2017). On calibration of modern neural networks. <i>ICML</i>.</li>
+<li>Akiba, T., et al. (2019). Optuna: A next-generation hyperparameter optimization framework. <i>KDD</i>.</li>
+<li>NIPHM / Directorate of Plant Protection, Quarantine &amp; Storage — AESA-based IPM packages; TNAU Agritech Portal; and the other
+50 advisory sources listed in <code>advisory/SOURCES.md</code>.</li>
+</ol>
+</section><section>
+<h2>Appendix A — Per-class results</h2>
+<h3>A.1 PlantVillage test set</h3>
+<table class="small"><thead><tr><th>Class</th><th>Precision</th><th>Recall</th><th>F1</th><th>Support</th></tr></thead><tbody><tr><td>Apple — Apple scab</td><td>100.0%</td><td>100.0%</td><td>100.0%</td><td>88</td></tr><tr><td>Apple — Black rot</td><td>100.0%</td><td>100.0%</td><td>100.0%</td><td>91</td></tr><tr><td>Apple — Cedar apple rust</td><td>100.0%</td><td>100.0%</td><td>100.0%</td><td>39</td></tr><tr><td>Apple — healthy</td><td>100.0%</td><td>100.0%</td><td>100.0%</td><td>177</td></tr><tr><td>Blueberry — healthy</td><td>100.0%</td><td>100.0%</td><td>100.0%</td><td>136</td></tr><tr><td>Cherry — Powdery mildew</td><td>100.0%</td><td>100.0%</td><td>100.0%</td><td>150</td></tr><tr><td>Cherry — healthy</td><td>100.0%</td><td>100.0%</td><td>100.0%</td><td>128</td></tr><tr><td>Corn — Cercospora leaf spot Gray leaf spot</td><td>94.9%</td><td>97.4%</td><td>96.1%</td><td>76</td></tr><tr><td>Corn — Common rust</td><td>99.4%</td><td>99.4%</td><td>99.4%</td><td>178</td></tr><tr><td>Corn — Northern Leaf Blight</td><td>97.9%</td><td>96.6%</td><td>97.3%</td><td>147</td></tr><tr><td>Corn — healthy</td><td>100.0%</td><td>100.0%</td><td>100.0%</td><td>174</td></tr><tr><td>Grape — Black rot</td><td>98.9%</td><td>100.0%</td><td>99.4%</td><td>176</td></tr><tr><td>Grape — Esca (Black Measles)</td><td>100.0%</td><td>99.0%</td><td>99.5%</td><td>204</td></tr><tr><td>Grape — Leaf blight (Isariopsis Leaf Spot)</td><td>100.0%</td><td>100.0%</td><td>100.0%</td><td>160</td></tr><tr><td>Grape — healthy</td><td>100.0%</td><td>100.0%</td><td>100.0%</td><td>63</td></tr><tr><td>Orange — Haunglongbing (Citrus greening)</td><td>100.0%</td><td>100.0%</td><td>100.0%</td><td>822</td></tr><tr><td>Peach — Bacterial spot</td><td>100.0%</td><td>100.0%</td><td>100.0%</td><td>342</td></tr><tr><td>Peach — healthy</td><td>100.0%</td><td>100.0%</td><td>100.0%</td><td>54</td></tr><tr><td>Pepper (bell) — Bacterial spot</td><td>99.3%</td><td>100.0%</td><td>99.7%</td><td>147</td></tr><tr><td>Pepper (bell) — healthy</td><td>100.0%</td><td>99.5%</td><td>99.8%</td><td>218</td></tr><tr><td>Potato — Early blight</td><td>100.0%</td><td>98.0%</td><td>99.0%</td><td>148</td></tr><tr><td>Potato — Late blight</td><td>99.3%</td><td>99.3%</td><td>99.3%</td><td>148</td></tr><tr><td>Potato — healthy</td><td>100.0%</td><td>100.0%</td><td>100.0%</td><td>16</td></tr><tr><td>Raspberry — healthy</td><td>100.0%</td><td>100.0%</td><td>100.0%</td><td>38</td></tr><tr><td>Soybean — healthy</td><td>100.0%</td><td>100.0%</td><td>100.0%</td><td>633</td></tr><tr><td>Squash — Powdery mildew</td><td>100.0%</td><td>100.0%</td><td>100.0%</td><td>275</td></tr><tr><td>Strawberry — Leaf scorch</td><td>100.0%</td><td>100.0%</td><td>100.0%</td><td>162</td></tr><tr><td>Strawberry — healthy</td><td>100.0%</td><td>100.0%</td><td>100.0%</td><td>60</td></tr><tr><td>Tomato — Bacterial spot</td><td>99.4%</td><td>99.4%</td><td>99.4%</td><td>316</td></tr><tr><td>Tomato — Early blight</td><td>95.4%</td><td>98.0%</td><td>96.7%</td><td>148</td></tr><tr><td>Tomato — Late blight</td><td>98.6%</td><td>97.9%</td><td>98.2%</td><td>283</td></tr><tr><td>Tomato — Leaf Mold</td><td>100.0%</td><td>98.6%</td><td>99.3%</td><td>140</td></tr><tr><td>Tomato — Septoria leaf spot</td><td>100.0%</td><td>99.6%</td><td>99.8%</td><td>265</td></tr><tr><td>Tomato — Spider mites Two-spotted spider mite</td><td>98.4%</td><td>99.6%</td><td>99.0%</td><td>248</td></tr><tr><td>Tomato — Target Spot</td><td>98.6%</td><td>100.0%</td><td>99.3%</td><td>210</td></tr><tr><td>Tomato — Tomato Yellow Leaf Curl Virus</td><td>99.9%</td><td>99.5%</td><td>99.7%</td><td>801</td></tr><tr><td>Tomato — Tomato mosaic virus</td><td>100.0%</td><td>100.0%</td><td>100.0%</td><td>55</td></tr><tr><td>Tomato — healthy</td><td>99.6%</td><td>100.0%</td><td>99.8%</td><td>235</td></tr></tbody></table>
+<h3>A.2 External field test sets</h3>
+<table class="small"><thead><tr><th>Set</th><th>Class</th><th>Precision</th><th>Recall</th><th>F1</th><th>Support</th></tr></thead><tbody><tr><td>PlantDoc</td><td>Apple — Apple scab</td><td>100.0%</td><td>20.0%</td><td>33.3%</td><td>10</td></tr><tr><td>PlantDoc</td><td>Apple — Cedar apple rust</td><td>0.0%</td><td>0.0%</td><td>0.0%</td><td>10</td></tr><tr><td>PlantDoc</td><td>Apple — healthy</td><td>30.0%</td><td>33.3%</td><td>31.6%</td><td>9</td></tr><tr><td>PlantDoc</td><td>Blueberry — healthy</td><td>33.3%</td><td>50.0%</td><td>40.0%</td><td>10</td></tr><tr><td>PlantDoc</td><td>Cherry — healthy</td><td>33.3%</td><td>20.0%</td><td>25.0%</td><td>10</td></tr><tr><td>PlantDoc</td><td>Corn — Cercospora leaf spot Gray leaf spot</td><td>13.3%</td><td>66.7%</td><td>22.2%</td><td>3</td></tr><tr><td>PlantDoc</td><td>Corn — Common rust</td><td>66.7%</td><td>20.0%</td><td>30.8%</td><td>10</td></tr><tr><td>PlantDoc</td><td>Corn — Northern Leaf Blight</td><td>42.9%</td><td>30.0%</td><td>35.3%</td><td>10</td></tr><tr><td>PlantDoc</td><td>Grape — Black rot</td><td>44.4%</td><td>50.0%</td><td>47.1%</td><td>8</td></tr><tr><td>PlantDoc</td><td>Grape — healthy</td><td>60.0%</td><td>75.0%</td><td>66.7%</td><td>12</td></tr><tr><td>PlantDoc</td><td>Peach — healthy</td><td>100.0%</td><td>11.1%</td><td>20.0%</td><td>9</td></tr><tr><td>PlantDoc</td><td>Pepper (bell) — Bacterial spot</td><td>66.7%</td><td>44.4%</td><td>53.3%</td><td>9</td></tr><tr><td>PlantDoc</td><td>Pepper (bell) — healthy</td><td>50.0%</td><td>75.0%</td><td>60.0%</td><td>8</td></tr><tr><td>PlantDoc</td><td>Potato — Early blight</td><td>40.0%</td><td>33.3%</td><td>36.4%</td><td>6</td></tr><tr><td>PlantDoc</td><td>Potato — Late blight</td><td>0.0%</td><td>0.0%</td><td>0.0%</td><td>5</td></tr><tr><td>PlantDoc</td><td>Raspberry — healthy</td><td>55.6%</td><td>71.4%</td><td>62.5%</td><td>7</td></tr><tr><td>PlantDoc</td><td>Soybean — healthy</td><td>0.0%</td><td>0.0%</td><td>0.0%</td><td>8</td></tr><tr><td>PlantDoc</td><td>Squash — Powdery mildew</td><td>50.0%</td><td>66.7%</td><td>57.1%</td><td>6</td></tr><tr><td>PlantDoc</td><td>Strawberry — healthy</td><td>0.0%</td><td>0.0%</td><td>0.0%</td><td>8</td></tr><tr><td>PlantDoc</td><td>Tomato — Bacterial spot</td><td>0.0%</td><td>0.0%</td><td>0.0%</td><td>7</td></tr><tr><td>PlantDoc</td><td>Tomato — Early blight</td><td>28.0%</td><td>77.8%</td><td>41.2%</td><td>9</td></tr><tr><td>PlantDoc</td><td>Tomato — Late blight</td><td>12.5%</td><td>33.3%</td><td>18.2%</td><td>9</td></tr><tr><td>PlantDoc</td><td>Tomato — Leaf Mold</td><td>0.0%</td><td>0.0%</td><td>0.0%</td><td>6</td></tr><tr><td>PlantDoc</td><td>Tomato — Septoria leaf spot</td><td>25.0%</td><td>30.0%</td><td>27.3%</td><td>10</td></tr><tr><td>PlantDoc</td><td>Tomato — Tomato Yellow Leaf Curl Virus</td><td>100.0%</td><td>40.0%</td><td>57.1%</td><td>5</td></tr><tr><td>PlantDoc</td><td>Tomato — Tomato mosaic virus</td><td>0.0%</td><td>0.0%</td><td>0.0%</td><td>10</td></tr><tr><td>PlantDoc</td><td>Tomato — healthy</td><td>0.0%</td><td>0.0%</td><td>0.0%</td><td>8</td></tr><tr><td>Tomato field</td><td>Tomato — Early blight</td><td>31.7%</td><td>55.9%</td><td>40.4%</td><td>1200</td></tr><tr><td>Tomato field</td><td>Tomato — Late blight</td><td>35.0%</td><td>67.2%</td><td>46.0%</td><td>1200</td></tr><tr><td>Tomato field</td><td>Tomato — Leaf Mold</td><td>96.4%</td><td>4.4%</td><td>8.4%</td><td>1200</td></tr><tr><td>Tomato field</td><td>Tomato — Septoria leaf spot</td><td>49.6%</td><td>11.1%</td><td>18.1%</td><td>1200</td></tr><tr><td>Tomato field</td><td>Tomato — Tomato Yellow Leaf Curl Virus</td><td>79.0%</td><td>20.3%</td><td>32.3%</td><td>1200</td></tr><tr><td>Tomato field</td><td>Tomato — healthy</td><td>0.0%</td><td>0.0%</td><td>0.0%</td><td>1200</td></tr></tbody></table>
+</section><section>
+<h2>Appendix B — Dataset split per class</h2>
+<table class="small"><thead><tr><th>Class</th><th>Train</th><th>Validation</th><th>Test</th><th>PlantDoc ext-val</th><th>External test</th></tr></thead><tbody><tr><td>Apple — Apple scab</td><td>441</td><td>101</td><td>88</td><td>16</td><td>10</td></tr><tr><td>Apple — Black rot</td><td>449</td><td>81</td><td>91</td><td>0</td><td>0</td></tr><tr><td>Apple — Cedar apple rust</td><td>196</td><td>40</td><td>39</td><td>16</td><td>10</td></tr><tr><td>Apple — healthy</td><td>1305</td><td>163</td><td>177</td><td>16</td><td>9</td></tr><tr><td>Blueberry — healthy</td><td>1246</td><td>120</td><td>136</td><td>21</td><td>10</td></tr><tr><td>Cherry — Powdery mildew</td><td>745</td><td>157</td><td>150</td><td>0</td><td>0</td></tr><tr><td>Cherry — healthy</td><td>603</td><td>123</td><td>128</td><td>10</td><td>10</td></tr><tr><td>Corn — Cercospora leaf spot Gray leaf spot</td><td>360</td><td>77</td><td>76</td><td>13</td><td>3</td></tr><tr><td>Corn — Common rust</td><td>835</td><td>179</td><td>178</td><td>21</td><td>10</td></tr><tr><td>Corn — Northern Leaf Blight</td><td>690</td><td>148</td><td>147</td><td>36</td><td>10</td></tr><tr><td>Corn — healthy</td><td>814</td><td>174</td><td>174</td><td>0</td><td>0</td></tr><tr><td>Grape — Black rot</td><td>828</td><td>176</td><td>176</td><td>11</td><td>8</td></tr><tr><td>Grape — Esca (Black Measles)</td><td>972</td><td>207</td><td>204</td><td>0</td><td>0</td></tr><tr><td>Grape — Leaf blight (Isariopsis Leaf Spot)</td><td>756</td><td>160</td><td>160</td><td>0</td><td>0</td></tr><tr><td>Grape — healthy</td><td>297</td><td>63</td><td>63</td><td>11</td><td>12</td></tr><tr><td>Orange — Haunglongbing (Citrus greening)</td><td>3865</td><td>820</td><td>822</td><td>0</td><td>0</td></tr><tr><td>Peach — Bacterial spot</td><td>1612</td><td>343</td><td>342</td><td>0</td><td>0</td></tr><tr><td>Peach — healthy</td><td>254</td><td>52</td><td>54</td><td>20</td><td>9</td></tr><tr><td>Pepper (bell) — Bacterial spot</td><td>699</td><td>151</td><td>147</td><td>13</td><td>9</td></tr><tr><td>Pepper (bell) — healthy</td><td>1036</td><td>224</td><td>218</td><td>11</td><td>8</td></tr><tr><td>Potato — Early blight</td><td>700</td><td>152</td><td>148</td><td>21</td><td>6</td></tr><tr><td>Potato — Late blight</td><td>700</td><td>152</td><td>148</td><td>18</td><td>5</td></tr><tr><td>Potato — healthy</td><td>112</td><td>24</td><td>16</td><td>0</td><td>0</td></tr><tr><td>Raspberry — healthy</td><td>265</td><td>68</td><td>38</td><td>23</td><td>7</td></tr><tr><td>Soybean — healthy</td><td>4389</td><td>68</td><td>633</td><td>12</td><td>8</td></tr><tr><td>Squash — Powdery mildew</td><td>1285</td><td>275</td><td>275</td><td>24</td><td>6</td></tr><tr><td>Strawberry — Leaf scorch</td><td>780</td><td>167</td><td>162</td><td>0</td><td>0</td></tr><tr><td>Strawberry — healthy</td><td>359</td><td>37</td><td>60</td><td>18</td><td>8</td></tr><tr><td>Tomato — Bacterial spot</td><td>1491</td><td>320</td><td>316</td><td>20</td><td>7</td></tr><tr><td>Tomato — Early blight</td><td>700</td><td>152</td><td>148</td><td>15</td><td>1209</td></tr><tr><td>Tomato — Late blight</td><td>1337</td><td>289</td><td>283</td><td>19</td><td>1209</td></tr><tr><td>Tomato — Leaf Mold</td><td>668</td><td>144</td><td>140</td><td>17</td><td>1206</td></tr><tr><td>Tomato — Septoria leaf spot</td><td>1240</td><td>266</td><td>265</td><td>26</td><td>1210</td></tr><tr><td>Tomato — Spider mites Two-spotted spider mite</td><td>1176</td><td>252</td><td>248</td><td>1</td><td>0</td></tr><tr><td>Tomato — Target Spot</td><td>983</td><td>211</td><td>210</td><td>0</td><td>0</td></tr><tr><td>Tomato — Tomato Yellow Leaf Curl Virus</td><td>3752</td><td>804</td><td>801</td><td>14</td><td>1205</td></tr><tr><td>Tomato — Tomato mosaic virus</td><td>262</td><td>56</td><td>55</td><td>9</td><td>10</td></tr><tr><td>Tomato — healthy</td><td>1107</td><td>249</td><td>235</td><td>11</td><td>1208</td></tr></tbody></table>
+</section></body></html>
